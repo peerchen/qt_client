@@ -1,0 +1,1525 @@
+2018-05-23 14:04:36 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:10448]的连接成功
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:776,Total:0,Left time:30 
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:776
+2018-05-23 14:04:37 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1331,Total:0,Left time:30 
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1331
+2018-05-23 14:04:37 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 14:04:37 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2920,Total:0,Left time:30 
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1176,Total:2920,Left time:30 
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 14:04:37 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1004,Total:0,Left time:30 
+2018-05-23 14:04:37 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1004
+2018-05-23 14:04:37 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 14:04:37 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 14:04:37 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 14:04:38 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:04:38 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:04:38 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:804,Total:0,Left time:30 
+2018-05-23 14:04:38 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:804
+2018-05-23 14:04:46 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:16208]的连接成功
+2018-05-23 14:04:46 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:04:46 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:107,Total:0,Left time:20 
+2018-05-23 14:04:46 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:107
+2018-05-23 14:04:56 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 14:04:56 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1112,Total:0,Left time:30 
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1112
+2018-05-23 14:04:56 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2067,Total:8192,Left time:30 
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10259
+2018-05-23 14:04:56 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:284,Total:4096,Left time:30 
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:3812,Total:4380,Left time:30 
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2066,Total:8192,Left time:30 
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10258
+2018-05-23 14:04:56 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1101,Total:0,Left time:30 
+2018-05-23 14:04:56 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1101
+2018-05-23 14:04:56 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 14:04:56 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 14:04:56 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 14:04:56 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 14:04:56 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 14:04:56 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 14:04:56 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 14:04:56 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 14:04:56 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 14:04:56 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 14:04:57 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:04:57 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:04:57 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:870,Total:0,Left time:30 
+2018-05-23 14:04:57 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:870
+2018-05-23 14:05:31 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:05:31 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:05:31 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 14:05:31 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 14:05:31 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:05:31 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:05:31 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:30 
+2018-05-23 14:05:31 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 14:05:40 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 14:05:40 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 14:05:40 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1338,Total:0,Left time:30 
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1338
+2018-05-23 14:05:40 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2920,Total:0,Left time:30 
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1176,Total:2920,Left time:30 
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 14:05:40 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 14:05:40 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1002,Total:0,Left time:30 
+2018-05-23 14:05:40 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1002
+2018-05-23 14:05:40 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 14:05:40 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 14:05:40 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 14:05:40 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 14:05:40 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 14:05:40 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 14:05:40 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 14:05:40 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 14:05:40 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 14:05:40 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 14:05:41 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:05:41 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:05:41 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:808,Total:0,Left time:30 
+2018-05-23 14:05:41 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:808
+2018-05-23 14:05:42 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 14:05:42 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1106,Total:0,Left time:30 
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1106
+2018-05-23 14:05:42 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2066,Total:8192,Left time:30 
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10258
+2018-05-23 14:05:42 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2067,Total:8192,Left time:30 
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10259
+2018-05-23 14:05:42 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1101,Total:0,Left time:30 
+2018-05-23 14:05:42 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1101
+2018-05-23 14:05:42 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 14:05:42 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 14:05:42 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 14:05:42 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 14:05:42 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 14:05:42 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 14:05:42 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 14:05:42 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 14:05:42 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 14:05:42 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 14:05:43 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:05:43 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:05:43 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:875,Total:0,Left time:30 
+2018-05-23 14:05:43 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:875
+2018-05-23 14:05:50 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:16208]的连接成功
+2018-05-23 14:05:50 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:05:50 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:107,Total:0,Left time:20 
+2018-05-23 14:05:50 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:107
+2018-05-23 14:17:09 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:10448]的连接成功
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:776,Total:0,Left time:30 
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:776
+2018-05-23 14:17:10 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1329,Total:0,Left time:30 
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1329
+2018-05-23 14:17:10 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 14:17:10 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1460,Total:0,Left time:30 
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2636,Total:1460,Left time:30 
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:284,Total:4096,Left time:30 
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:3812,Total:4380,Left time:30 
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 14:17:10 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 14:17:11 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:11 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:11 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1004,Total:0,Left time:30 
+2018-05-23 14:17:11 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1004
+2018-05-23 14:17:11 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 14:17:11 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 14:17:11 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 14:17:12 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:12 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:12 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:807,Total:0,Left time:30 
+2018-05-23 14:17:12 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:807
+2018-05-23 14:17:19 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:19 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:19 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 14:17:19 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 14:17:19 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:19 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:19 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1111,Total:0,Left time:30 
+2018-05-23 14:17:19 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1111
+2018-05-23 14:17:19 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:19 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:19 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 14:17:19 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 14:17:19 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2066,Total:8192,Left time:30 
+2018-05-23 14:17:19 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10258
+2018-05-23 14:17:19 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:19 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:19 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2920,Total:0,Left time:30 
+2018-05-23 14:17:19 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1176,Total:2920,Left time:30 
+2018-05-23 14:17:19 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 14:17:19 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2067,Total:8192,Left time:30 
+2018-05-23 14:17:19 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10259
+2018-05-23 14:17:20 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:20 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:20 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1101,Total:0,Left time:30 
+2018-05-23 14:17:20 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1101
+2018-05-23 14:17:20 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 14:17:20 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 14:17:20 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 14:17:20 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 14:17:20 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 14:17:20 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 14:17:20 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 14:17:20 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 14:17:20 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 14:17:20 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 14:17:20 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:20 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:20 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:876,Total:0,Left time:30 
+2018-05-23 14:17:20 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:876
+2018-05-23 14:17:26 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:26 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:26 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 14:17:26 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 14:17:26 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:26 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:26 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1338,Total:0,Left time:30 
+2018-05-23 14:17:26 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1338
+2018-05-23 14:17:26 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:26 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:26 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 14:17:26 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 14:17:26 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 14:17:26 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 14:17:26 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:26 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:27 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:29 
+2018-05-23 14:17:27 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:29 
+2018-05-23 14:17:27 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:29 
+2018-05-23 14:17:27 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 14:17:27 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:27 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:27 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1001,Total:0,Left time:30 
+2018-05-23 14:17:27 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1001
+2018-05-23 14:17:27 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 14:17:27 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 14:17:27 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 14:17:27 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 14:17:27 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 14:17:27 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 14:17:27 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 14:17:27 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 14:17:27 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 14:17:27 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 14:17:28 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:28 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:28 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:808,Total:0,Left time:30 
+2018-05-23 14:17:28 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:808
+2018-05-23 14:17:31 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:31 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:31 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 14:17:31 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 14:17:31 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:31 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:31 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1105,Total:0,Left time:30 
+2018-05-23 14:17:31 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1105
+2018-05-23 14:17:31 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:31 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:31 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 14:17:31 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 14:17:31 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2066,Total:8192,Left time:30 
+2018-05-23 14:17:31 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10258
+2018-05-23 14:17:32 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:32 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:32 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 14:17:32 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 14:17:32 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2065,Total:8192,Left time:30 
+2018-05-23 14:17:32 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10257
+2018-05-23 14:17:32 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:32 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:32 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1101,Total:0,Left time:30 
+2018-05-23 14:17:32 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1101
+2018-05-23 14:17:32 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 14:17:32 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 14:17:32 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 14:17:32 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 14:17:32 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 14:17:32 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 14:17:32 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 14:17:32 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 14:17:32 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 14:17:32 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 14:17:33 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:33 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:33 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:876,Total:0,Left time:30 
+2018-05-23 14:17:33 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:876
+2018-05-23 14:17:37 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:37 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:19 
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 14:17:38 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1336,Total:0,Left time:30 
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1336
+2018-05-23 14:17:38 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 14:17:38 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:284,Total:4096,Left time:30 
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:3812,Total:4380,Left time:30 
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 14:17:38 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1001,Total:0,Left time:30 
+2018-05-23 14:17:38 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1001
+2018-05-23 14:17:38 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 14:17:38 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 14:17:38 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 14:17:38 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 14:17:38 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 14:17:38 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 14:17:38 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 14:17:38 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 14:17:38 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 14:17:38 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 14:17:39 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:17:39 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:17:39 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:808,Total:0,Left time:30 
+2018-05-23 14:17:39 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:808
+2018-05-23 14:21:58 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 14:21:58 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 14:21:58 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 14:21:58 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 15:01:59 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:10448]的连接成功
+2018-05-23 15:02:00 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:02:00 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:776,Total:0,Left time:30 
+2018-05-23 15:02:00 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:776
+2018-05-23 15:02:00 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:02:00 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:02:00 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1331,Total:0,Left time:30 
+2018-05-23 15:02:00 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1331
+2018-05-23 15:02:00 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:02:00 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:02:00 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1460,Total:0,Left time:30 
+2018-05-23 15:02:00 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2636,Total:1460,Left time:30 
+2018-05-23 15:02:00 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:02:00 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:02:00 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:02:01 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:02:01 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:02:01 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:02:01 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:02:01 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:02:01 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:02:01 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:02:01 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:02:01 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1004,Total:0,Left time:30 
+2018-05-23 15:02:01 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1004
+2018-05-23 15:02:01 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:02:01 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:02:01 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:02:02 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:02:02 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:02:02 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:809,Total:0,Left time:30 
+2018-05-23 15:02:02 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:809
+2018-05-23 15:09:47 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:10448]的连接成功
+2018-05-23 15:09:48 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:09:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:776,Total:0,Left time:30 
+2018-05-23 15:09:48 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:776
+2018-05-23 15:09:48 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:09:48 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:09:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1330,Total:0,Left time:30 
+2018-05-23 15:09:48 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1330
+2018-05-23 15:09:48 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:09:48 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:09:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2920,Total:0,Left time:30 
+2018-05-23 15:09:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1176,Total:2920,Left time:30 
+2018-05-23 15:09:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:09:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:09:48 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:09:48 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:09:48 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:09:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:09:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:09:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:09:48 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:09:49 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:09:49 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:09:49 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1004,Total:0,Left time:30 
+2018-05-23 15:09:49 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1004
+2018-05-23 15:09:49 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:09:49 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:09:49 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:09:49 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:09:49 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:09:49 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:813,Total:0,Left time:30 
+2018-05-23 15:09:49 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:813
+2018-05-23 15:09:54 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:09:54 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:09:54 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 15:09:54 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 15:09:54 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:09:54 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:09:54 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1111,Total:0,Left time:30 
+2018-05-23 15:09:54 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1111
+2018-05-23 15:09:54 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:09:54 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:09:54 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:09:54 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:3204,Total:4096,Left time:30 
+2018-05-23 15:09:54 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:892,Total:7300,Left time:30 
+2018-05-23 15:09:54 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2066,Total:8192,Left time:30 
+2018-05-23 15:09:54 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10258
+2018-05-23 15:09:54 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:09:54 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:09:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:29 
+2018-05-23 15:09:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:29 
+2018-05-23 15:09:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2067,Total:8192,Left time:29 
+2018-05-23 15:09:55 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10259
+2018-05-23 15:09:55 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:09:55 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:09:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1101,Total:0,Left time:30 
+2018-05-23 15:09:55 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1101
+2018-05-23 15:09:55 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 15:09:55 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 15:09:55 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 15:09:55 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 15:09:55 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 15:09:55 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 15:09:55 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:09:55 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:09:55 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:09:55 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 15:09:55 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:09:55 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:09:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:875,Total:0,Left time:30 
+2018-05-23 15:09:55 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:875
+2018-05-23 15:11:03 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:10448]的连接成功
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:776,Total:0,Left time:30 
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:776
+2018-05-23 15:11:04 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1329,Total:0,Left time:30 
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1329
+2018-05-23 15:11:04 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1744,Total:4096,Left time:30 
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2352,Total:5840,Left time:30 
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:11:04 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:11:04 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1004,Total:0,Left time:30 
+2018-05-23 15:11:04 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1004
+2018-05-23 15:11:04 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:11:04 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:11:04 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:11:05 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:05 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:05 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:813,Total:0,Left time:30 
+2018-05-23 15:11:05 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:813
+2018-05-23 15:11:09 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 15:11:09 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1111,Total:0,Left time:30 
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1111
+2018-05-23 15:11:09 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2066,Total:8192,Left time:30 
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10258
+2018-05-23 15:11:09 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2067,Total:8192,Left time:30 
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10259
+2018-05-23 15:11:09 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1101,Total:0,Left time:30 
+2018-05-23 15:11:09 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1101
+2018-05-23 15:11:09 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 15:11:09 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 15:11:09 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 15:11:09 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 15:11:09 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 15:11:09 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 15:11:09 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:11:09 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:11:09 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:11:09 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 15:11:10 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:10 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:10 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:875,Total:0,Left time:30 
+2018-05-23 15:11:10 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:875
+2018-05-23 15:11:23 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 15:11:23 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1336,Total:0,Left time:30 
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1336
+2018-05-23 15:11:23 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2920,Total:0,Left time:30 
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1176,Total:2920,Left time:30 
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:284,Total:4096,Left time:30 
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:3812,Total:4380,Left time:30 
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:11:23 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:11:23 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:11:24 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:24 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:24 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1001,Total:0,Left time:30 
+2018-05-23 15:11:24 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1001
+2018-05-23 15:11:24 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 15:11:24 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 15:11:24 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 15:11:24 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 15:11:24 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 15:11:24 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 15:11:24 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:11:24 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:11:24 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:11:24 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 15:11:24 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:24 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:24 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:811,Total:0,Left time:30 
+2018-05-23 15:11:24 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:811
+2018-05-23 15:11:28 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 15:11:28 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1106,Total:0,Left time:30 
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1106
+2018-05-23 15:11:28 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2066,Total:8192,Left time:30 
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10258
+2018-05-23 15:11:28 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2065,Total:8192,Left time:30 
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10257
+2018-05-23 15:11:28 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1101,Total:0,Left time:30 
+2018-05-23 15:11:28 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1101
+2018-05-23 15:11:28 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 15:11:28 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 15:11:28 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 15:11:28 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 15:11:28 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 15:11:28 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 15:11:28 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:11:28 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:11:28 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:11:28 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 15:11:29 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:29 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:29 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:875,Total:0,Left time:30 
+2018-05-23 15:11:29 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:875
+2018-05-23 15:11:42 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 15:11:42 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1336,Total:0,Left time:30 
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1336
+2018-05-23 15:11:42 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2920,Total:0,Left time:30 
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1176,Total:2920,Left time:30 
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:11:42 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:284,Total:4096,Left time:30 
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:3812,Total:4380,Left time:30 
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:11:42 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:11:43 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:43 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:43 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1001,Total:0,Left time:30 
+2018-05-23 15:11:43 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1001
+2018-05-23 15:11:43 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 15:11:43 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 15:11:43 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 15:11:43 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 15:11:43 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 15:11:43 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 15:11:43 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:11:43 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:11:43 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:11:43 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 15:11:43 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:43 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:43 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:811,Total:0,Left time:30 
+2018-05-23 15:11:43 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:811
+2018-05-23 15:11:47 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:47 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:19 
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 15:11:48 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1104,Total:0,Left time:30 
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1104
+2018-05-23 15:11:48 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2066,Total:8192,Left time:30 
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10258
+2018-05-23 15:11:48 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2920,Total:0,Left time:30 
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1176,Total:2920,Left time:30 
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2066,Total:8192,Left time:30 
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10258
+2018-05-23 15:11:48 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1101,Total:0,Left time:30 
+2018-05-23 15:11:48 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1101
+2018-05-23 15:11:48 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 15:11:48 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 15:11:48 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 15:11:48 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 15:11:48 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 15:11:48 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 15:11:48 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:11:48 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:11:48 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:11:48 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 15:11:49 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:49 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:49 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:875,Total:0,Left time:30 
+2018-05-23 15:11:49 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:875
+2018-05-23 15:11:55 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 15:11:55 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1335,Total:0,Left time:30 
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1335
+2018-05-23 15:11:55 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1460,Total:0,Left time:30 
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2636,Total:1460,Left time:30 
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:11:55 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:11:55 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1002,Total:0,Left time:30 
+2018-05-23 15:11:55 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1002
+2018-05-23 15:11:55 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 15:11:55 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 15:11:55 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 15:11:55 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 15:11:55 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 15:11:55 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 15:11:55 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:11:55 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:11:55 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:11:55 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 15:11:56 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:11:56 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:11:56 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:811,Total:0,Left time:30 
+2018-05-23 15:11:56 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:811
+2018-05-23 15:12:17 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:12:17 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:12:17 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:693,Total:0,Left time:30 
+2018-05-23 15:12:17 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:693
+2018-05-23 15:12:18 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:12:18 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:12:18 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:693,Total:0,Left time:30 
+2018-05-23 15:12:18 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:693
+2018-05-23 15:12:35 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:12:35 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:12:35 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:696,Total:0,Left time:30 
+2018-05-23 15:12:35 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:696
+2018-05-23 15:12:38 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:12:38 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:12:38 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:697,Total:0,Left time:30 
+2018-05-23 15:12:38 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:697
+2018-05-23 15:13:03 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:13:03 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:13:03 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 15:13:03 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 15:13:03 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:13:03 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:13:03 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1105,Total:0,Left time:30 
+2018-05-23 15:13:03 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1105
+2018-05-23 15:13:03 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:13:03 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:13:03 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:13:03 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:13:03 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2066,Total:8192,Left time:30 
+2018-05-23 15:13:03 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10258
+2018-05-23 15:13:03 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:13:03 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:13:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:29 
+2018-05-23 15:13:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:3204,Total:4096,Left time:29 
+2018-05-23 15:13:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:892,Total:7300,Left time:29 
+2018-05-23 15:13:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2066,Total:8192,Left time:29 
+2018-05-23 15:13:04 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10258
+2018-05-23 15:13:04 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:13:04 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:13:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1101,Total:0,Left time:30 
+2018-05-23 15:13:04 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1101
+2018-05-23 15:13:04 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 15:13:04 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 15:13:04 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 15:13:04 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 15:13:04 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 15:13:04 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 15:13:04 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:13:04 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:13:04 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:13:04 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 15:13:04 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:13:04 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:13:05 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:870,Total:0,Left time:29 
+2018-05-23 15:13:05 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:870
+2018-05-23 15:13:08 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:13:08 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:13:08 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:738,Total:0,Left time:30 
+2018-05-23 15:13:08 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:738
+2018-05-23 15:13:39 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:13:39 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:19 
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 15:13:40 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1337,Total:0,Left time:30 
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1337
+2018-05-23 15:13:40 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:13:40 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2920,Total:0,Left time:30 
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1176,Total:2920,Left time:30 
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:13:40 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1001,Total:0,Left time:30 
+2018-05-23 15:13:40 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1001
+2018-05-23 15:13:40 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 15:13:40 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 15:13:40 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 15:13:40 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 15:13:40 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 15:13:40 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 15:13:40 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:13:40 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:13:40 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:13:40 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 15:13:41 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:13:41 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:13:41 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:826,Total:0,Left time:30 
+2018-05-23 15:13:41 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:826
+2018-05-23 15:14:07 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:14:07 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:14:07 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:622,Total:0,Left time:30 
+2018-05-23 15:14:07 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:622
+2018-05-23 15:14:08 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:14:08 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:14:08 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:622,Total:0,Left time:30 
+2018-05-23 15:14:08 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:622
+2018-05-23 15:14:38 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:14:38 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:14:38 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:700,Total:0,Left time:30 
+2018-05-23 15:14:38 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:700
+2018-05-23 15:14:57 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 15:14:57 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1106,Total:0,Left time:30 
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1106
+2018-05-23 15:14:57 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2066,Total:8192,Left time:30 
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10258
+2018-05-23 15:14:57 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2920,Total:0,Left time:30 
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1176,Total:2920,Left time:30 
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:284,Total:4096,Left time:30 
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:3812,Total:4380,Left time:30 
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2067,Total:8192,Left time:30 
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10259
+2018-05-23 15:14:57 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1101,Total:0,Left time:30 
+2018-05-23 15:14:57 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1101
+2018-05-23 15:14:57 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 15:14:57 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 15:14:57 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 15:14:57 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 15:14:57 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 15:14:57 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 15:14:57 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:14:57 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:14:57 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:14:57 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 15:14:58 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:14:58 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:14:58 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:875,Total:0,Left time:30 
+2018-05-23 15:14:58 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:875
+2018-05-23 15:15:04 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:15:04 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:15:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:743,Total:0,Left time:30 
+2018-05-23 15:15:04 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:743
+2018-05-23 15:15:08 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:15:08 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:15:08 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:743,Total:0,Left time:30 
+2018-05-23 15:15:08 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:743
+2018-05-23 15:15:26 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:15:26 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:15:26 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:743,Total:0,Left time:30 
+2018-05-23 15:15:26 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:743
+2018-05-23 15:15:29 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:15:29 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:15:29 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:743,Total:0,Left time:30 
+2018-05-23 15:15:29 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:743
+2018-05-23 15:16:46 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:16:46 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:16:46 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 15:16:46 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 15:16:46 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:16:46 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:16:46 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1338,Total:0,Left time:30 
+2018-05-23 15:16:46 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1338
+2018-05-23 15:16:46 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:16:46 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:16:47 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2920,Total:0,Left time:29 
+2018-05-23 15:16:47 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1176,Total:2920,Left time:29 
+2018-05-23 15:16:47 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:29 
+2018-05-23 15:16:47 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:29 
+2018-05-23 15:16:47 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:16:47 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:16:47 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:16:47 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:16:47 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:16:47 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:16:47 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:16:47 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:16:47 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:16:47 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1002,Total:0,Left time:30 
+2018-05-23 15:16:47 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1002
+2018-05-23 15:16:47 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 15:16:47 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 15:16:47 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 15:16:47 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 15:16:47 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 15:16:47 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 15:16:47 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:16:47 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:16:47 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:16:47 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 15:16:48 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:16:48 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:16:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:833,Total:0,Left time:30 
+2018-05-23 15:16:48 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:833
+2018-05-23 15:16:52 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:16:52 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:16:52 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:705,Total:0,Left time:30 
+2018-05-23 15:16:52 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:705
+2018-05-23 15:16:55 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 15:16:55 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1106,Total:0,Left time:30 
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1106
+2018-05-23 15:16:55 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2067,Total:8192,Left time:30 
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10259
+2018-05-23 15:16:55 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2067,Total:8192,Left time:30 
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10259
+2018-05-23 15:16:55 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1101,Total:0,Left time:30 
+2018-05-23 15:16:55 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1101
+2018-05-23 15:16:55 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 15:16:55 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 15:16:55 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 15:16:55 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 15:16:55 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 15:16:55 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 15:16:55 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:16:55 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:16:55 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:16:55 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 15:16:56 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:16:56 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:16:56 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:877,Total:0,Left time:30 
+2018-05-23 15:16:56 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:877
+2018-05-23 15:17:08 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 15:17:08 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1336,Total:0,Left time:30 
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1336
+2018-05-23 15:17:08 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:17:08 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2061,Total:8192,Left time:30 
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10253
+2018-05-23 15:17:08 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1001,Total:0,Left time:30 
+2018-05-23 15:17:08 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1001
+2018-05-23 15:17:08 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 15:17:08 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 15:17:08 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 15:17:08 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 15:17:09 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 15:17:09 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 15:17:09 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:17:09 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:17:09 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:17:09 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 15:17:09 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:17:09 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:17:09 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:833,Total:0,Left time:30 
+2018-05-23 15:17:09 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:833
+2018-05-23 15:18:10 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:18:10 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:18:10 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:705,Total:0,Left time:30 
+2018-05-23 15:18:10 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:705
+2018-05-23 15:19:04 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:10448]的连接成功
+2018-05-23 15:19:05 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:19:06 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:776,Total:0,Left time:29 
+2018-05-23 15:19:06 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:776
+2018-05-23 15:19:06 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:19:06 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:19:06 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1330,Total:0,Left time:30 
+2018-05-23 15:19:06 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1330
+2018-05-23 15:19:06 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:19:06 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:19:06 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1460,Total:0,Left time:30 
+2018-05-23 15:19:06 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2636,Total:1460,Left time:30 
+2018-05-23 15:19:06 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:19:06 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:19:06 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:19:06 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:19:06 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:19:06 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2920,Total:0,Left time:30 
+2018-05-23 15:19:06 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1176,Total:2920,Left time:30 
+2018-05-23 15:19:06 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:19:06 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:19:06 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:19:07 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:19:07 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:19:07 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1004,Total:0,Left time:30 
+2018-05-23 15:19:07 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1004
+2018-05-23 15:19:07 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:19:07 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:19:07 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:19:07 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:19:07 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:19:07 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:834,Total:0,Left time:30 
+2018-05-23 15:19:07 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:834
+2018-05-23 15:20:04 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:20:04 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:20:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:619,Total:0,Left time:30 
+2018-05-23 15:20:04 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:619
+2018-05-23 15:20:31 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:20:31 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:20:31 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:618,Total:0,Left time:30 
+2018-05-23 15:20:31 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:618
+2018-05-23 15:20:48 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:20:48 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:20:48 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:620,Total:0,Left time:30 
+2018-05-23 15:20:48 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:620
+2018-05-23 15:21:22 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:21:22 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:21:22 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:690,Total:0,Left time:30 
+2018-05-23 15:21:22 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:690
+2018-05-23 15:25:43 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:10448]的连接成功
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:776,Total:0,Left time:30 
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:776
+2018-05-23 15:25:44 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1330,Total:0,Left time:30 
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1330
+2018-05-23 15:25:44 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:25:44 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:284,Total:4096,Left time:30 
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2920,Total:4380,Left time:30 
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:892,Total:7300,Left time:30 
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 15:25:44 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 15:25:45 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:25:45 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:25:45 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1004,Total:0,Left time:30 
+2018-05-23 15:25:45 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1004
+2018-05-23 15:25:45 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 15:25:45 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 15:25:45 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 15:25:45 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:25:45 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:25:45 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:812,Total:0,Left time:30 
+2018-05-23 15:25:45 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:812
+2018-05-23 15:26:37 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:26:37 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:26:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:689,Total:0,Left time:30 
+2018-05-23 15:26:37 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:689
+2018-05-23 15:26:38 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:26:38 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:26:38 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:689,Total:0,Left time:30 
+2018-05-23 15:26:38 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:689
+2018-05-23 15:26:58 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:26:58 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:26:58 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:694,Total:0,Left time:30 
+2018-05-23 15:26:58 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:694
+2018-05-23 15:27:04 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:27:04 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:27:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:690,Total:0,Left time:30 
+2018-05-23 15:27:04 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:690
+2018-05-23 15:27:33 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:27:33 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:27:33 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:606,Total:0,Left time:30 
+2018-05-23 15:27:33 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:606
+2018-05-23 15:28:14 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:28:14 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:28:14 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:692,Total:0,Left time:30 
+2018-05-23 15:28:14 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:692
+2018-05-23 15:44:58 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 15:44:58 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 15:44:58 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:687,Total:0,Left time:30 
+2018-05-23 15:44:58 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:687
+2018-05-23 17:09:46 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 17:09:46 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 17:09:46 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 17:09:46 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 17:09:46 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:687,Total:0,Left time:30 
+2018-05-23 17:09:46 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:687
+2018-05-23 17:44:38 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:10448]的连接成功
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:776,Total:0,Left time:30 
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:776
+2018-05-23 17:44:39 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1332,Total:0,Left time:30 
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1332
+2018-05-23 17:44:39 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:284,Total:4096,Left time:30 
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:3812,Total:4380,Left time:30 
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 17:44:39 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 17:44:39 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1004,Total:0,Left time:30 
+2018-05-23 17:44:39 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1004
+2018-05-23 17:44:39 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 17:44:39 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 17:44:39 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 17:44:40 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 17:44:40 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 17:44:40 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:788,Total:0,Left time:30 
+2018-05-23 17:44:40 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:788
+2018-05-23 17:45:37 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 17:45:37 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1115,Total:0,Left time:30 
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1115
+2018-05-23 17:45:37 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2066,Total:8192,Left time:30 
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10258
+2018-05-23 17:45:37 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2067,Total:8192,Left time:30 
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10259
+2018-05-23 17:45:37 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1101,Total:0,Left time:30 
+2018-05-23 17:45:37 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1101
+2018-05-23 17:45:37 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 17:45:37 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 17:45:37 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 17:45:37 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 17:45:37 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 17:45:37 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 17:45:37 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 17:45:37 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 17:45:37 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 17:45:37 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 17:45:38 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 17:45:38 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 17:45:38 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:875,Total:0,Left time:30 
+2018-05-23 17:45:38 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:875
+2018-05-23 18:05:11 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:10448]的连接成功
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:776,Total:0,Left time:30 
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:776
+2018-05-23 18:05:12 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1329,Total:0,Left time:30 
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1329
+2018-05-23 18:05:12 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 18:05:12 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1460,Total:0,Left time:30 
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2636,Total:1460,Left time:30 
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 18:05:12 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1004,Total:0,Left time:30 
+2018-05-23 18:05:12 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1004
+2018-05-23 18:05:12 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 18:05:12 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 18:05:12 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 18:05:13 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:05:13 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:05:13 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:788,Total:0,Left time:30 
+2018-05-23 18:05:13 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:788
+2018-05-23 18:13:03 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:10448]的连接成功
+2018-05-23 18:13:04 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:776,Total:0,Left time:30 
+2018-05-23 18:13:04 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:776
+2018-05-23 18:13:04 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:13:04 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1328,Total:0,Left time:30 
+2018-05-23 18:13:04 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1328
+2018-05-23 18:13:04 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:13:04 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 18:13:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 18:13:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 18:13:04 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 18:13:04 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:13:04 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 18:13:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:3204,Total:4096,Left time:30 
+2018-05-23 18:13:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:892,Total:7300,Left time:30 
+2018-05-23 18:13:04 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 18:13:04 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 18:13:05 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:13:05 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:05 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1004,Total:0,Left time:30 
+2018-05-23 18:13:05 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1004
+2018-05-23 18:13:05 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 18:13:05 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 18:13:05 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 18:13:05 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:13:05 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:05 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:788,Total:0,Left time:30 
+2018-05-23 18:13:05 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:788
+2018-05-23 18:13:11 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 18:13:11 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1116,Total:0,Left time:30 
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1116
+2018-05-23 18:13:11 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2066,Total:8192,Left time:30 
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10258
+2018-05-23 18:13:11 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1460,Total:0,Left time:30 
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2636,Total:1460,Left time:30 
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1744,Total:4096,Left time:30 
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2352,Total:5840,Left time:30 
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2067,Total:8192,Left time:30 
+2018-05-23 18:13:11 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10259
+2018-05-23 18:13:12 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:13:12 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:12 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1101,Total:0,Left time:30 
+2018-05-23 18:13:12 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1101
+2018-05-23 18:13:12 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 18:13:12 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 18:13:12 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 18:13:12 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 18:13:12 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 18:13:12 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 18:13:12 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 18:13:12 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 18:13:12 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 18:13:12 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 18:13:12 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:13:12 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:12 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:875,Total:0,Left time:30 
+2018-05-23 18:13:12 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:875
+2018-05-23 18:13:18 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 18:13:18 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1336,Total:0,Left time:30 
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1336
+2018-05-23 18:13:18 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 18:13:18 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2920,Total:0,Left time:30 
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1176,Total:2920,Left time:30 
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 18:13:18 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1001,Total:0,Left time:30 
+2018-05-23 18:13:18 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1001
+2018-05-23 18:13:18 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 18:13:18 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 18:13:18 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 18:13:18 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 18:13:18 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 18:13:18 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 18:13:18 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 18:13:18 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 18:13:18 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 18:13:18 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 18:13:19 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:13:19 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:13:19 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:787,Total:0,Left time:30 
+2018-05-23 18:13:19 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:787
+2018-05-23 18:15:16 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:10448]的连接成功
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:776,Total:0,Left time:30 
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:776
+2018-05-23 18:15:17 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1329,Total:0,Left time:30 
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1329
+2018-05-23 18:15:17 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 18:15:17 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 18:15:17 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1004,Total:0,Left time:30 
+2018-05-23 18:15:17 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1004
+2018-05-23 18:15:17 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 18:15:17 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 18:15:17 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 18:15:18 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:15:18 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:15:18 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:788,Total:0,Left time:30 
+2018-05-23 18:15:18 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:788
+2018-05-23 18:17:24 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:10448]的连接成功
+2018-05-23 18:17:25 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:776,Total:0,Left time:29 
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:776
+2018-05-23 18:17:26 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1329,Total:0,Left time:30 
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1329
+2018-05-23 18:17:26 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2920,Total:0,Left time:30 
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1176,Total:2920,Left time:30 
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 18:17:26 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 18:17:26 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1004,Total:0,Left time:30 
+2018-05-23 18:17:26 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1004
+2018-05-23 18:17:26 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 18:17:26 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 18:17:26 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 18:17:27 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:17:27 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:17:27 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:788,Total:0,Left time:30 
+2018-05-23 18:17:27 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:788
+2018-05-23 18:17:42 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:17:42 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:17:42 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 18:17:42 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 18:17:53 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:10448]的连接成功
+2018-05-23 18:17:54 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:17:54 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:776,Total:0,Left time:30 
+2018-05-23 18:17:54 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:776
+2018-05-23 18:17:54 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:17:54 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:17:54 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1325,Total:0,Left time:30 
+2018-05-23 18:17:54 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1325
+2018-05-23 18:17:54 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:17:54 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:17:54 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 18:17:54 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 18:17:54 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 18:17:54 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 18:17:54 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:17:54 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:17:54 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 18:17:54 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 18:17:54 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 18:17:54 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 18:17:55 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:17:55 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:17:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1004,Total:0,Left time:30 
+2018-05-23 18:17:55 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1004
+2018-05-23 18:17:55 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 18:17:55 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 18:17:55 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 18:17:55 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:17:55 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:17:55 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:788,Total:0,Left time:30 
+2018-05-23 18:17:55 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:788
+2018-05-23 18:18:21 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:18:21 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:18:21 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 18:18:21 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 18:18:31 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:10448]的连接成功
+2018-05-23 18:18:32 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:18:32 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:776,Total:0,Left time:30 
+2018-05-23 18:18:32 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:776
+2018-05-23 18:18:32 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:18:32 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:18:32 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1326,Total:0,Left time:30 
+2018-05-23 18:18:32 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1326
+2018-05-23 18:18:32 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:18:32 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:18:32 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 18:18:32 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 18:18:32 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 18:18:32 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 18:18:32 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:18:32 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:18:32 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 18:18:32 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:3204,Total:4096,Left time:30 
+2018-05-23 18:18:32 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:892,Total:7300,Left time:30 
+2018-05-23 18:18:32 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2062,Total:8192,Left time:30 
+2018-05-23 18:18:32 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10254
+2018-05-23 18:18:33 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:18:33 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:18:33 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1004,Total:0,Left time:30 
+2018-05-23 18:18:33 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1004
+2018-05-23 18:18:33 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 18:18:33 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 18:18:33 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 18:18:33 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:18:33 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:18:33 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:788,Total:0,Left time:30 
+2018-05-23 18:18:33 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:788
+2018-05-23 18:19:59 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115
+2018-05-23 18:19:59 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1107,Total:0,Left time:30 
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1107
+2018-05-23 18:19:59 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1460,Total:0,Left time:30 
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2636,Total:1460,Left time:30 
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:4096,Left time:30 
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2066,Total:8192,Left time:30 
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10258
+2018-05-23 18:19:59 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:4096,Total:0,Left time:30 
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:284,Total:4096,Left time:30 
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1460,Total:4380,Left time:30 
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2352,Total:5840,Left time:30 
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:2067,Total:8192,Left time:30 
+2018-05-23 18:19:59 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:10259
+2018-05-23 18:20:00 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:20:00 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:20:00 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:1101,Total:0,Left time:30 
+2018-05-23 18:20:00 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:1101
+2018-05-23 18:20:00 E_SYSINFO CProtocolCommClient::Stop:350 Stop Connetor
+2018-05-23 18:20:00 E_SYSINFO CConnector::End:244 Signal Connector[10.0.2.122:17208] end!
+2018-05-23 18:20:00 E_SYSINFO CConnector::End:249 Wait Connector[10.0.2.122:17208] end!
+2018-05-23 18:20:00 E_SYSINFO CConnector::ThreadEntry:225 Connector[10.0.2.122:17208] Thread exit!
+2018-05-23 18:20:00 E_SYSINFO CProtocolCommImp::Stop:67 Stop ReadWriteAio
+2018-05-23 18:20:00 E_SYSINFO CProtocolCommImp::CProtocolCommWorker::ThreadEntry:124 ProtocolThread exit!
+2018-05-23 18:20:00 E_NOTICE CCommHandler::OpenInterfaceYCEx:516 初始化连接点YC
+2018-05-23 18:20:00 E_SYSINFO CConnector::NotifyConnect:106 NotifyConnect
+2018-05-23 18:20:00 E_SYSINFO CConnector::ThreadEntry:196 与[10.0.2.122:17208]的连接成功
+2018-05-23 18:20:00 E_SYSINFO CGessTimerMgr::CreateTimer:65 重复创建定时器:PTimer
+2018-05-23 18:20:00 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:20:00 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:20:00 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:875,Total:0,Left time:30 
+2018-05-23 18:20:00 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:875
+2018-05-23 18:20:31 E_SYSINFO CTcpShortComm::Connect:533 与[10.0.2.122:15208]的连接成功
+2018-05-23 18:20:31 E_DEBUG CTcpShortProcess::SendPacket:527 Begin Recv Data
+2018-05-23 18:20:31 E_DEBUG CTcpShortProcess::SendPacket:549 Recv Bytes:115,Total:0,Left time:20 
+2018-05-23 18:20:31 E_DEBUG CTcpShortProcess::SendPacket:615 Recv Bytes Total:115

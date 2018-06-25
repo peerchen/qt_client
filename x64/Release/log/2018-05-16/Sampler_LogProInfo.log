@@ -1,0 +1,135 @@
+2018-05-16 16:45:37 E_PROINFO CProcessInterfaceYC::OnConnect:158 YC OnConnect socket (1892) 10.0.128.25:65455
+2018-05-16 16:45:37 E_PROINFO CProcessInterfaceYC::SendLogin:323 与服务器连接成功,发送认证报文,#again_flag=0#user_id=1080013632#user_key=942652806#user_type=2#
+2018-05-16 16:45:37 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnSpotInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132838#SequenceSeriesNo=2#instID=Au99.99#tradeState=5#
+2018-05-16 16:45:37 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnForwardInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132834#SequenceSeriesNo=2#instID=Ag99.9#tradeState=5#
+2018-05-16 16:45:37 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnDeferInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132840#SequenceSeriesNo=2#instID=mAu(T+D)#tradeState=5#
+2018-05-16 16:45:37 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnSpotInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132836#SequenceSeriesNo=2#instID=Au100g#tradeState=5#
+2018-05-16 16:45:37 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnDeferInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132835#SequenceSeriesNo=2#instID=Ag(T+D)#tradeState=5#
+2018-05-16 16:45:37 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnSpotInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132837#SequenceSeriesNo=2#instID=Au99.95#tradeState=5#
+2018-05-16 16:45:37 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnDeferInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132839#SequenceSeriesNo=2#instID=Au(T+D)#tradeState=5#
+2018-05-16 16:45:37 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvDeferQuotation#instID=Au(T+D)#quoteDate=20160314#sZipBuff=6AbtcOQDn7zgBUOo3AOb1NgAJxDUA5fs0AEk+MwDlATIAU/wxAOQHMAAG1i8A0vAuAVm0LQDT6iw
+AAPorANTkKgAhNCkA1d4oACvyJwDW2CYCSfAlAJbhJEH6tMwjANqdIlHQPkQhAAygoFH+tGgfAMX
+hngDfJR0CCXwcAgl8GwBT/BoA4w0ZAF+0GADiExcAXroWAOEZFQA2sBQA4B8TAbtcEgDfJREAIi4
+QANfSDwA2sA4A2MwNAF66DADZxgsAIi4KANrACQAMsggA27oHAAAABgDeKwUA11UEAM0UAwDfJQI
+A3yUBANxfAADQwA=#
+2018-05-16 16:45:37 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvDeferQuotation#instID=Ag99.9#quoteDate=20160314#sZipBuff=6AO1OOQ4joTgAAu43DiSbNgAD6DUOJZU0AAXcMw4mjzIABtYxDieJMAALuC8ONLguADS8LQ4zviw
+AAu4rDjLEKgAMsikOMcooABCaJw4w0CYCSfAlAJbhJEH6stgjDjWyIlHQPkQhAAygoFH+tGgfDiI
+qHg5JOh0CCXwcAgl8GwNXeBoOKIMZAEFuGA4pfRcAAu4WDip3FQAF3BQOK3ETAEk+Eg4r7hEAF3A
+QDi/WDwAC7g4OLtwNAAH0DA4t4gsAAPoKDjasCQAhNAgONbIHAAAABg41sgUONbIEDivuAw4/dgI
+ONbIBDjWyAA41sg=#
+2018-05-16 16:45:37 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvSpotQuotation#instID=Au99.99#quoteDate=20160314#sZipBuff=6AAnEOQDn7zgAAfQ3AOb1NgAD6DUA5fs0AAjKMwDlATIACMoxAOQHMAAA+i8A0vAuAAfQLQDT6iw
+AKAorANTkKgAD6CkA1d4oAAH0JwDW2CYCSfAlAJbhJEH6r+ojANqdIlHQPkQhAAygoFH+tGgfAMX
+hngDfJR0CCXwcAgl8GwAIyhoA4w0ZAAbWGADiExcACMoWAOEZFQAG1hQA4B8TAAXcEgDfJREAA+g
+QANfSDwAoCg4A2MwNAATiDADZxgsAAu4KANrACQAfQAgA27oHAAAABgDeKwUA3yUEAM0UAwDfJQI
+A3yUBANxfAADQwA=#
+2018-05-16 16:45:37 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvDeferQuotation#instID=mAu(T+D)#quoteDate=20160314#sZipBuff=6AATiOQDn7zgCfqw3AOb1NgAH0DUA5fs0ACIuMwDlATIA2sAxAOQHMAAIyi8A0vAuAAbWLQDT6iw
+ACMorANTkKgBJPikA1d4oAD96JwDW2CYCSfAlAJbhJEH6tcYjANqdIlHQPkQhAAygoFH+tGgfAMX
+hngDfJR0CCXwcAgl8GwBJPhoA4w0ZAFMCGADiExcDTLoWAOEZFQAhNBQA4B8TAuBUEgDfJREAF3A
+QANfSDwBJPg4A2MwNAAD6DADZxgsAST4KANrACQAiLggA27oHAAAABgDeKwUA3yUEAM0UAwDfJQI
+A3yUBANxfAADQwA=#
+2018-05-16 16:45:37 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvSpotQuotation#instID=Au100g#quoteDate=20160314#sZipBuff=6AAfQOQDn7zgABtY3AOb1NgAG1jUA5fs0AAfQMwDlATIAAfQxAOQHMAAA+i8A0vAuAAPoLQDT6iw
+AAu4rANTkKgAF3CkA1d4oAALuJwDW2CYCSfAlAJbhJEH6rvAjANqdIlHQPkQhAAygoFH+tGgfAMX
+hngDfJR0CCXwcAgl8GwAF3BoA4w0ZAAXcGADiExcABOIWAOEZFQAB9BQA4B8TAAPoEgDfJREAAfQ
+QANfSDwAF3A4A2MwNAAH0DADZxgsABOIKANrACQAB9AgA27oHAAAABgDeKwUA3yUEAM0UAwDfJQI
+A3yUBANxfAADQwA=#
+2018-05-16 16:45:37 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvDeferQuotation#instID=Ag(T+D)#quoteDate=20160314#sZipBuff=6AALuOQ4joTgABdw3DiSbNgAH0DUOJZU0AAfQMw4mjzIAB9AxDieJMAAA+i8ONLguAAbWLQ4zviw
+AAu4rDjLEKgAC7ikOMcooAALuJw4w0CYCSfAlAJbhJEH6tsAjDjWyIlHQPkQhAAygoFH+tGgfDiI
+qHg5JOh0CCXwcAgl8GwAIyhoOKIMZADDUGA4pfRcAEo4WDip3FQBX5BQOK3ETAAbWEg4r7hEAAfQ
+QDi/WDwAMsg4OLtwNAAD6DA4t4gsAA+gKDjasCQAIyggONbIHAAAABg41sgUONbIEDivuAw4/dgI
+ONbIBDjWyAA41sg=#
+2018-05-16 16:45:37 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvSpotQuotation#instID=Au99.95#quoteDate=20160314#sZipBuff=6AATiOQDn7zgAU/w3AOb1NgBT/DUA5fs0AAH0MwDlATIAB9AxAOQHMAAD6C8A0vAuADeqLQDT6iw
+ANrArANTkKgAH0CkA1d4oAAH0JwDW2CYCSfAlAJbhJEH6sOQjANqdIlHQPkQhAAygoFH+tGgfAMX
+hngDfJR0CCXwcAgl8GwA/ehoA4w0ZAAbWGADiExcABdwWAOEZFQAB9BQA4B8TAAH0EgDfJREADLI
+QANfSDwAB9A4A2MwNAAH0DADZxgsAA+gKANrACQAE4ggA27oHAAAABgDeKwUA3yUEAM0UAwDfJQI
+A3yUBANxfAADQwA=#
+2018-05-16 16:45:37 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onSysStatChange#b_sys_stat=2#exch_date=20160224#m_sys_stat=1#sys_date=20160223#
+2018-05-16 18:06:10 E_PROINFO CProcessInterfaceYC::OnConnect:158 YC OnConnect socket (2212) 10.0.128.25:50640
+2018-05-16 18:06:10 E_PROINFO CProcessInterfaceYC::SendLogin:323 与服务器连接成功,发送认证报文,#again_flag=0#user_id=1080013632#user_key=406975909#user_type=2#
+2018-05-16 18:06:10 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnSpotInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132838#SequenceSeriesNo=2#instID=Au99.99#tradeState=5#
+2018-05-16 18:06:10 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnForwardInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132834#SequenceSeriesNo=2#instID=Ag99.9#tradeState=5#
+2018-05-16 18:06:10 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnDeferInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132840#SequenceSeriesNo=2#instID=mAu(T+D)#tradeState=5#
+2018-05-16 18:06:10 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnSpotInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132836#SequenceSeriesNo=2#instID=Au100g#tradeState=5#
+2018-05-16 18:06:10 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnDeferInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132835#SequenceSeriesNo=2#instID=Ag(T+D)#tradeState=5#
+2018-05-16 18:06:10 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnSpotInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132837#SequenceSeriesNo=2#instID=Au99.95#tradeState=5#
+2018-05-16 18:06:10 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnDeferInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132839#SequenceSeriesNo=2#instID=Au(T+D)#tradeState=5#
+2018-05-16 18:06:10 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvDeferQuotation#instID=Au(T+D)#quoteDate=20160314#sZipBuff=6AbtcOQDn7zgBUOo3AOb1NgAJxDUA5fs0AEk+MwDlATIAU/wxAOQHMAAG1i8A0vAuAVm0LQDT6iw
+AAPorANTkKgAhNCkA1d4oACvyJwDW2CYCSfAlAJbhJEH6tMwjANqdIlHQPkQhAAygoFH+tGgfAMX
+hngDfJR0CCXwcAgl8GwBT/BoA4w0ZAF+0GADiExcAXroWAOEZFQA2sBQA4B8TAbtcEgDfJREAIi4
+QANfSDwA2sA4A2MwNAF66DADZxgsAIi4KANrACQAMsggA27oHAAAABgDeKwUA11UEAM0UAwDfJQI
+A3yUBANxfAADQwA=#
+2018-05-16 18:06:10 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvDeferQuotation#instID=Ag99.9#quoteDate=20160314#sZipBuff=6AO1OOQ4joTgAAu43DiSbNgAD6DUOJZU0AAXcMw4mjzIABtYxDieJMAALuC8ONLguADS8LQ4zviw
+AAu4rDjLEKgAMsikOMcooABCaJw4w0CYCSfAlAJbhJEH6stgjDjWyIlHQPkQhAAygoFH+tGgfDiI
+qHg5JOh0CCXwcAgl8GwNXeBoOKIMZAEFuGA4pfRcAAu4WDip3FQAF3BQOK3ETAEk+Eg4r7hEAF3A
+QDi/WDwAC7g4OLtwNAAH0DA4t4gsAAPoKDjasCQAhNAgONbIHAAAABg41sgUONbIEDivuAw4/dgI
+ONbIBDjWyAA41sg=#
+2018-05-16 18:06:10 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvSpotQuotation#instID=Au99.99#quoteDate=20160314#sZipBuff=6AAnEOQDn7zgAAfQ3AOb1NgAD6DUA5fs0AAjKMwDlATIACMoxAOQHMAAA+i8A0vAuAAfQLQDT6iw
+AKAorANTkKgAD6CkA1d4oAAH0JwDW2CYCSfAlAJbhJEH6r+ojANqdIlHQPkQhAAygoFH+tGgfAMX
+hngDfJR0CCXwcAgl8GwAIyhoA4w0ZAAbWGADiExcACMoWAOEZFQAG1hQA4B8TAAXcEgDfJREAA+g
+QANfSDwAoCg4A2MwNAATiDADZxgsAAu4KANrACQAfQAgA27oHAAAABgDeKwUA3yUEAM0UAwDfJQI
+A3yUBANxfAADQwA=#
+2018-05-16 18:06:10 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvDeferQuotation#instID=mAu(T+D)#quoteDate=20160314#sZipBuff=6AATiOQDn7zgCfqw3AOb1NgAH0DUA5fs0ACIuMwDlATIA2sAxAOQHMAAIyi8A0vAuAAbWLQDT6iw
+ACMorANTkKgBJPikA1d4oAD96JwDW2CYCSfAlAJbhJEH6tcYjANqdIlHQPkQhAAygoFH+tGgfAMX
+hngDfJR0CCXwcAgl8GwBJPhoA4w0ZAFMCGADiExcDTLoWAOEZFQAhNBQA4B8TAuBUEgDfJREAF3A
+QANfSDwBJPg4A2MwNAAD6DADZxgsAST4KANrACQAiLggA27oHAAAABgDeKwUA3yUEAM0UAwDfJQI
+A3yUBANxfAADQwA=#
+2018-05-16 18:06:10 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvSpotQuotation#instID=Au100g#quoteDate=20160314#sZipBuff=6AAfQOQDn7zgABtY3AOb1NgAG1jUA5fs0AAfQMwDlATIAAfQxAOQHMAAA+i8A0vAuAAPoLQDT6iw
+AAu4rANTkKgAF3CkA1d4oAALuJwDW2CYCSfAlAJbhJEH6rvAjANqdIlHQPkQhAAygoFH+tGgfAMX
+hngDfJR0CCXwcAgl8GwAF3BoA4w0ZAAXcGADiExcABOIWAOEZFQAB9BQA4B8TAAPoEgDfJREAAfQ
+QANfSDwAF3A4A2MwNAAH0DADZxgsABOIKANrACQAB9AgA27oHAAAABgDeKwUA3yUEAM0UAwDfJQI
+A3yUBANxfAADQwA=#
+2018-05-16 18:06:10 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvDeferQuotation#instID=Ag(T+D)#quoteDate=20160314#sZipBuff=6AALuOQ4joTgABdw3DiSbNgAH0DUOJZU0AAfQMw4mjzIAB9AxDieJMAAA+i8ONLguAAbWLQ4zviw
+AAu4rDjLEKgAC7ikOMcooAALuJw4w0CYCSfAlAJbhJEH6tsAjDjWyIlHQPkQhAAygoFH+tGgfDiI
+qHg5JOh0CCXwcAgl8GwAIyhoOKIMZADDUGA4pfRcAEo4WDip3FQBX5BQOK3ETAAbWEg4r7hEAAfQ
+QDi/WDwAMsg4OLtwNAAD6DA4t4gsAA+gKDjasCQAIyggONbIHAAAABg41sgUONbIEDivuAw4/dgI
+ONbIBDjWyAA41sg=#
+2018-05-16 18:06:10 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvSpotQuotation#instID=Au99.95#quoteDate=20160314#sZipBuff=6AATiOQDn7zgAU/w3AOb1NgBT/DUA5fs0AAH0MwDlATIAB9AxAOQHMAAD6C8A0vAuADeqLQDT6iw
+ANrArANTkKgAH0CkA1d4oAAH0JwDW2CYCSfAlAJbhJEH6sOQjANqdIlHQPkQhAAygoFH+tGgfAMX
+hngDfJR0CCXwcAgl8GwA/ehoA4w0ZAAbWGADiExcABdwWAOEZFQAB9BQA4B8TAAH0EgDfJREADLI
+QANfSDwAB9A4A2MwNAAH0DADZxgsAA+gKANrACQAE4ggA27oHAAAABgDeKwUA3yUEAM0UAwDfJQI
+A3yUBANxfAADQwA=#
+2018-05-16 18:06:10 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onSysStatChange#b_sys_stat=2#exch_date=20160224#m_sys_stat=1#sys_date=20160223#
+2018-05-16 18:34:44 E_PROINFO CProcessInterfaceYC::OnConnect:158 YC OnConnect socket (1960) 10.0.128.25:51199
+2018-05-16 18:34:44 E_PROINFO CProcessInterfaceYC::SendLogin:323 与服务器连接成功,发送认证报文,#again_flag=0#user_id=1080013632#user_key=853653936#user_type=2#
+2018-05-16 18:34:44 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnSpotInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132838#SequenceSeriesNo=2#instID=Au99.99#tradeState=5#
+2018-05-16 18:34:44 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnForwardInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132834#SequenceSeriesNo=2#instID=Ag99.9#tradeState=5#
+2018-05-16 18:34:44 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnDeferInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132840#SequenceSeriesNo=2#instID=mAu(T+D)#tradeState=5#
+2018-05-16 18:34:44 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnSpotInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132836#SequenceSeriesNo=2#instID=Au100g#tradeState=5#
+2018-05-16 18:34:44 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnDeferInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132835#SequenceSeriesNo=2#instID=Ag(T+D)#tradeState=5#
+2018-05-16 18:34:44 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnSpotInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132837#SequenceSeriesNo=2#instID=Au99.95#tradeState=5#
+2018-05-16 18:34:44 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvRtnDeferInstStateUpdate#BeginString=GTP1.0#ChainFlag=L#CheckFlag=0#ContentLength=37#DataType=TInstState#MsgType=B182#NodeID=6031#NodeType=6#ReceiverID=0000#RootID=0#RspCode=RSP000000#RspMsg=交易成功#SequenceNo=132839#SequenceSeriesNo=2#instID=Au(T+D)#tradeState=5#
+2018-05-16 18:34:44 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvDeferQuotation#instID=Au(T+D)#quoteDate=20160314#sZipBuff=6AbtcOQDn7zgBUOo3AOb1NgAJxDUA5fs0AEk+MwDlATIAU/wxAOQHMAAG1i8A0vAuAVm0LQDT6iw
+AAPorANTkKgAhNCkA1d4oACvyJwDW2CYCSfAlAJbhJEH6tMwjANqdIlHQPkQhAAygoFH+tGgfAMX
+hngDfJR0CCXwcAgl8GwBT/BoA4w0ZAF+0GADiExcAXroWAOEZFQA2sBQA4B8TAbtcEgDfJREAIi4
+QANfSDwA2sA4A2MwNAF66DADZxgsAIi4KANrACQAMsggA27oHAAAABgDeKwUA11UEAM0UAwDfJQI
+A3yUBANxfAADQwA=#
+2018-05-16 18:34:44 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvDeferQuotation#instID=Ag99.9#quoteDate=20160314#sZipBuff=6AO1OOQ4joTgAAu43DiSbNgAD6DUOJZU0AAXcMw4mjzIABtYxDieJMAALuC8ONLguADS8LQ4zviw
+AAu4rDjLEKgAMsikOMcooABCaJw4w0CYCSfAlAJbhJEH6stgjDjWyIlHQPkQhAAygoFH+tGgfDiI
+qHg5JOh0CCXwcAgl8GwNXeBoOKIMZAEFuGA4pfRcAAu4WDip3FQAF3BQOK3ETAEk+Eg4r7hEAF3A
+QDi/WDwAC7g4OLtwNAAH0DA4t4gsAAPoKDjasCQAhNAgONbIHAAAABg41sgUONbIEDivuAw4/dgI
+ONbIBDjWyAA41sg=#
+2018-05-16 18:34:44 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvSpotQuotation#instID=Au99.99#quoteDate=20160314#sZipBuff=6AAnEOQDn7zgAAfQ3AOb1NgAD6DUA5fs0AAjKMwDlATIACMoxAOQHMAAA+i8A0vAuAAfQLQDT6iw
+AKAorANTkKgAD6CkA1d4oAAH0JwDW2CYCSfAlAJbhJEH6r+ojANqdIlHQPkQhAAygoFH+tGgfAMX
+hngDfJR0CCXwcAgl8GwAIyhoA4w0ZAAbWGADiExcACMoWAOEZFQAG1hQA4B8TAAXcEgDfJREAA+g
+QANfSDwAoCg4A2MwNAATiDADZxgsAAu4KANrACQAfQAgA27oHAAAABgDeKwUA3yUEAM0UAwDfJQI
+A3yUBANxfAADQwA=#
+2018-05-16 18:34:44 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvDeferQuotation#instID=mAu(T+D)#quoteDate=20160314#sZipBuff=6AATiOQDn7zgCfqw3AOb1NgAH0DUA5fs0ACIuMwDlATIA2sAxAOQHMAAIyi8A0vAuAAbWLQDT6iw
+ACMorANTkKgBJPikA1d4oAD96JwDW2CYCSfAlAJbhJEH6tcYjANqdIlHQPkQhAAygoFH+tGgfAMX
+hngDfJR0CCXwcAgl8GwBJPhoA4w0ZAFMCGADiExcDTLoWAOEZFQAhNBQA4B8TAuBUEgDfJREAF3A
+QANfSDwBJPg4A2MwNAAD6DADZxgsAST4KANrACQAiLggA27oHAAAABgDeKwUA3yUEAM0UAwDfJQI
+A3yUBANxfAADQwA=#
+2018-05-16 18:34:44 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvSpotQuotation#instID=Au100g#quoteDate=20160314#sZipBuff=6AAfQOQDn7zgABtY3AOb1NgAG1jUA5fs0AAfQMwDlATIAAfQxAOQHMAAA+i8A0vAuAAPoLQDT6iw
+AAu4rANTkKgAF3CkA1d4oAALuJwDW2CYCSfAlAJbhJEH6rvAjANqdIlHQPkQhAAygoFH+tGgfAMX
+hngDfJR0CCXwcAgl8GwAF3BoA4w0ZAAXcGADiExcABOIWAOEZFQAB9BQA4B8TAAPoEgDfJREAAfQ
+QANfSDwAF3A4A2MwNAAH0DADZxgsABOIKANrACQAB9AgA27oHAAAABgDeKwUA3yUEAM0UAwDfJQI
+A3yUBANxfAADQwA=#
+2018-05-16 18:34:44 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvDeferQuotation#instID=Ag(T+D)#quoteDate=20160314#sZipBuff=6AALuOQ4joTgABdw3DiSbNgAH0DUOJZU0AAfQMw4mjzIAB9AxDieJMAAA+i8ONLguAAbWLQ4zviw
+AAu4rDjLEKgAC7ikOMcooAALuJw4w0CYCSfAlAJbhJEH6tsAjDjWyIlHQPkQhAAygoFH+tGgfDiI
+qHg5JOh0CCXwcAgl8GwAIyhoOKIMZADDUGA4pfRcAEo4WDip3FQBX5BQOK3ETAAbWEg4r7hEAAfQ
+QDi/WDwAMsg4OLtwNAAD6DA4t4gsAA+gKDjasCQAIyggONbIHAAAABg41sgUONbIEDivuAw4/dgI
+ONbIBDjWyAA41sg=#
+2018-05-16 18:34:44 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onRecvSpotQuotation#instID=Au99.95#quoteDate=20160314#sZipBuff=6AATiOQDn7zgAU/w3AOb1NgBT/DUA5fs0AAH0MwDlATIAB9AxAOQHMAAD6C8A0vAuADeqLQDT6iw
+ANrArANTkKgAH0CkA1d4oAAH0JwDW2CYCSfAlAJbhJEH6sOQjANqdIlHQPkQhAAygoFH+tGgfAMX
+hngDfJR0CCXwcAgl8GwA/ehoA4w0ZAAbWGADiExcABdwWAOEZFQAB9BQA4B8TAAH0EgDfJREADLI
+QANfSDwAB9A4A2MwNAAH0DADZxgsAA+gKANrACQAE4ggA27oHAAAABgDeKwUA3yUEAM0UAwDfJQI
+A3yUBANxfAADQwA=#
+2018-05-16 18:34:44 E_PROINFO CProcessInterfaceYC::OnPacket:137 YC #ApiName=onSysStatChange#b_sys_stat=2#exch_date=20160224#m_sys_stat=1#sys_date=20160223#

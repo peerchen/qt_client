@@ -1,0 +1,23 @@
+﻿  XMemmap.cpp
+  XQueue.cpp
+Src\XQueue.cpp(580): warning C4477: 'sprintf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type 'size_t'
+  Src\XQueue.cpp(580): note: consider using '%zu' in the format string
+Src\XQueue.cpp(580): warning C4477: 'sprintf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+  Src\XQueue.cpp(580): note: consider using '%zu' in the format string
+Src\XQueue.cpp(605): warning C4477: 'sprintf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type 'size_t'
+  Src\XQueue.cpp(605): note: consider using '%zu' in the format string
+Src\XQueue.cpp(605): warning C4477: 'sprintf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+  Src\XQueue.cpp(605): note: consider using '%zu' in the format string
+Src\XQueue.cpp(658): warning C4477: 'sprintf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type 'size_t'
+  Src\XQueue.cpp(658): note: consider using '%zu' in the format string
+Src\XQueue.cpp(672): warning C4477: 'sprintf' : format string '%X' requires an argument of type 'unsigned int', but variadic argument 1 has type 'size_t'
+  Src\XQueue.cpp(672): note: consider using '%zX' in the format string
+Src\XQueue.cpp(704): warning C4477: 'sprintf' : format string '%u' requires an argument of type 'unsigned int', but variadic argument 1 has type 'size_t'
+  Src\XQueue.cpp(704): note: consider using '%zu' in the format string
+Src\XQueue.cpp(718): warning C4477: 'sprintf' : format string '%X' requires an argument of type 'unsigned int', but variadic argument 1 has type 'size_t'
+  Src\XQueue.cpp(718): note: consider using '%zX' in the format string
+     Creating library ..\..\..\BIN_CPLUS_64\XQueue.lib and object ..\..\..\BIN_CPLUS_64\XQueue.exp
+  Generating code
+  All 69 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  XQueue_20015.vcxproj -> E:\GCN\SVN_114_Server\qt_client\Framwork\XQueue\..\..\..\BIN_CPLUS_64\XQueue.dll

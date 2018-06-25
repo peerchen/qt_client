@@ -1,0 +1,15 @@
+﻿  NetMgrModule.cpp
+  Packet1911.cpp
+  Packet1912.cpp
+  Packet1913.cpp
+  Packet1914.cpp
+  Packet1915.cpp
+  Packet1916.cpp
+  Packet1921.cpp
+  Packet1922.cpp
+  Packet1923.cpp
+  Packet1924.cpp
+  Packet1925.cpp
+  Generating Code...
+     Creating library ..\..\..\BIN_CPLUS_64\NetMgrAgentD.lib and object ..\..\..\BIN_CPLUS_64\NetMgrAgentD.exp
+  NetMgrAgent_2008.vcxproj -> E:\GCN\SVN_114_Server\qt_client\Framwork\NetMgrAgent\..\..\..\BIN_CPLUS_64\NetMgrAgentD.dll
