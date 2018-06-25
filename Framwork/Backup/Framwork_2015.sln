@@ -1,5 +1,4 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommFramwork", "CommFramwork\CommFramwork_2008.vcproj", "{209B9D6B-5DD0-459A-9EF8-0E3BD4F5083B}"
 	ProjectSection(ProjectDependencies) = postProject
