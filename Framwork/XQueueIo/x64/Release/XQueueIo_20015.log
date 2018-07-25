@@ -1,2 +1,0 @@
-﻿  XQueueIo.cpp
-LINK : fatal error LNK1181: cannot open input file 'Utility.lib'

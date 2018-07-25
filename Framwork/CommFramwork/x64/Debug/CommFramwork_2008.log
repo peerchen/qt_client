@@ -1,9 +1,0 @@
-﻿  Connector.cpp
-  Listener.cpp
-  ProtocolComm.cpp
-  ProtocolProcess.cpp
-  Selector.cpp
-  WorkThreadNm.cpp
-  Generating Code...
-     Creating library ..\..\..\BIN_CPLUS_64\CommFramworkD.lib and object ..\..\..\BIN_CPLUS_64\CommFramworkD.exp
-  CommFramwork_2008.vcxproj -> E:\GCN\SVN_114_Server\qt_client\Framwork\CommFramwork\..\..\..\BIN_CPLUS_64\CommFramworkD.dll
