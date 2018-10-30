@@ -3,7 +3,6 @@
 
 #include <QEvent>
 #include <QHBoxLayout>
-//#include <QToolButton>
 #include <QPushButton>
 #include <QPainter>
 #include <QStyleOption>
@@ -48,7 +47,7 @@ WindowTitle::WindowTitle(QWidget *window)
 
 	setLayout(m_layout);
 
-        setStyleSheet("QWidget { background-color: #181a1d;}");//不显示下拉图片
+    setStyleSheet("QWidget { background-color: #181a1d;}");//不显示下拉图片
 
 	m_window->installEventFilter(this);
 
@@ -254,8 +253,6 @@ void WindowTitle::initButton()
 
 }
 
-
-
 //响应双击标头,主界面最大化或者恢复一般大小
 void WindowTitle::mouseDoubleClickEvent(QMouseEvent *e)
 {
@@ -272,9 +269,7 @@ void WindowTitle::mouseDoubleClickEvent(QMouseEvent *e)
 
 void WindowTitle::initMenu()
 {
-	//系统
-	//加入菜单
-
+	//构建
 	setContextMenuPolicy(Qt::ActionsContextMenu);
 
 	//系统
@@ -299,7 +294,6 @@ void WindowTitle::initMenu()
 
 	m_layout->addItem(Spacer);
 
-	//m_buttonSys->setMenu(pMenu);
 	menuBar = new QMenuBar(this);
 	menuBar->setStyleSheet("QMenuBar { font:12pt bold;font-family:'Microsoft YaHei';border: none; border-left: none; padding-top: 8px; background-color: #181a1d;}"
 	"QMenuBar::item:enabled:selected {	background: rgba(255, 255, 255, 40);}"
@@ -437,7 +431,7 @@ void WindowTitle::initMenu()
 	m_action5One = new QAction(this);
 	m_action5Two = new QAction(this);
 	m_action5One->setText(tr("使用说明"));	
-	m_action5Two->setText(tr("关于金通联"));
+	m_action5Two->setText(tr("关于金联通"));
 
 	QMenu *pMenu5 = new QMenu("帮助");
 	pMenu5->addAction(m_action5One);
@@ -468,53 +462,57 @@ void WindowTitle::initMenu()
 #endif
 
 
-	connect(m_actionOne, &QAction::triggered, this, &WindowTitle::actionOneSlot);
-	connect(m_actionTwo, &QAction::triggered, this, &WindowTitle::actionTwoSlot);
-	connect(m_actionThree, &QAction::triggered, this, &WindowTitle::actionThreeSlot);
-	connect(m_actionFour, &QAction::triggered, this, &WindowTitle::actionFourSlot);
+	connect(m_buttonClose, &QPushButton::clicked, [this]() {
+			emit buttonClick(ButtonClose);
+	});
 
-	connect(m_action2One, &QAction::triggered, this, &WindowTitle::action2OneSlot);
-	connect(m_action2Two, &QAction::triggered, this, &WindowTitle::action2TwoSlot);
-	connect(m_action2Three, &QAction::triggered, this, &WindowTitle::action2ThreeSlot);
-	connect(m_action2Four, &QAction::triggered, this, &WindowTitle::action2FourSlot);
-	connect(m_action2Five, &QAction::triggered, this, &WindowTitle::action2FiveSlot);
+	connect(m_actionOne, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handleOneSlot();	});
+	connect(m_actionTwo, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handleTwoSlot();	});
+	connect(m_actionThree, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handleThreeSlot();	});
+	connect(m_actionFour, &QAction::triggered, [this]() {		emit buttonClick(ButtonClose);  });
 
-	connect(m_action3One, &QAction::triggered, this, &WindowTitle::action3OneSlot);
-	connect(m_action3Two, &QAction::triggered, this, &WindowTitle::action3TwoSlot);
-	connect(m_action3Three, &QAction::triggered, this, &WindowTitle::action3ThreeSlot);
-	connect(m_action3Four, &QAction::triggered, this, &WindowTitle::action3FourSlot);
-	connect(m_action3Five, &QAction::triggered, this, &WindowTitle::action3FiveSlot);
-	//2个二级子菜单
-	connect(m_action3Six_sub1, &QAction::triggered, this, &WindowTitle::action3Sixsub1Slot);
-	connect(m_action3Six_sub2, &QAction::triggered, this, &WindowTitle::action3Sixsub2Slot);
-	connect(m_action3Six_sub3, &QAction::triggered, this, &WindowTitle::action3Sixsub3Slot);
-	connect(m_action3Six_sub4, &QAction::triggered, this, &WindowTitle::action3Sixsub4Slot);
+	connect(m_action2One, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle2OneSlot();	});
+	connect(m_action2Two, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle2TwoSlot();	});
+	connect(m_action2Three, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle2ThreeSlot();	});
+	connect(m_action2Four, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle2FourSlot(); });
+	connect(m_action2Five, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle2FiveSlot(); });
 
-	connect(m_action3Seven_sub1, &QAction::triggered, this, &WindowTitle::action3Sevensub1Slot);
-	connect(m_action3Seven_sub2, &QAction::triggered, this, &WindowTitle::action3Sevensub2Slot);
-	connect(m_action3Seven_sub3, &QAction::triggered, this, &WindowTitle::action3Sevensub3Slot);
-	connect(m_action3Seven_sub4, &QAction::triggered, this, &WindowTitle::action3Sevensub4Slot);
-	connect(m_action3Seven_sub5, &QAction::triggered, this, &WindowTitle::action3Sevensub5Slot);
-	connect(m_action3Seven_sub6, &QAction::triggered, this, &WindowTitle::action3Sevensub6Slot);
-	connect(m_action3Seven_sub7, &QAction::triggered, this, &WindowTitle::action3Sevensub7Slot);
+	connect(m_action3One, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle3OneSlot();	});
+	connect(m_action3Two, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle3TwoSlot();	});
+	connect(m_action3Three, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle3ThreeSlot();	});
+	connect(m_action3Four, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle3FourSlot(); });
+	connect(m_action3Five, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle3FiveSlot(); });
 
+	connect(m_action3Six_sub1, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle3Sixsub1Slot();	});
+	connect(m_action3Six_sub2, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle3Sixsub2Slot();	});
+	connect(m_action3Six_sub3, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle3Sixsub3Slot();	});
+	connect(m_action3Six_sub4, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle3Sixsub4Slot();	});
 
+	connect(m_action3Seven_sub1, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle3Sevensub1Slot();	});
+	connect(m_action3Seven_sub2, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle3Sevensub2Slot();	});
+	connect(m_action3Seven_sub3, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle3Sevensub3Slot();	});
+	connect(m_action3Seven_sub4, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle3Sevensub4Slot();	});
+	connect(m_action3Seven_sub5, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle3Sevensub5Slot();	});
+	connect(m_action3Seven_sub6, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle3Sevensub6Slot();	});
+	connect(m_action3Seven_sub7, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle3Sevensub7Slot();	});
 
-	connect(m_action4One, &QAction::triggered, this, &WindowTitle::action4OneSlot);
-	connect(m_action4Two, &QAction::triggered, this, &WindowTitle::action4TwoSlot);
+	connect(m_action4One, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle4OneSlot();	});
+	connect(m_action4Two, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle4TwoSlot();	});
 	connect(m_action4Three, &QAction::triggered, this, &WindowTitle::action4ThreeSlot);
 	connect(m_action4Four, &QAction::triggered, (mainWindow *)m_window, &mainWindow::ResetLayoutSlot);
 	connect(m_action4Four, &QAction::triggered, this, &WindowTitle::action4FourSlot);
 
-	connect(m_action5One, &QAction::triggered, this, &WindowTitle::action5OneSlot);
+	connect(m_action5One, &QAction::triggered, [this]() {		((mainWindow *)m_window)->handle3Sevensub1Slot();	});
+
 }
 
-
+//////////////////////////////////////////////start  设置///////////////////////////////////////////////////////////////////
+//设置
 void WindowTitle::checkedAction()
 {
-	//
+
 	if (m_action4Three->isChecked())
-	{	
+	{
 		m_action4Three->setText("显示资金信息");
 		m_action4Three->setChecked(false);
 	}
@@ -523,7 +521,7 @@ void WindowTitle::checkedAction()
 		m_action4Three->setText("隐藏资金信息");
 		m_action4Three->setChecked(true);
 	}
-	
+
 }
 
 void WindowTitle::action4FourSlot()
@@ -541,168 +539,7 @@ void WindowTitle::action4FourSlot()
 	}
 
 }
-//锁屏
-void WindowTitle::actionOneSlot()
-{
-	((mainWindow *)m_window)->handleOneSlot();
-}
 
-//登录密码修改
-void WindowTitle::actionTwoSlot()
-{
-	((mainWindow *)m_window)->handleTwoSlot();
-}
-
-//资金密码修改
-void WindowTitle::actionThreeSlot()
-{
-	((mainWindow *)m_window)->handleThreeSlot();
-}
-
-//退出
-void WindowTitle::actionFourSlot()
-{
-	emit buttonClick(ButtonClose);
-}
-
-
-
-
-//操作
-//延期平仓试算
-void WindowTitle::action2OneSlot()
-{
-	((mainWindow *)m_window)->handle2OneSlot();
-}
-
-//显示交收行情
-void WindowTitle::action2TwoSlot()
-{
-	((mainWindow *)m_window)->handle2TwoSlot();
-}
-
-//显示交易状态
-void WindowTitle::action2ThreeSlot()
-{
-	((mainWindow *)m_window)->handle2ThreeSlot();
-}
-
-//出入金
-void WindowTitle::action2FourSlot()
-{
-	((mainWindow *)m_window)->handle2FourSlot();
-
-}
-
-//提货
-void WindowTitle::action2FiveSlot()
-{
-	((mainWindow *)m_window)->handle2FiveSlot();
-}
-
-
-
-//查询///////////////////////////////////////////////////////////////////////////////////////////
-void WindowTitle::action3OneSlot()
-{
-	((mainWindow *)m_window)->handle3OneSlot();
-}
-
-//日结单查询
-void WindowTitle::action3TwoSlot()
-{
-	((mainWindow *)m_window)->handle3TwoSlot();
-}
-
-//月结单查询
-void WindowTitle::action3ThreeSlot()
-{
-	((mainWindow *)m_window)->handle3ThreeSlot();
-}
-
-//强平单查询 
-void WindowTitle::action3FourSlot()
-{
-	((mainWindow *)m_window)->handle3FourSlot();
-}
-
-//会员公告查询
-void WindowTitle::action3FiveSlot()
-{
-	((mainWindow *)m_window)->handle3FiveSlot();
-}
-
-//委托报单查询
-void WindowTitle::action3Sixsub1Slot()
-{
-	((mainWindow *)m_window)->handle3Sixsub1Slot();
-}
-
-//成交查询
-void WindowTitle::action3Sixsub2Slot()
-{
-	((mainWindow *)m_window)->handle3Sixsub2Slot();
-}
-
-//延期持仓查询
-void WindowTitle::action3Sixsub3Slot()
-{
-	((mainWindow *)m_window)->handle3Sixsub3Slot();
-}
-
-//出入金明细
-void WindowTitle::action3Sixsub4Slot()
-{
-	((mainWindow *)m_window)->handle3Sixsub4Slot();
-}
-
-
-/////////////////历史查询///////////////////////////
-//委托报单查询
-void WindowTitle::action3Sevensub1Slot()
-{
-	((mainWindow *)m_window)->handle3Sevensub1Slot();
-}
-//成交查询
-void WindowTitle::action3Sevensub2Slot()
-{
-	((mainWindow *)m_window)->handle3Sevensub2Slot();
-}
-
-//延期持仓查询
-void WindowTitle::action3Sevensub3Slot()
-{
-	((mainWindow *)m_window)->handle3Sevensub3Slot();
-}
-//库存查询
-void WindowTitle::action3Sevensub4Slot()
-{
-	((mainWindow *)m_window)->handle3Sevensub4Slot();
-}
-
-//资金变动流水查询
-void WindowTitle::action3Sevensub5Slot()
-{
-		((mainWindow *)m_window)->handle3Sevensub5Slot();
-}
-
-//资金查询
-void WindowTitle::action3Sevensub6Slot()
-{
-	((mainWindow *)m_window)->handle3Sevensub6Slot();
-}
-
-//费用明细
-void WindowTitle::action3Sevensub7Slot()
-{
-	((mainWindow *)m_window)->handle3Sevensub7Slot();
-}
-
-
-////////////////////////////////////////////end  查询//////////////////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////start  设置///////////////////////////////////////////////////////////////////
-//设置
 //清除缓存设置
 void WindowTitle::action4OneSlot()
 {

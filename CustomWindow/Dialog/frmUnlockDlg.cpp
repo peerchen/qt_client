@@ -18,10 +18,6 @@ frmUnlockDlg::frmUnlockDlg(QWidget *parent)
 	connect(ui.pushButton_ok, SIGNAL(clicked()), this, SLOT(pushButton_ok()));
 	connect(ui.pushButton_cancel, SIGNAL(clicked()), this, SLOT(pushButton_cancel()));
 	ui.lineEdit->setEchoMode(QLineEdit::Password);
-
-	/*int width = QApplication::desktop()->width();
-	int height = QApplication::desktop()->height();
-	this->move((width - this->width()) / 2, (height - this->height()) / 2);*/
 }
 
 frmUnlockDlg::~frmUnlockDlg()

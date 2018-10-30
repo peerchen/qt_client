@@ -7,9 +7,6 @@
 #include "Global.h"
 
 
-
-
-
 //直接设置1字节对齐会报错，在需要对其的地方，协商次句
 //#pragma pack(push, 1)  
 
@@ -27,24 +24,30 @@ LONG __stdcall MyUnhandledExceptionFilter(PEXCEPTION_POINTERS pExceptionInfo)
 	     return EXCEPTION_EXECUTE_HANDLER;
  }
 
+void noMoreMemory() {
+	cerr << "out of memory" << endl;
+	abort(); //如果不终止程序，将一直重复调用该函数
+}
+
 
 int main(int argc, char *argv[])
 {
-
 	SetUnhandledExceptionFilter(MyUnhandledExceptionFilter);
+	set_new_handler(noMoreMemory);
 
 	QApplication a(argc, argv);
 
 	//创建共享内存,判断是否已经运行程序
-	QSharedMemory mem("gessClient");
+	/*QSharedMemory mem("gessClient");
 	if (!mem.create(1))
 	{
 		QMessageBox::warning(nullptr, "提示", "程序已经在运行, 软件将自动关闭!");
 		return 1;
-	}
-
+	}*/
 
 	qApp->setFont(QFont(App::AppFontName, App::AppFontSize));
+
+	//QTextCodec::setCodecForLocale(QTextCodec::codecForLocale());
 
 	//QTextCodec::setCodecForLocale(QTextCodec::codecForName(QTextCodec::codecForLocale()->name()));
 	a.setWindowIcon(QIcon(":/res/App.png"));    //设置应用程序图标
@@ -93,7 +96,9 @@ int main(int argc, char *argv[])
 		QTimer::singleShot(5000, box, SLOT(accept()));
 		box->exec();
 
+		//二段是构造
 		mainWindow   w;
+		w.Init();
 
 		pInit->installEventFilter(&w);
 

@@ -17,8 +17,6 @@ CommonStandardItemModel::~CommonStandardItemModel()
 }
 
 
-
-
 // 加载list
 void CommonStandardItemModel::LoadList(const QString &csPath)
 {
@@ -75,22 +73,27 @@ void CommonStandardItemModel::LoadList(const QString &csPath)
 
 
 
-
-
-
 QVariant CommonStandardItemModel::data(const QModelIndex & index, int role) const
 {
+	int column = index.column();
 	if (Qt::TextAlignmentRole == role)
 	{
 		return (int)(Qt::AlignCenter);
 	}
 
-	//设置显示的颜色
-	if (Qt::TextColorRole == role)
-	{
+	////设置显示的颜色
+	//if (Qt::TextColorRole == role)
+	//{
+	//	switch (column)
+	//	{
+	//	case 0:
+	//		return  QColor("#dab96b");//黄金色
+	//		break;
+	//	}
 
-		return QColor("#b4b4b4");
 
-	}
+	//	return QColor("#b4b4b4");//灰色
+
+	//}
 	return QStandardItemModel::data(index, role);
 }

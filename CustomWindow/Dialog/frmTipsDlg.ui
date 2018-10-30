@@ -165,7 +165,7 @@ QPushButton:enabled:pressed{
    <sender>pushButton_3</sender>
    <signal>clicked()</signal>
    <receiver>frmTipsDlg</receiver>
-   <slot>accept()</slot>
+   <slot>OnBnClickedOk()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>512</x>

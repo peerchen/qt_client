@@ -31,7 +31,7 @@ frmMonthSettlementDlg::frmMonthSettlementDlg(QWidget *parent)
 		OnBnClickedButtonQuery();
 
 
-	connect(ui.pushButton, &QPushButton::clicked, this, &frmMonthSettlementDlg::OnBnClickedButtonQuery);
+	//connect(ui.pushButton, &QPushButton::clicked, this, &frmMonthSettlementDlg::OnBnClickedButtonQuery);
 
 	setFixedSize(561, 300);
 	ui.widget->setGeometry(0, 0, 561, 200);

@@ -99,7 +99,7 @@ void CHJQueryBase::SetComboxCurPage( EPageBtnType ePagebtnType )
 	int cursel;
 	if(ePagebtnType == E_FIRST) // 首页
 	{
-		m_cmbPage->setCurrentText(0);
+		m_cmbPage->setCurrentIndex(0);
 		return;
 	}
 	else if(ePagebtnType == E_LAST)  // 最后一页
@@ -130,10 +130,8 @@ void CHJQueryBase::ResetComboxPage( const int &iTotal, int &iCurPage )
     for (; atemp >= 0; atemp--)
 	{
 		m_cmbPage->removeItem(atemp);
-		// cb->setItemText (atemp, "ddd");
 	 }
 
-	//m_cmbPage->removeItem   clear();// ResetContent();
 	QString cstr;
 	for(int i = 0 ; i < iTotal; i++)
 	{
@@ -143,6 +141,31 @@ void CHJQueryBase::ResetComboxPage( const int &iTotal, int &iCurPage )
 	}
 	
 	m_cmbPage->setCurrentIndex(--iCurPage);
+
+}
+
+void CHJQueryBase::ResetComboxPageContent(const int &iTotal, int &iCurPage)
+{
+	int atemp = m_cmbPage->count();
+
+	for (; atemp >= 0; atemp--)
+	{
+		m_cmbPage->removeItem(atemp);
+	}
+
+	QStringList texts;
+	QString cstr;
+	for (int i = 0; i < iTotal; i++)
+	{
+		cstr = QString(("第%1页")).arg(i + 1);
+		//m_cmbPage->insertItem(i, cstr);
+		texts.append(cstr);
+	}
+
+	m_cmbPage->addItems(texts);
+
+	cstr = QString(("第%1页")).arg(iCurPage);
+	m_cmbPage->setCurrentText(cstr);
 
 }
 
@@ -249,8 +272,9 @@ void CHJQueryBase::OnButtonQuery()
 	int iPageNum = GetPageNum();
 
 	// 向服务器提交查询请求
-    stRsp6002.page_count = 1;
-    stRsp6002.curr_page  = 1;
+    stRsp6002.page_count  = 1;
+    stRsp6002.curr_page   = iCurPage;
+	stRsp6002.paginal_num = iPageNum;
 
 	if (Query(GetQueryID(), vecPara, iPageNum, iCurPage, stReq6002, stRsp6002))
 	{
@@ -259,6 +283,9 @@ void CHJQueryBase::OnButtonQuery()
 
 	// 重新加载页码下拉菜单和当前选中页码
 	//ResetComboxPage(stRsp6002.page_count, stRsp6002.curr_page);
+	m_cmbPage->blockSignals(true);
+	ResetComboxPageContent(stRsp6002.page_count, stRsp6002.curr_page);
+	m_cmbPage->blockSignals(false);
 }
 
 void CHJQueryBase::OnButtonQuery( QDateTime &dtBegin, QDateTime &dtEnd )
@@ -508,7 +535,7 @@ void CHJQueryBase::ShowQueryResult( const Req6002 &stReq6002, const Rsp6002 &stR
 		}
 	}
 
-	QueryReserver(stReq6002, stRsp6002);
+	//QueryReserver(stReq6002, stRsp6002);
 }
 
 bool CHJQueryBase::IsFloatTitle( const string &strID, const string &sQueryID /*= ""*/ )
@@ -931,4 +958,8 @@ void CHJQueryBase::GetUserAlign( vector<int> & vecAlign )
 
 void CHJQueryBase::QueryReserver( const Req6002 &stReq6002, const Rsp6002 &stRsp6002 )
 {
+	int  curPage = stRsp6002.curr_page;
+
+	ResetComboxPage(stRsp6002.page_count , curPage);
+
 }

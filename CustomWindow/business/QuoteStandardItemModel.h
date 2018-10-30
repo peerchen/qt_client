@@ -29,19 +29,29 @@ class QuoteStandardItemModel : public QStandardItemModel
 public:
 
     explicit QuoteStandardItemModel(QObject *parent = NULL);
+
+Q_SIGNALS:
+	void recover(int row ,int column);
+
+public Q_SLOTS:
+	bool recoverSlot(int row, int column);
 public:
+
+	void recoverAllBackground();
+
     QVariant data(const QModelIndex & index,  int role=Qt::DisplayRole) const;
     QVariant headerData(int section,
 		                Qt::Orientation orientation,
                         int role=Qt::DisplayRole) const;
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole);
-	bool setItem2(const int &row, const int  &column, const QVariant& value);//自定义数据
+	bool InitItem(const int &row, const int  &column, const QVariant& value);//自定义数据
 
 	void ClearAllData();
 	void setVerticalHeaderLabels(const QStringList &labels);
 
 	void SetMarketData(std::vector<GcnTableRow> vecData, int nStartSel);
     //void SetMarketDataTextColor(std::vector<RowColor> vecColor);
+	bool updateItem(const int &row, const int  &column, const QVariant& value);
     void setUpDownColor(const QColor &up,const QColor &down,const QColor &none,const QColor &normal)
     {
         m_upColor = up;
@@ -50,9 +60,10 @@ public:
         m_normalColor = normal;
     }
 
-private:
 	//自己存储数据
 	std::vector<GcnTableRow> m_vecData;
+private:
+	
 	int    m_nStartSel;
     const char *m_cDecimal;
     std::string m_strDecimal;

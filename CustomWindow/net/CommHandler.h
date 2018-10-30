@@ -82,6 +82,7 @@ public:
     int OpenInterfaceYC();
 	// 支持多个服务器
 	int OpenInterfaceYCEx();
+	int CloseInterfaceYCEx();
 
 	CConnectPointSync* FindRoute(QString& sCmdID);
 

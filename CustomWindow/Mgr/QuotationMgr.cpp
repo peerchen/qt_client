@@ -25,7 +25,7 @@ bool CQuotationMgr::Initialize(map<string, QUOTATION> &mapQuotation )
 
 int CQuotationMgr::GetFormatPrice( QString &csPrice, const QString &sInsID, EPriceType eType )
 {
-	map<string, QUOTATION>::iterator it = m_mapQuotation->find( sInsID.toStdString() );
+	auto it = m_mapQuotation->find( sInsID.toStdString() );
 	if( it != m_mapQuotation->end() )
 	{
 		uint uiPrice = GetPrice(it->second, eType);

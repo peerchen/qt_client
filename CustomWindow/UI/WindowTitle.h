@@ -10,8 +10,6 @@
 
 class QHBoxLayout;
 class QPushButton;
-//class QToolButton;
-
 
 class WindowTitle : public StyleSheetWidget 
 {
@@ -39,46 +37,44 @@ signals:
 	void buttonClick(WindowTitle::ButtonStatus status);
 
 protected slots:
-	void actionOneSlot();
-	void actionTwoSlot();
-	void actionThreeSlot();
-	void actionFourSlot();
+	//void actionOneSlot();
+	//void actionTwoSlot();
+	//void actionThreeSlot();
+	//void actionFourSlot();
 
-	void action2OneSlot();
-	void action2TwoSlot();
-	void action2ThreeSlot();
-	void action2FourSlot();
-	void action2FiveSlot();
+	//void action2OneSlot();
+	//void action2TwoSlot();
+	//void action2ThreeSlot();
+	//void action2FourSlot();
+	//void action2FiveSlot();
 
-	void action3OneSlot();
-	void action3TwoSlot();
-	void action3ThreeSlot();
-	void action3FourSlot();
-	void action3FiveSlot();
+	//void action3OneSlot();
+	//void action3TwoSlot();
+	//void action3ThreeSlot();
+	//void action3FourSlot();
+	//void action3FiveSlot();
 
 	//二级菜单响应
-	void action3Sixsub1Slot();
-	void action3Sixsub2Slot();
-	void action3Sixsub3Slot();
-	void action3Sixsub4Slot();
+	//void action3Sixsub1Slot();
+	//void action3Sixsub2Slot();
+	//void action3Sixsub3Slot();
+	//void action3Sixsub4Slot();
 
-	void action3Sevensub1Slot();
-	void action3Sevensub2Slot();
-	void action3Sevensub3Slot();
-	void action3Sevensub4Slot();
-	void action3Sevensub5Slot();
-	void action3Sevensub6Slot();
-	void action3Sevensub7Slot();
+	//void action3Sevensub1Slot();
+	//void action3Sevensub2Slot();
+	//void action3Sevensub3Slot();
+	//void action3Sevensub4Slot();
+	//void action3Sevensub5Slot();
+	//void action3Sevensub6Slot();
+	//void action3Sevensub7Slot();
 
-
+	void checkedAction();
+	void action4FourSlot();
 	void action4OneSlot();
 	void action4TwoSlot();
 	void action4ThreeSlot();
-	void action4FourSlot();
+
 	void action5OneSlot();
-
-
-	void checkedAction();
 private:
 	QWidget* m_window;
 

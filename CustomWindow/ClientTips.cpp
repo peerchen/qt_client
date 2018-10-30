@@ -29,7 +29,6 @@ int CTipsManager::Add( const TipsOrderInfo &TipsInfo )
 
 int CTipsManager::GetTips( TipsOrderInfo &stTips, int nPos )
 {
-	//QMutexGuard guard(m_csMutex);
 	QMutexLocker  guard(&m_csMutex);
 
 	int nSize = m_vecTips.size();

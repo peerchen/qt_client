@@ -63,8 +63,8 @@ public:
 private:
 	enum _enumFieldType
 	{
-		SHORT = 'n',
-		LONG = 'l',
+		SHORT  = 'n',
+		LONG   = 'l',
 		STRING = 's',
 		BINARY = 'b'
 	};

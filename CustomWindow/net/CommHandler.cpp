@@ -25,7 +25,7 @@ CCommHandler* CCommHandler::Instance()
        s_pCommHandler = new CCommHandler();
     }
 
-    return s_pCommHandler;
+	return s_pCommHandler;
 }
 
 
@@ -122,8 +122,6 @@ void CCommHandler::Finish()
 	{
 		m_pCpInterfaceYC->Stop();
 
-	
-		m_pCpInterfaceYC->Stop();
 		delete m_pCpInterfaceYC;
 		m_pCpInterfaceYC = nullptr;
 	}
@@ -172,10 +170,9 @@ int CCommHandler::Forward(CPacket &pkt,const unsigned long& ulKey)
 		//CRLog(E_ERROR,"ApiName:%s",sCmdID.c_str());
 
         // 广播报文
-        for (VPKTRECEIVER::iterator it = m_vPketReceiver.begin(); it < m_vPketReceiver.end(); 
-            it++)
+        for (auto v : m_vPketReceiver)
         {
-            (*it)->Receive(pkt);
+            v->Receive(pkt);//kenny 20180731
         }
 
 		return 0;
@@ -506,11 +503,12 @@ int CCommHandler::OpenInterfaceYCEx()
 		pCfgYC->SetProperty("user_id", g_Global.m_strUserID.toStdString());
 		pCfgYC->SetProperty("user_type", "2");
 
-		if (NULL != m_pCpInterfaceYC)
+		if (nullptr != m_pCpInterfaceYC)
 		{
+			m_pCpInterfaceYC->Stop();//kenny  20180824  促发关闭连接的定时器
 			m_pCpInterfaceYC->Finish();
 			delete m_pCpInterfaceYC;
-			m_pCpInterfaceYC = NULL;
+			m_pCpInterfaceYC = nullptr;
 		}
 
 		CRLog(E_NOTICE, "初始化连接点YC");
@@ -528,6 +526,19 @@ int CCommHandler::OpenInterfaceYCEx()
 	return -1;
 }
 
+int CCommHandler::CloseInterfaceYCEx()
+{
+
+		if (0 != m_pCpInterfaceYC)
+		{
+			m_pCpInterfaceYC->Stop();
+
+			delete m_pCpInterfaceYC;
+			m_pCpInterfaceYC = nullptr;
+		}
+
+		return  1;
+}
 // 测试代码
 //int CCommHandler::OpenInterfaceYCEx()
 //{
@@ -609,7 +620,7 @@ int CCommHandler::OpenInterfaceYCEx()
 
 void CCommHandler::Subscribe(CPacketReceiver *pPacketReceiver)
 {
-    VPKTRECEIVER::iterator it = find(m_vPketReceiver.begin(), m_vPketReceiver.end(), pPacketReceiver);
+    auto it = find(m_vPketReceiver.begin(), m_vPketReceiver.end(), pPacketReceiver);
     if (it == m_vPketReceiver.end())
     {
         m_vPketReceiver.push_back(pPacketReceiver);
@@ -618,7 +629,7 @@ void CCommHandler::Subscribe(CPacketReceiver *pPacketReceiver)
 
 void CCommHandler::Unsubscribe(CPacketReceiver *pPacketReceiver)
 {
-    VPKTRECEIVER::iterator it = find(m_vPketReceiver.begin(), m_vPketReceiver.end(), pPacketReceiver);
+    auto it = find(m_vPketReceiver.begin(), m_vPketReceiver.end(), pPacketReceiver);
     if (it != m_vPketReceiver.end())
     {
         m_vPketReceiver.erase(it);

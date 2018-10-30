@@ -119,8 +119,8 @@ void frmStopOutDialog::OnBnClickedButtonQuery()
 		req.acct_no = CHJGlobalFun::qstr2str(g_Global.m_strUserID);
 		req.instid = CHJGlobalFun::qstr2str(GetProdCode());
 		req.gene_type = "";
-		req.begin_date = CHJGlobalFun::qstr2str(ui.dateEdit_st->text());
-		req.end_date = CHJGlobalFun::qstr2str(ui.dateEdit_ed->text());
+		req.begin_date = CHJGlobalFun::qstr2str(ui.dateEdit_st->date().toString("yyyyMMdd"));
+		req.end_date = CHJGlobalFun::qstr2str(ui.dateEdit_ed->date().toString("yyyyMMdd"));
 
 		Rsp3069 rsp; //应答报文体
 		g_HeaderReq.SetTermType("12"); //强平单特殊要求，要恢复以保证其他查询
@@ -128,7 +128,7 @@ void frmStopOutDialog::OnBnClickedButtonQuery()
 		{
 			g_HeaderReq.SetTermType("03");//恢复
 										  //AfxMessageBox(CONSTANT_CONNECT_SERVER_FAIL_TIPS);
-			QMessageBox::information(nullptr, ("系统提示"), rsp.rsp_msg.c_str());
+			QMessageBox::information(nullptr, u8"系统提示", rsp.rsp_msg.c_str());
 			return;
 		}
 
@@ -158,7 +158,7 @@ void frmStopOutDialog::OnBnClickedButtonQuery()
 						if (j == 1)
 						{
 							// 强平类型
-							value == value;
+							value = value.contains("b")?u8"买":u8"卖";
 						}
 						else if (j == 2 || j == 6 || j == 14 || j == 12 || j == 11)
 						{

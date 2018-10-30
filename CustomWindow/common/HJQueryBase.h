@@ -21,8 +21,10 @@ typedef enum
 
 
 
-class CHJQueryBase
+class CHJQueryBase /*: public  QObject*/
 {
+	//Q_OBJECT
+
 public:
 	CHJQueryBase(void);
 public:
@@ -53,6 +55,8 @@ protected:
 
 	// 向服务器查询后重新加载页码下拉菜单和当前选中页码
 	void ResetComboxPage(const int &iTotal, int &iCurPage);
+
+	void ResetComboxPageContent(const int &iTotal, int &iCurPage);
 
 	void OnButtonFirst();
 	void OnButtonPrev();

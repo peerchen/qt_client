@@ -204,8 +204,8 @@ void frmLoginDialog::checkLogic()
 		{
 			//timer->stop();
 
-			mNote = "用户登录成功";
-			emit notify(mNote);
+			//mNote = "用户登录成功";
+			//emit notify(mNote);
 			m_bLoginState = true;
 			accept();
 			return;

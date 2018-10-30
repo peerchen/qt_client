@@ -161,8 +161,16 @@ int CProcessInterfaceYC::OnConnect()
 
 	CreateTimer(m_GessPktInfo.ulIdleInterval);
 
-	int wparam = 1;
-	g_TraderCpMgr.m_mapBdr[E_HQ_STATE].Broadcast(WM_HQ_STATE_CHANGE, &wparam, 0);
+	std::unique_ptr<int>p = std::make_unique<int>();
+	*p = 1;
+	g_TraderCpMgr.m_mapBdr[E_HQ_STATE].Broadcast(WM_HQ_STATE_CHANGE, p.get(), 0);
+
+
+	//QParamEvent * msg = new QParamEvent(WM_HQ_STATE_CHANGE);
+	//msg->setInt(*p.get());
+
+	//QApplication::postEvent(m_hMain, msg);
+
 
 	return 0;
 }
@@ -220,8 +228,9 @@ void CProcessInterfaceYC::OnClose()
 	DestroyTimer();
 
 	// 行情断开连接
-	int wparam = 2;
-	g_TraderCpMgr.m_mapBdr[E_HQ_STATE].Broadcast(WM_HQ_STATE_CHANGE, &wparam, 0);
+	std::unique_ptr<int>p = std::make_unique<int>();
+	*p = 2;
+	g_TraderCpMgr.m_mapBdr[E_HQ_STATE].Broadcast(WM_HQ_STATE_CHANGE, p.get(), 0);
 	return;
 }
 

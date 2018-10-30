@@ -3,6 +3,7 @@
 #include "TraderCpMgr.h"
 #include "Global.h"
 #include "app.h"
+#include "ModifySetting.h"
 
 #pragma execution_character_set("utf-8")
 
@@ -116,6 +117,22 @@ void frmConfirmDlg::SetConfirmType(ConfirmType eType)
 
 void frmConfirmDlg::slotOk()
 {
+	// 修改是否提醒
+	if (ui.checkBox_tip->isChecked())
+	{
+		if (m_eType == E_OrderCancel)
+		{
+			CModifySetting::ModifyCancelConfirm(false);
+		}
+		else if (m_eType == E_Order)
+		{
+			CModifySetting::ModifyTradeConfirm(false);
+		}
+		else if (m_eType == E_OppCov)
+		{
+			CModifySetting::ModifyOppCovConfirm(false);
+		}
+	}
 	accept();
 }
 void frmConfirmDlg::slotCancel()

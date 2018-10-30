@@ -36,6 +36,12 @@ mainWindow::mainWindow(QWidget *parent)
 {
 	ui.setupUi(this);
 	bLoadAllData = false;
+	
+	
+}
+
+void mainWindow::Init()
+{
 	//1.初始化相关参数
 	initParam();
 
@@ -84,8 +90,21 @@ mainWindow::mainWindow(QWidget *parent)
 
 	QString strCode = "Au(T+D)";
 	emit ui.securityComboBox->currentIndexChanged(strCode);
-}
 
+	m_nTimerID = this->startTimer(10000);//间隔5秒
+
+	m_nTimerPosiID  = this->startTimer(5000);//间隔5秒
+	//请求风险通知单
+	std::thread t(std::bind(&mainWindow::getRiskNotify, this));
+	t.detach();
+
+	//响应事件-修改价格，动态计算最大手数目
+	QObject::connect(ui.spinBox_order_price, static_cast<void(QDoubleSpinBox::*)(const QString &)>(&QDoubleSpinBox::valueChanged), [&](const QString & strText)
+	{
+		//ui.label_high_hand->setText(QString::number(hand));
+		CalculateMax();
+	});
+}
 mainWindow::~mainWindow()
 {
 	if (0 != m_pConfig)
@@ -156,10 +175,10 @@ void mainWindow::InitAccountUI()
 	ui.comboBox_account->setCurrentIndex(accIndex);
 
 	accountlayout->addWidget(ui.comboBox_account);
-	accountlayout->addSpacing(8);
+	accountlayout->addSpacing(15);
 	
 	accountlayout->addWidget(ui.pushButton_add); ui.pushButton_add->setFixedWidth(60);
-	accountlayout->addSpacing(15);
+	accountlayout->addSpacing(10);
 
 	accountlayout->addWidget(ui.label_account_name);
 	accountlayout->addSpacing(10);
@@ -343,11 +362,19 @@ void mainWindow::InitOrderUI()
 
 	//深度行情按钮位置
 	quoteButton = new QPushButton(TabOrderBoard);
-	quoteButton->setGeometry(400, 6, 75, 30);
+	quoteButton->setGeometry(400, 0, 75, 25);
 	quoteButton->setBackgroundRole(QPalette::Base);
 	quoteButton->setText("深度行情");
 
-	connect(quoteButton,&QPushButton::clicked,this, &mainWindow::slotDeepQuote);
+	connect(quoteButton, &QPushButton::clicked, [this]() {
+		//show非模态展示，open是模态，exec是ApplicationModal
+		deepQuoteDlg->show();
+		showDeepQuote = true;
+		ShowDeepQuoteUI();
+
+		quoteButton->setGeometry(230, 0, 75, 25);
+	});
+
 	connect(ui.pushButton_add, &QPushButton::clicked, this, &mainWindow::slotChangeAccount);
 	connect(ui.comboBox_account, &QComboBox::currentTextChanged, this, &mainWindow::slotLoginAccount);
 
@@ -365,7 +392,13 @@ void mainWindow::InitDeepQuoteUI()
 	deepQuoteDlg->setGeometry(300, 200, 200, 550);
 	deepQuoteDlg->setFixedSize(200, 550);
 
-	connect(deepQuoteDlg, SIGNAL(setHide()), this, SLOT(slotCloseDeepQuoteDlg()));
+	connect(deepQuoteDlg, &frmDeepQuoteDlg::setHide, [this]() {
+		deepQuoteDlg->hide();
+		showDeepQuote = false;
+		ShowNormalQuoteUI();
+
+		quoteButton->setGeometry(400, 0, 75, 25);
+	});
 }
 
 void mainWindow::createQuoteUI()
@@ -1111,8 +1144,10 @@ void mainWindow::initParam()
 	this->resize(1058, 900);
 
 	//分割器
-	m_pSplitterOrderAndOrderReturn = new QSplitter(Qt::Orientation::Horizontal);//水平  
+	m_pSplitterOrderAndOrderReturn   = new QSplitter(Qt::Orientation::Horizontal);//水平  
 	m_pSplitterLocalDBAndTransReturn = new QSplitter(Qt::Orientation::Horizontal);//水平  
+
+
 	m_pSplitterAllTithoutLabel = new QSplitter(Qt::Orientation::Vertical);//垂直  
 
 	 //1.添加标头
@@ -1273,320 +1308,336 @@ int mainWindow::OnUITask(void * wparam, void * lparam)
 void  mainWindow::customEvent(QEvent *e)
 {
 	//qDebug("mainWindow::customEvent");
+	try
+	{
+		//OnInstStateUpdate(nullptr);//test
 
-	QParamEvent *msg = static_cast<QParamEvent *>(e);
-	if (msg->type() == MSG_RECV_QUOTATION)//行情广播
-	{
-		SetQuotation((QUOTATION* )msg->wparam());
-	}
-	/*else if (msg->type() == WM_FORCE_LOGOUT)
-	{
-		TForceLogout *stLogout = (TForceLogout *)msg->wparam();
-		//QMessageBox::information(nullptr, "系统提示", CHJGlobalFun::str2qstr(stLogout->hint_msg));
-		QMessageBox::information(nullptr, "系统提示", "系统强制退出！");
-		//kenny 20180320 
-		//退出底层网络端口
-		//CCommHandler::Instance()->Finish();
-
-		//退出系统，自动清理管理层
-		this->close();
-	}*/
-	//界面表格展示更新
-	else if (msg->type() == WM_UPDATE_ORDER)//下单，表头重建
-	{
-		//下单界面  重新加载
-		QIniFilesManager mag;
-		vector<QString> vecUserNames;
-		ui.securityComboBox->clear();
-		mag.ReadUserChoose(g_Global.GetListIniPath("InsID"), "UserColumnIndexs", true, vecUserNames);
-		for (size_t i = 0; i < vecUserNames.size(); i++)
+		QParamEvent *msg = static_cast<QParamEvent *>(e);
+		if (msg->type() == MSG_RECV_QUOTATION)//行情广播
 		{
-			ui.securityComboBox->insertItem(i, vecUserNames.at(i));;
+			SetQuotation((QUOTATION*)msg->wparam());
+		}
+		/*else if (msg->type() == WM_FORCE_LOGOUT)
+		{
+			TForceLogout *stLogout = (TForceLogout *)msg->wparam();
+			//QMessageBox::information(nullptr, "系统提示", CHJGlobalFun::str2qstr(stLogout->hint_msg));
+			QMessageBox::information(nullptr, "系统提示", "系统强制退出！");
+			//kenny 20180320
+			//退出底层网络端口
+			//CCommHandler::Instance()->Finish();
+
+			//退出系统，自动清理管理层
+			this->close();
+		}*/
+		//界面表格展示更新
+		else if (msg->type() == WM_UPDATE_ORDER)//下单，表头重建
+		{
+			//下单界面  重新加载
+			QIniFilesManager mag;
+			vector<QString> vecUserNames;
+			ui.securityComboBox->clear();
+			mag.ReadUserChoose(g_Global.GetListIniPath("InsID"), "UserColumnIndexs", true, vecUserNames);
+			for (size_t i = 0; i < vecUserNames.size(); i++)
+			{
+				ui.securityComboBox->insertItem(i, vecUserNames.at(i));;
+			}
+
+			//ui.securityComboBox->setView(new QListView());
+			//行情报价界面 重新加载
+			ui.tableViewMarketPrice->InitColumn();
+			ui.tableViewMarketPrice->InitRowData();
+		}
+		else if (msg->type() == WM_UPDATE_QUOTATION_LIST)//行情展示列表，重建
+		{
+			ui.tableViewMarketPrice->InitColumn();
+			ui.tableViewMarketPrice->InitRowData();
+		}
+		else if (msg->type() == WM_UPDATE_ENTR_FLOW)//报单流水，表头重建
+		{
+			tableModel_order->clear();
+			((CommonStandardItemModel *)tableModel_order)->LoadList(g_Global.GetListIniPath("EntrFlow"));
+			RefreshOrder();
+		}
+		else if (msg->type() == WM_UPDATE_DEFER_POSI)//持仓，表头重建
+		{
+			tableModel_posi->clear();
+			((CommonStandardItemModel *)tableModel_posi)->LoadList(g_Global.GetListIniPath("DeferPosi"));
+			RefreshPosi();//加载持仓
+		}
+		else if (msg->type() == WM_UPDATE_STORE)//库存，表头重建
+		{
+			tableModel_store->clear();
+			((CommonStandardItemModel *)tableModel_store)->LoadList(g_Global.GetListIniPath("Store"));
+			RefreshStore();//加载库存
+		}
+		else if (msg->type() == WM_UPDATE_FUN)//资金，表头重建
+		{
+			tableModel_capital->clear();
+			((CommonStandardItemModel *)tableModel_capital)->LoadList(g_Global.GetListIniPath("Fund"));
+			RefreshCapital();
+		}
+		else if (msg->type() == WM_UPDATE_MATCH_FLOW)
+		{
+			tableModel_match->clear();
+			((CommonStandardItemModel *)tableModel_match)->LoadList(g_Global.GetListIniPath("MatchFlow"));
+			RefreshMatch();
+
+		}
+		else if (msg->type() == WM_SYS_STAT_CHANGE)
+		{
+			RefreshStatusLabelUI();
+		}
+		else if (msg->type() == WM_ON_SYS_INIT)//初始化，进行日切，清空报单成交流水
+		{
+			tableModel_match->removeRows(0, tableModel_match->rowCount());
+			tableModel_preorder->removeRows(0, tableModel_preorder->rowCount());
+			tableModel_order->removeRows(0, tableModel_order->rowCount());
+		}
+		else if (msg->type() == WM_ON_RISK_NOTIFY)//风险度
+		{
+			//已经通过定时器完成
+			//有异常，先屏蔽
+			//TRiskNotity *sys = (TRiskNotity *)msg->wparam();
+			//string str = sys->risk_idx1;
+			//string content = sys->notify_content;
+			//QMessageBox::information(nullptr, "系统提示", CHJGlobalFun::str2qstr(sys->risk_idx1));
+		}
+		else if (msg->type() == WM_HQ_STATE_CHANGE)
+		{
+			int  param = (int)msg->OrderId();
+			if (param == 2)
+				ui.label_server_status_val->setText("网络异常");
+			else
+				ui.label_server_status_val->setText("连接");
+
+		}
+		else if (msg->type() == WM_SelectTableRow)//选中行情的行
+		{
+			DeferInstState *state = (DeferInstState *)msg->wparam();
+			if (state->instID == "")
+				return;
+			//Set
+			if (ui.securityComboBox->currentText().compare(CHJGlobalFun::str2qstr(state->instID)) != 0)
+			{
+				ui.securityComboBox->setCurrentText(CHJGlobalFun::str2qstr(state->instID));
+				slotChangeQuote(CHJGlobalFun::str2qstr(state->instID));
+			}
+
+		}
+		else if (msg->type() == WM_PREORDER_CHANGE)//预埋单  界面更新
+		{
+
+			OnRecvPreOrderChange(msg->OrderId(), msg->getInt());
+
+		}
+		//////////////报单流水相关//////////////////////////////////////////////////////////////////
+		else if (msg->type() == MSG_RECV_DEFER_ORDER)//延期报单回报
+		{
+			// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
+			HandleDeferOrder(msg->wparam());
+		}
+		else if (msg->type() == WM_SHOW_TD_TO_TRADE)//kenny  20180329  报单同时发送来的消息，更新持仓界面
+		{
+			//采用自刷新解决及时响应
+			/*	QString &csProdCode  = *(QString*)msg->wparam();
+				bool    &csLong  = *(bool *)msg->lparam();
+
+				UpdatePosiInfo(csProdCode,csLong);*/
+
+		}
+		else if (msg->type() == MSG_RECV_MA_ORDER)//报单流水
+		{
+			HandleMAOrder(msg->wparam());
+		}
+		else if (msg->type() == MSG_RECV_FORWARD_ORDER)//
+		{
+			HandleForwardOrder(msg->wparam());
+		}
+		else if (msg->type() == MSG_RECV_DDA_ORDER)//报单流水
+		{
+			HandleDDAOrder(msg->wparam());
+
+		}
+		else if (msg->type() == MSG_RECV_SPOT_ORDER)//报单流水广播
+		{
+			HandleSpotOrder(msg->wparam());//只处理报单回报
+
+		}
+		else if (msg->type() == MSG_MA_ORDER_CANCEL)
+		{
+			// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
+			//HandleMAOrderCancel(msg->wparam());
+		}
+		else if (msg->type() == MSG_RECV_ORDER_CANCEL)
+		{
+			// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
+			//HandleSpotOrderCancel(msg->wparam());
+			//HandleOrderCancel(msg->wparam());
+
+			RefreshOrder();
+		}
+		else if (msg->type() == MSG_DEFER_ORDER_CANCEL)//延期撤单
+		{
+			// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
+			//HandleOrderCancel(msg->wparam());
+			RefreshOrder();
+		}
+		else if (msg->type() == MSG_DDA_ORDER_CANCEL)
+		{
+			// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
+			//HandleSpotOrder(msg->wparam());
+		}
+		/////////////////////成交//////////////////////////////////////////////////////////////////////
+		else if (msg->type() == MSG_RECV_RTN_DDA_MATCH)//成交流水
+		{
+			// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
+			tableModel_order->removeRows(0, tableModel_order->rowCount());
+			tableModel_match->removeRows(0, tableModel_match->rowCount());
+			RefreshOrder();
+			RefreshMatch();
+
+		}
+		else if (msg->type() == MSG_RECV_RTN_DEFER_MATCH)//成交流水
+		{
+			tableModel_order->removeRows(0, tableModel_order->rowCount());
+			tableModel_match->removeRows(0, tableModel_match->rowCount());
+			RefreshOrder();
+			RefreshMatch();
+		}
+		else if (msg->type() == MSG_RECV_RTN_SPOT_MATCH)//成交流水
+		{
+			tableModel_order->removeRows(0, tableModel_order->rowCount());
+			tableModel_match->removeRows(0, tableModel_match->rowCount());
+			RefreshOrder();
+			RefreshMatch();
+		}
+		/////////////////////远期相关//////////////////////////////////////////////////////////////////////
+		else if (msg->type() == MSG_RECV_RTN_FORWARD_MATCH)//成交流水
+		{
+			// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
+			tableModel_order->removeRows(0, tableModel_order->rowCount());
+			tableModel_match->removeRows(0, tableModel_match->rowCount());
+			RefreshOrder();
+			RefreshMatch();
+		}
+		/////////////////////////////////持仓/库存/资金////////////////////////////////
+		else if (msg->type() == WM_REFRESH_POSI)//持仓
+		{
+			//直接在内存去，不能再向服务器申请了
+			RefreshPosi();
+		}
+		else if (msg->type() == WM_REFRESH_STORE)//库存
+		{
+			//直接在内存去，不能再向服务器申请了
+			RefreshStore();
+		}
+		else if (msg->type() == WM_REFRESH_FUND)//资金变化
+		{
+
+			RefreshCapital();
+			//直接在内存去，不能再向服务器申请了
+		}
+		else if (msg->type() == WM_CUS_BASE_INFO || msg->type() == WM_CUSTOM_INFO_CHANGE)//客户基本信息
+		{
+			// 更新当前品种的持仓或者库存信息
+			RefreshAccount();
+			ProdCodeInfo info;
+			GetCurProdCodeInfo(info);
+			ShowCurStore(info);
+
+			RefreshPosi();
+			//// 显示可委托手数
+			CalculateMax();
+		}
+		else if (msg->type() == WM_MY_UI_TASHK)
+		{
+			OnUITask(0, 0);
+		}
+		else if (msg->type() == WM_TOTAL_SURPLUS_CHANGE)
+		{
+			RefreshAccount();
+			RefreshCapital();
+		}
+		else if (msg->type() == WM_SURPLUS_CHANGE)//行情改变，浮动盈亏改变
+		{
+			DeferPosi* stDeferPosiPara = (DeferPosi *)msg->wparam();
+			//int test = 0;
+			RefreshPosi();
+			RefreshCapital();
 		}
 
-		//ui.securityComboBox->setView(new QListView());
-		//行情报价界面 重新加载
-		ui.tableViewMarketPrice->InitColumn();
-		ui.tableViewMarketPrice->InitRowData();
-	}
-	else if (msg->type() == WM_UPDATE_QUOTATION_LIST)//行情展示列表，重建
-	{
-		ui.tableViewMarketPrice->InitColumn();
-		ui.tableViewMarketPrice->InitRowData();
-	}
-	else if (msg->type() == WM_UPDATE_ENTR_FLOW)//报单流水，表头重建
-	{
-		tableModel_order->clear();
-		((CommonStandardItemModel *)tableModel_order)->LoadList(g_Global.GetListIniPath("EntrFlow"));
-		RefreshOrder();
-	}
-	else if (msg->type() == WM_UPDATE_DEFER_POSI)//持仓，表头重建
-	{
-		tableModel_posi->clear();
-		((CommonStandardItemModel *)tableModel_posi)->LoadList(g_Global.GetListIniPath("DeferPosi"));
-		RefreshPosi();//加载持仓
-	}
-	else if (msg->type() == WM_UPDATE_STORE)//库存，表头重建
-	{
-		tableModel_store->clear();
-		((CommonStandardItemModel *)tableModel_store)->LoadList(g_Global.GetListIniPath("Store"));
-		RefreshStore();//加载库存
-	}
-	else if (msg->type() == WM_UPDATE_FUN)//资金，表头重建
-	{
-		tableModel_capital->clear();
-		((CommonStandardItemModel *)tableModel_capital)->LoadList(g_Global.GetListIniPath("Fund"));
-		RefreshCapital();
-	}
-	else if (msg->type() == WM_UPDATE_MATCH_FLOW)
-	{
-		tableModel_match->clear();
-		((CommonStandardItemModel *)tableModel_match)->LoadList(g_Global.GetListIniPath("MatchFlow"));
-		RefreshMatch();
-
-	}
-	else if (msg->type() == WM_SYS_STAT_CHANGE)
-	{
-		//g_Global.m_strSysState = body.m_sys_stat.c_str();
-		////获取交易日期
-		//g_Global.m_strExchDate = body.exch_date.c_str();
-		////获取系统日期
-		//g_Global.m_strSysDate = body.sys_date.c_str();
-
-		//SysStat *sys = (SysStat *)msg->wparam();
-		RefreshStatusLabelUI();
-	}
-	else if (msg->type() == WM_ON_RISK_NOTIFY)//风险度
-	{
-		TRiskNotity *sys = (TRiskNotity *)msg->wparam();
-		QMessageBox::information(nullptr, "系统提示", CHJGlobalFun::str2qstr(sys->risk_idx1));
-	}
-	else if (msg->type() == WM_SelectTableRow)//选中行情的行
-	{
-		DeferInstState *state = (DeferInstState *)msg->wparam();
-		if (state->instID == "")
-			return ;
-		//Set
-		if (ui.securityComboBox->currentText().compare(CHJGlobalFun::str2qstr(state->instID)) != 0)
+		else if (msg->type() == WM_INST_STATE_UPDATE)//合约交易状态改变
 		{
-			ui.securityComboBox->setCurrentText(CHJGlobalFun::str2qstr(state->instID));
-			slotChangeQuote(CHJGlobalFun::str2qstr(state->instID));
+			OnInstStateUpdate(msg->wparam());
+
 		}
-
-	}
-	else if (msg->type() == WM_PREORDER_CHANGE)//预埋单  界面更新
-	{
-
-		OnRecvPreOrderChange(msg->OrderId(), msg->getInt());
-
-	}
-	//////////////报单流水相关//////////////////////////////////////////////////////////////////
-	else if (msg->type() == MSG_RECV_DEFER_ORDER)//延期报单回报
-	{
-		// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
-		HandleDeferOrder(msg->wparam());
-	}
-	else if (msg->type() == WM_SHOW_TD_TO_TRADE)//kenny  20180329  报单同时发送来的消息，更新持仓界面
-	{	
-	/*	QString &csProdCode  = *(QString*)msg->wparam();
-		bool    &csLong  = *(bool *)msg->lparam();
-
-		UpdatePosiInfo(csProdCode,csLong);*/
-	
-	}
-	else if (msg->type() == MSG_RECV_MA_ORDER)//报单流水
-	{
-		// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
-		HandleMAOrder(msg->wparam());
-	}
-	else if (msg->type() == MSG_RECV_FORWARD_ORDER)//
-	{
-		// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
-		HandleForwardOrder(msg->wparam());
-	}
-	else if (msg->type() == MSG_RECV_DDA_ORDER)//报单流水
-	{
-		// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
-		HandleDDAOrder(msg->wparam());
-
-	}
-	else if (msg->type() == MSG_RECV_SPOT_ORDER)//报单流水广播
-	{
-		// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
-		HandleSpotOrder(msg->wparam());//只处理报单回报
-
-	}
-	else if (msg->type() == MSG_MA_ORDER_CANCEL)
-	{
-		// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
-		//HandleMAOrderCancel(msg->wparam());
-	}
-	else if (msg->type() == MSG_RECV_ORDER_CANCEL)
-	{
-		// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
-		//HandleSpotOrderCancel(msg->wparam());
-		//HandleOrderCancel(msg->wparam());
-
-		RefreshOrder();
-	}
-	else if (msg->type() == MSG_DEFER_ORDER_CANCEL)//延期撤单
-	{
-		// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
-		//HandleOrderCancel(msg->wparam());
-		RefreshOrder();
-	}
-	else if (msg->type() == MSG_DDA_ORDER_CANCEL)
-	{
-		// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
-		//HandleSpotOrder(msg->wparam());
-	}
-	/////////////////////成交//////////////////////////////////////////////////////////////////////
-	else if (msg->type() == MSG_RECV_RTN_DDA_MATCH)//成交流水
-	{
-		// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
-		//HandleRtnDDAMatch(msg->wparam());
-		tableModel_order->removeRows(0, tableModel_order->rowCount());
-		tableModel_match->removeRows(0, tableModel_match->rowCount());
-		RefreshOrder();
-		RefreshMatch();
-
-	}
-	else if (msg->type() == MSG_RECV_RTN_DEFER_MATCH)//成交流水
-	{
-		//HandleRtnDeferMatch(msg->wparam());
-		tableModel_order->removeRows(0,tableModel_order->rowCount());
-		tableModel_match->removeRows(0, tableModel_match->rowCount());
-		RefreshOrder();
-		RefreshMatch();
-	}
-	else if (msg->type() == MSG_RECV_RTN_SPOT_MATCH)//成交流水
-	{
-		// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
-		//HandleRtnSpotMatch(msg->wparam());
-		tableModel_order->removeRows(0, tableModel_order->rowCount());
-		tableModel_match->removeRows(0, tableModel_match->rowCount());
-		RefreshOrder();
-		RefreshMatch();
-	}
-	/////////////////////远期相关//////////////////////////////////////////////////////////////////////
-	else if (msg->type() == MSG_RECV_RTN_FORWARD_MATCH)//成交流水
-	{
-		// DeferOrder *pDeferOrder= (DeferOrder *)msg->wparam();
-		//HandleRtnForwardMatch(msg->wparam());
-
-		tableModel_order->removeRows(0, tableModel_order->rowCount());
-		tableModel_match->removeRows(0, tableModel_match->rowCount());
-		RefreshOrder();
-		RefreshMatch();
-	}
-	/////////////////////////////////持仓/库存/资金////////////////////////////////
-	else if (msg->type() == WM_REFRESH_POSI)//持仓
-	{
-		//直接在内存去，不能再向服务器申请了
-		RefreshPosi();
-	}
-	else if (msg->type() == WM_REFRESH_STORE)//库存
-	{
-		//直接在内存去，不能再向服务器申请了
-		RefreshStore();
-	}
-	else if (msg->type() == WM_REFRESH_FUND)//资金变化
-	{
-
-		RefreshCapital();
-		//直接在内存去，不能再向服务器申请了
-	}
-	else if (msg->type() == WM_CUS_BASE_INFO || msg->type() == WM_CUSTOM_INFO_CHANGE)//客户基本信息
-	{
-		// 更新当前品种的持仓或者库存信息
-		RefreshAccount();
-		ProdCodeInfo info;
-		GetCurProdCodeInfo(info);
-		ShowCurStore(info);
-
-		RefreshPosi();
-		//// 显示可委托手数
-		CalculateMax();
-	}
-	else if (msg->type() == WM_MY_UI_TASHK)
-	{
-		OnUITask(0, 0);
-	}
-	else if (msg->type() == WM_SURPLUS_CHANGE)
-	{
-		//
-		int test = 0;
-	}
-
-	else if (msg->type() == WM_INST_STATE_UPDATE)//合约交易状态改变
-	{
-		OnInstStateUpdate(msg->wparam());
-
-	}
-	else if (msg->type() == WM_SHOW_ORDER_TIPS)//1.报单回报信息提示    2.预埋单回报显示信息
-	{
-		//int nAddPos = *((int *)(msg->wparam()));
-		int nAddPos = (msg->getInt());
-		//qDebug("mainWindow::customEvent:nAddPos");
-		// bool bShow= false;
-		//if (g_Global.m_bPreOrderConfirm )
-		//{
-		//	frmTipsDlg dlg;
-		//	dlg.Show(nAddPos);
-
-		//	dlg.exec();
-		//	bShow = true;
-		//}
-
-		//if (!bShow)
-		//{
+		else if (msg->type() == WM_SHOW_ORDER_TIPS)//1.报单回报信息提示    2.预埋单回报显示信息
+		{
+			//int nAddPos = *((int *)(msg->wparam()));
+			int nAddPos = (msg->getInt());
+			//qDebug("mainWindow::customEvent:nAddPos");
+			
 			if (g_Global.m_bTipsAskFail || g_Global.m_bTipsAskSus)
 			{
 				frmTipsDlg dlg;
 				dlg.Show(nAddPos);
 
 				dlg.exec();
-				
+
 			}
-		//}
 
-	}
-	else if (msg->type() == WM_SHOW_ORDER_CANCEL_TIPS)//1.撤销报单回报信息提示
-	{
+			if (g_Global.m_bTipsOrderMatch)//回报
+			{
+				frmTipsDlg dlg;
+				dlg.Show(nAddPos);
 
-		int nAddPos = (msg->getInt());
+				dlg.exec();
+			}
 
-		frmTipsDlg dlg;
-		dlg.Show(nAddPos);
-
-	    dlg.exec();
-
-	}
-	else if (msg->type() == WM_SHOW_ORDER_RESULT_TIPS)//1.报单回报信息提示    2.预埋单回报显示信息
-	{
-		int nAddPos = (msg->getInt());
-
-		if (g_Global.m_bTipsOrderMatch)
+		}
+		else if (msg->type() == WM_SHOW_ORDER_CANCEL_TIPS)//1.撤销报单回报信息提示
 		{
+
+			int nAddPos = (msg->getInt());
+
 			frmTipsDlg dlg;
 			dlg.Show(nAddPos);
 
 			dlg.exec();
+
 		}
+		else if (msg->type() == WM_SHOW_ORDER_RESULT_TIPS)//1.报单回报信息提示    2.预埋单回报显示信息
+		{
+			int nAddPos = (msg->getInt());
+
+			if (g_Global.m_bTipsOrderMatch)
+			{
+				frmTipsDlg dlg;
+				dlg.Show(nAddPos);
+
+				dlg.exec();
+			}
+
+		}
+		//else if (msg->type() == WM_LOG_OUT)//签退广播
+		//{
+		//	PTForceLogout stLogout = (PTForceLogout)(msg->wparam());
+		//	QMessageBox *box = new QMessageBox(QMessageBox::Information, "提示信息", QString::fromStdString(stLogout->hint_msg));
+		//	box->setModal(false);
+		//	box->setAttribute(Qt::WA_DeleteOnClose);
+		//	QTimer::singleShot(5000, box, SLOT(accept()));
+		//	box->show();
+
+		//	this->close();
+		//}
+
+
 
 	}
-	//else if (msg->type() == WM_LOG_OUT)//签退广播
-	//{
-	//	PTForceLogout stLogout = (PTForceLogout)(msg->wparam());
-	//	QMessageBox *box = new QMessageBox(QMessageBox::Information, "提示信息", QString::fromStdString(stLogout->hint_msg));
-	//	box->setModal(false);
-	//	box->setAttribute(Qt::WA_DeleteOnClose);
-	//	QTimer::singleShot(5000, box, SLOT(accept()));
-	//	box->show();
+	catch (...)
+	{
 
-	//	this->close();
-	//}
-
+	}
 
 }
 
@@ -1812,6 +1863,7 @@ void mainWindow::disableKaipingOrderCtl()
 void mainWindow::enableKaiPingOrderCtl()
 {
 	ui.pushButton_kaicang->setEnabled(true);
+	if(ui.securityComboBox->currentText() != "Ag99.9" && ui.securityComboBox->currentText() != "Ag99.99")
 	ui.pushButton_pingcang->setEnabled(true);
 
 	ui.pushButton_kaicang->setStyleSheet("background-color: #2a3a57;");
@@ -1882,6 +1934,10 @@ void mainWindow::slotChangeQuote(const QString & string)
 
 	QUOTATION* qt = &(g_TraderCpMgr.m_QMapQuotation[CHJGlobalFun::qstr2str(info.prod_code)]);
 
+	
+	// 设置初始手数为1
+	ui.label_high_hand->setText("1");
+	
 	// 显示价格信息
 	ShowPriceInfo(CHJGlobalFun::qstr2str(info.prod_code), std::move(*qt));
 
@@ -1891,8 +1947,7 @@ void mainWindow::slotChangeQuote(const QString & string)
 	// 显示当前品种的仓库信息
 	ShowCurStore(info);
 
-	// 设置手数为1
-	ui.label_high_hand->setText("1");
+
 
 	// 是否切换tab界面
 	if (g_Global.m_bInsTriggerInfo)
@@ -1969,9 +2024,107 @@ void mainWindow::cleanWidgetContent()
 //切换账户
 void mainWindow::slotLoginAccount(const QString & str)
 {
-	doUpdateUiTask(std::bind(&mainWindow::cleanWidgetContent, this));
+	
+	//doUpdateUiTask(std::bind(&mainWindow::cleanWidgetContent, this));
+	cleanWidgetContent();
 	//避免切换闪烁先填入账户别名
 	ui.label_accountname_val->setText(str);
+	killTimer(this->m_nTimerID);
+	killTimer(this->m_nTimerPosiID);
+	
+	//保留此刻的行情
+	auto map = g_TraderCpMgr.m_QMapQuotation;
+
 	g_TraderCpMgr.resetAccount(str.toStdString().c_str());
 		
+	//slotChangeQuote(ui.securityComboBox->currentText());
+	//恢复行情
+	std::lock_guard <mutex>  lock(m_quote_mutex);
+	g_TraderCpMgr.m_QMapQuotation = map;
+
+	InitAllData();
+
+	m_nTimerID = this->startTimer(10000);
+	m_nTimerPosiID = this->startTimer(3000);
+}
+
+#include "TranMessage.h"
+#include "Global.h"
+
+void mainWindow::handleTimeout()
+{
+	// 获取风险度
+	Rsp3099 rsp3099; //应答报文体
+	int nRet = CTranMessage::Handle3099(rsp3099, false);
+	
+	if (nRet == 0)
+		ui.label_account_risk_val->setText(CHJGlobalFun::str2qstr(/* g_Global.m_bRiskMode1 ? rsp3099.risk_degree1 :*/ rsp3099.risk_degree2));
+	
+}
+
+void mainWindow::timerEvent(QTimerEvent *event)
+{
+	if (event->timerId() == m_nTimerID) 
+	{
+		handleTimeout();
+	
+	}
+	else if (event->timerId() == m_nTimerID)
+	{
+		RefreshPosi();//定时刷新
+	}
+}
+
+#include "frmRiskNotifyDlg.h"
+
+
+frmRiskNotifyDlg  *dialog;  //最好定义成全局变量
+
+
+
+void mainWindow::getRiskNotify()
+{
+	//  暂时屏蔽
+	// 获取风险通知单
+	//Rsp3064 rsp3064; //应答报文体
+	//if (CTranMessage::Handle3064(rsp3064, false) == 0)
+	//{
+	//	if (rsp3064.alm_result.size() == 1)
+	//	{
+	//		// 获取报文中得风险通知单信息到结构
+	//		const ArrayListMsg &aMsg = rsp3064.alm_result.GetValue(0);
+
+	//		// modify by xrs 20130130 解决可能存在的内存泄露
+	//		TRiskNotity body;
+	//		body.acct_no = aMsg.GetStringEx(3);
+	//		body.exch_date = aMsg.GetStringEx(0);
+	//		body.notify_content = aMsg.GetStringEx(11);
+
+	//		body.notify_title = aMsg.GetStringEx(10);
+	//		body.risk_idx1 = aMsg.GetStringEx(7);
+	//		body.risk_idx2 = aMsg.GetStringEx(8);
+	//		body.call_margin = aMsg.GetStringEx(9);
+
+	//		//if (g_TraderCpMgr.m_hMainDlg != NULL)
+	//		//{
+	//		//	// 发送消息到主界面，由主界面处理
+	//		//	::SendMessage(g_TraderCpMgr.m_hMainDlg, WM_ON_RISK_NOTIFY, (WPARAM)&body, 0);
+	//		//}
+
+	//		frmRiskNotifyDlg  dlg;
+	//		dlg.setval(body.acct_no, body.risk_idx2, body.call_margin, body.exch_date, body.notify_content);
+	//		dlg.setWindowTitle(CHJGlobalFun::str2qstr(body.notify_title));
+	//		dlg.show();
+	//	}
+	//}
+	//TRiskNotity body;
+	//frmRiskNotifyDlg  dlg;
+	////if(dialog == nullptr)
+	////	dialog = new frmRiskNotifyDlg;
+
+	//dlg.setval(body.acct_no, body.risk_idx2, body.call_margin, body.exch_date, body.notify_content);
+	//dlg.setWindowTitle("风险变动通知");
+	//dlg.exec();
+	//return;
+
 }

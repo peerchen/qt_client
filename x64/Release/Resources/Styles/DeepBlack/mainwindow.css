@@ -107,7 +107,7 @@ QTabBar::tab {
         font:bold;
         font-size: 15px;
 	margin: 1px;
-        min-height:40;
+        min-height:25;
 }
 QTabBar::tab:hover {
         background: rgb(37,41,50);

@@ -130,7 +130,7 @@ void frmOption_5::LoadSetting()
 	// 加载品种的配置
 	int i = 0;
 	const map<string, PLInfo>* pInfo = g_StopPLMgr.GetInfo();
-	for (map<string, PLInfo>::const_iterator it = pInfo->begin(); it != pInfo->end(); it++, i++)
+	for (auto it = pInfo->begin(); it != pInfo->end(); it++, i++)
 	{
 		QString csValue;
 		//m_list.InsertItem(i, it->first.c_str());    // 合约代码
@@ -141,8 +141,7 @@ void frmOption_5::LoadSetting()
 		tableModel->setItem(i, 3, new QStandardItem(QString::number(it->second.iDysAjust)));		//// 自动追踪止损调整价位
 
 	}
-
-	
+		
 }
 
 
@@ -155,9 +154,6 @@ void frmOption_5::WriteStopPLSetting(void)
 	int iPosCmp = ui.comboBox->currentIndex();//.GetCurSel();
 	int iPosAsk = ui.comboBox_1->currentIndex();//m_cmbAskPriceType.GetCurSel();
 
-	//QString csAjust(ui.spinBox.GetText());
-	//if (csAjust.IsEmpty())
-	//	csAjust = "0";
 	csStopPL = QString("%1^%2^%3^%4^").arg(ui.comboBox->itemData(iPosCmp).toString())
 		.arg(ui.comboBox_1->itemData(iPosAsk).toString()).arg(ui.spinBox->value()).arg(m_bUseServer);
 

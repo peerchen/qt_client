@@ -6,6 +6,8 @@
 
 using namespace std;
 
+#define YLINK_SYSTEM_ADAPTER
+
 //----------------------------------------------报单基类Ex 定义  --未用，待定
 typedef struct tagOrderBaseEx
 {
@@ -65,6 +67,7 @@ typedef struct tagSpotOrder : public OrderBase
 		pkt.GetParameterVal("matchType",matchType);          // 类型  (not null)
 		pkt.GetParameterVal("endorseInstID",endorseInstID);  // 转让合约代码 (not null)
 		pkt.GetParameterVal("localOrderNo",localOrderNo);    // 本地报单号 (not null)
+		
 		pkt.GetParameterVal("RspMsg",RspMsg);                // 错误描述
 		return 0;
 	}
@@ -100,7 +103,9 @@ typedef struct tagForwardOrder : public OrderBase
 		pkt.GetParameterVal("cancelTime",  cancelTime);    // 撤消时间
 		pkt.GetParameterVal("cancelID",    cancelID);      // 撤消员代码
 		pkt.GetParameterVal("status",      status);        // 状态
-		pkt.GetParameterVal("localOrderNo",localOrderNo);  // 本地报单号  (not null)
+
+		pkt.GetParameterVal("localOrderNo", localOrderNo);    // 本地报单号 (not null)
+
 		pkt.GetParameterVal("matchType",   matchType);     // 类型  (not null)
 		pkt.GetParameterVal("RspMsg",      RspMsg);        // 错误描述
 
@@ -134,13 +139,16 @@ typedef struct tagDeferOrder : public OrderBase
 		pkt.GetParameterVal("buyOrSell",   buyOrSell);    // 买卖方向 (not null)
 		pkt.GetParameterVal("applyDate",   applyDate);    // 申报日期
 		pkt.GetParameterVal("applyTime",   applyTime);    // 申报时间
-		pkt.GetParameterVal("offSetFlag",  offSetFlag);   // 开平仓标志 (not null)
+
+		pkt.GetParameterVal("offSetFlag", offSetFlag);   // 开平仓标志 (not null)
+	
 		pkt.GetParameterVal("price",       price);        // 价格   (not null)
 		pkt.GetParameterVal("amount",      amount);       // 数量  (not null)
 		pkt.GetParameterVal("remainAmount",remainAmount); // 剩余数量
 		pkt.GetParameterVal("cancelTime",  cancelTime);   // 撤消时间
 		pkt.GetParameterVal("status",      status);       // 状态
-		pkt.GetParameterVal("localOrderNo",localOrderNo); // 本地报单号  (not null)
+
+		pkt.GetParameterVal("localOrderNo", localOrderNo);    // 本地报单号 (not null)
 		pkt.GetParameterVal("margin",      margin);       // 保证金率
 		pkt.GetParameterVal("marginType"  ,marginType);   // 保证金类型  (not null)
 		pkt.GetParameterVal("traderID",    traderID);     // 交易员代码  (not null)
@@ -175,7 +183,8 @@ typedef struct tagDeferDeliveryAppOrder : public OrderBase
 		pkt.GetParameterVal("amount",amount);             // 数量  (not null)
 		pkt.GetParameterVal("cancelTime",cancelTime);     // 撤消时间
 		pkt.GetParameterVal("status",status);             // 报单状态
-		pkt.GetParameterVal("localOrderNo",localOrderNo); // 本地报单编号 (not null)
+
+		pkt.GetParameterVal("localOrderNo", localOrderNo);    // 本地报单号 (not null)
 		pkt.GetParameterVal("memberID",memberID);         // 会员代码  (not null)
 		pkt.GetParameterVal("traderID",traderID);         // 交易员代码  (not null)
 		pkt.GetParameterVal("cancelID",cancelID);         // 撤消员代码
@@ -210,7 +219,9 @@ typedef struct tagMiddleAppOrder : public OrderBase
 		pkt.GetParameterVal("amount",   amount);          // 数量  (not null)
 		pkt.GetParameterVal("cancelTime",cancelTime);     // 撤消时间
 		pkt.GetParameterVal("status",    status);         // 报单状态
-		pkt.GetParameterVal("localOrderNo",localOrderNo); // 本地报单编号 (not null)
+
+		pkt.GetParameterVal("localOrderNo", localOrderNo);    // 本地报单号 (not null)
+
 		pkt.GetParameterVal("traderID",    traderID);     // 交易员代码  (not null)
 		pkt.GetParameterVal("cancelID",    cancelID);     // 撤消员代码
 		pkt.GetParameterVal("remainAmount",remainAmount); // 剩余数量
@@ -454,18 +465,19 @@ typedef struct tagOrderCancel
 	int Packet2Struct(CBroadcastPacket & pkt) 
 	{
 		pkt.GetParameterVal("orderNo",orderNo);
-		pkt.GetParameterVal("localOrderNo",localOrderNo);
+
+		pkt.GetParameterVal("localOrderNo", localOrderNo);    // 本地报单号 (not null)
+
 		if(localOrderNo.empty()) // 用于解决交收撤单的时候发送过来的key为localOrderID的问题
 		{
-			pkt.GetParameterVal("localOrderID",localOrderNo);
+			pkt.GetParameterVal("localOrderNo", localOrderNo);    // 本地报单号 (not null)
 		}
 		pkt.GetParameterVal("instID",instID);
 		pkt.GetParameterVal("amount",amount);
 		pkt.GetParameterVal("remainAmount",remainAmount);
 		pkt.GetParameterVal("price",price);
 		pkt.GetParameterVal("buyOrSell",buyOrSell);
-		pkt.GetParameterVal("offSetFlag",offSetFlag);
-
+		pkt.GetParameterVal("offSetFlag", offSetFlag);   // 开平仓标志 (not null)
 		return 0;
 	}
 }OrderCancel,*POrderCancel;
@@ -501,7 +513,8 @@ typedef struct tagSpotMatch
 		pkt.GetParameterVal("price"             , stBody.price);
 		pkt.GetParameterVal("volume"            , stBody.volume);
 		pkt.GetParameterVal("orderNo"           , stBody.orderNo);
-		pkt.GetParameterVal("localOrderNo"      , stBody.localOrderNo);
+
+		pkt.GetParameterVal("localOrderNo", stBody.localOrderNo);    // 本地报单号 (not null)
 		pkt.GetParameterVal("matchType"         , stBody.matchType);
 
 		return 0;
@@ -554,8 +567,16 @@ typedef struct tagDeferMatch
 		pkt.GetParameterVal("price"             , stBody.price);
 		pkt.GetParameterVal("volume"            , stBody.volume);
 		pkt.GetParameterVal("offSetFlag"        , stBody.offsetFlag);
+
+#ifdef  YLINK_SYSTEM_ADAPTER
+		pkt.GetParameterVal("offsetFlag", stBody.offsetFlag);   // 开平仓标志 (not null)
+#else
+		pkt.GetParameterVal("offSetFlag", stBody.offsetFlag);   // 开平仓标志 (not null)
+#endif
+
 		pkt.GetParameterVal("orderNo"           , stBody.orderNo);
-		pkt.GetParameterVal("localOrderNo"      , stBody.localOrderNo);
+		pkt.GetParameterVal("localOrderNo", stBody.localOrderNo);    // 本地报单号 (not null)
+
 
 		return 0;
 	};
@@ -600,7 +621,8 @@ typedef struct tagDeferDeliveryAppMatch
 		pkt.GetParameterVal("matchDate"         , stBody.matchDate);
 		pkt.GetParameterVal("matchTime"         , stBody.matchTime);
 		pkt.GetParameterVal("orderNo"           , stBody.orderNo);
-		pkt.GetParameterVal("localOrderNo"      , stBody.LocalOrderNo);
+
+		pkt.GetParameterVal("localOrderNo", stBody.LocalOrderNo);    // 本地报单号 (not null)
 		pkt.GetParameterVal("middleFlag"        , stBody.middleFlag);
 
 		return 0;
@@ -664,7 +686,9 @@ typedef struct tagForwardMatch
 		pkt.GetParameterVal("marginRate"        , stBody.marginRate);
 		pkt.GetParameterVal("rateType"          , stBody.rateType);
 		pkt.GetParameterVal("orderNo"           , stBody.orderNo);
-		pkt.GetParameterVal("localOrderNo"      , stBody.localOrderNo);
+
+		pkt.GetParameterVal("localOrderNo", stBody.localOrderNo);    // 本地报单号 (not null)
+
 
 		return 0;
 	};
@@ -1755,6 +1779,9 @@ public:
         pkt.GetParameterVal("matchType",v.matchType);    //类型  (not null)
         pkt.GetParameterVal("endorseInstID",v.endorseInstID);    //转让合约代码 (not null)
         pkt.GetParameterVal("localOrderNo",v.localOrderNo);    //本地报单号 (not null)
+
+		pkt.GetParameterVal("localOrderNo", v.localOrderNo);    // 本地报单号 (not null)
+
         return 0;
     }
 
@@ -1777,7 +1804,9 @@ public:
         pkt.AddParameter("status",v.status);
         pkt.AddParameter("matchType",v.matchType);
         pkt.AddParameter("endorseInstID",v.endorseInstID);
-        pkt.AddParameter("localOrderNo",v.localOrderNo);
+
+		pkt.AddParameter("localOrderNo", v.localOrderNo);    // 本地报单号 (not null)
+
         return 0;
     }
 	
@@ -1812,13 +1841,16 @@ public:
         pkt.GetParameterVal("buyOrSell",v.buyOrSell);    //买卖方向 (not null)
         pkt.GetParameterVal("applyDate",v.applyDate);    //申报日期
         pkt.GetParameterVal("applyTime",v.applyTime);    //申报时间
-        pkt.GetParameterVal("offSetFlag",v.offSetFlag);    //开平仓标志 (not null)
+		pkt.GetParameterVal("offSetFlag", v.offSetFlag);   // 开平仓标志 (not null)
+
+
         pkt.GetParameterVal("price",v.price);    //价格   (not null)
         pkt.GetParameterVal("amount",v.amount);    //数量  (not null)
         pkt.GetParameterVal("remainAmount",v.remainAmount);    //剩余数量
         pkt.GetParameterVal("cancelTime",v.cancelTime);    //撤消时间
         pkt.GetParameterVal("status",v.status);    //状态
-        pkt.GetParameterVal("localOrderNo",v.localOrderNo);    //本地报单号  (not null)
+		pkt.GetParameterVal("localOrderNo", v.localOrderNo);    // 本地报单号 (not null)
+
         pkt.GetParameterVal("margin",v.margin);    //保证金率
         pkt.GetParameterVal("marginType",v.marginType);    //保证金类型  (not null)
         pkt.GetParameterVal("traderID",v.traderID);    //交易员代码  (not null)
@@ -1837,13 +1869,16 @@ public:
         pkt.AddParameter("buyOrSell",v.buyOrSell);
         pkt.AddParameter("applyDate",v.applyDate);
         pkt.AddParameter("applyTime",v.applyTime);
-        pkt.AddParameter("offSetFlag",v.offSetFlag);
+		pkt.AddParameter("offSetFlag", v.offSetFlag);   // 开平仓标志 (not null)
+
+
+
         pkt.AddParameter("price",v.price);
         pkt.AddParameter("amount",v.amount);
         pkt.AddParameter("remainAmount",v.remainAmount);
         pkt.AddParameter("cancelTime",v.cancelTime);
         pkt.AddParameter("status",v.status);
-        pkt.AddParameter("localOrderNo",v.localOrderNo);
+		pkt.AddParameter("localOrderNo", v.localOrderNo);    // 本地报单号 (not null)
         pkt.AddParameter("margin",v.margin);
         pkt.AddParameter("marginType",v.marginType);
         pkt.AddParameter("traderID",v.traderID);
@@ -1886,7 +1921,7 @@ public:
         pkt.GetParameterVal("amount",v.amount);    //数量  (not null)
         pkt.GetParameterVal("cancelTime",v.cancelTime);    //撤消时间
         pkt.GetParameterVal("status",v.status);    //报单状态
-        pkt.GetParameterVal("localOrderNo",v.localOrderNo);    //本地报单编号 (not null)
+		pkt.GetParameterVal("localOrderNo", v.localOrderNo);    // 本地报单号 (not null)
         pkt.GetParameterVal("memberID",v.memberID);    //会员代码  (not null)
         pkt.GetParameterVal("traderID",v.traderID);    //交易员代码  (not null)
         pkt.GetParameterVal("cancelID",v.cancelID);    //撤消员代码
@@ -1906,7 +1941,7 @@ public:
         pkt.AddParameter("amount",v.amount);
         pkt.AddParameter("cancelTime",v.cancelTime);
         pkt.AddParameter("status",v.status);
-        pkt.AddParameter("localOrderNo",v.localOrderNo);
+		pkt.AddParameter("localOrderNo", v.localOrderNo);    // 本地报单号 (not null)
         pkt.AddParameter("memberID",v.memberID);
         pkt.AddParameter("traderID",v.traderID);
         pkt.AddParameter("cancelID",v.cancelID);
@@ -1950,7 +1985,8 @@ public:
         pkt.GetParameterVal("amount",v.amount);    //数量  (not null)
         pkt.GetParameterVal("cancelTime",v.cancelTime);    //撤消时间
         pkt.GetParameterVal("status",v.status);    //报单状态
-        pkt.GetParameterVal("localOrderNo",v.localOrderNo);    //本地报单编号 (not null)
+		pkt.GetParameterVal("localOrderNo", v.localOrderNo);    // 本地报单号 (not null)
+
         pkt.GetParameterVal("traderID",v.traderID);    //交易员代码  (not null)
         pkt.GetParameterVal("cancelID",v.cancelID);    //撤消员代码
         pkt.GetParameterVal("remainAmount",v.remainAmount);    //剩余数量
@@ -1970,7 +2006,7 @@ public:
         pkt.AddParameter("amount",v.amount);
         pkt.AddParameter("cancelTime",v.cancelTime);
         pkt.AddParameter("status",v.status);
-        pkt.AddParameter("localOrderNo",v.localOrderNo);
+		pkt.AddParameter("localOrderNo", v.localOrderNo);    // 本地报单号 (not null)
         pkt.AddParameter("traderID",v.traderID);
         pkt.AddParameter("cancelID",v.cancelID);
         pkt.AddParameter("remainAmount",v.remainAmount);
@@ -2016,7 +2052,7 @@ public:
         pkt.GetParameterVal("cancelTime",v.cancelTime);    //撤消时间
         pkt.GetParameterVal("cancelID",v.cancelID);    //撤消员代码
         pkt.GetParameterVal("status",v.status);    //状态
-        pkt.GetParameterVal("localOrderNo",v.localOrderNo);    //本地报单号  (not null)
+		pkt.GetParameterVal("localOrderNo", v.localOrderNo);    // 本地报单号 (not null)
         pkt.GetParameterVal("matchType",v.matchType);    //类型  (not null)
         return 0;
     }
@@ -2038,7 +2074,7 @@ public:
         pkt.AddParameter("cancelTime",v.cancelTime);
         pkt.AddParameter("cancelID",v.cancelID);
         pkt.AddParameter("status",v.status);
-        pkt.AddParameter("localOrderNo",v.localOrderNo);
+		pkt.AddParameter("localOrderNo", v.localOrderNo);    // 本地报单号 (not null)
         pkt.AddParameter("matchType",v.matchType);
 		return 0;
     }
@@ -2403,7 +2439,7 @@ public:
 		pkt.GetParameterVal("price"             , stBody.stBody.price);
 		pkt.GetParameterVal("volume"            , stBody.stBody.volume);
 		pkt.GetParameterVal("orderNo"           , stBody.stBody.orderNo);
-		pkt.GetParameterVal("localOrderNo"      , stBody.stBody.localOrderNo);
+		pkt.GetParameterVal("localOrderNo", stBody.stBody.localOrderNo);    // 本地报单号 (not null)
 		pkt.GetParameterVal("matchType"         , stBody.stBody.matchType);
 		pkt.GetParameterVal("acctNo"            , stBody.acctNo);
 		pkt.GetParameterVal("RspCode"           , stBody.stRsp.RspCode);
@@ -2426,7 +2462,7 @@ public:
 		pkt.AddParameter("price"             , stBody.stBody.price);
 		pkt.AddParameter("volume"            , stBody.stBody.volume);
 		pkt.AddParameter("orderNo"           , stBody.stBody.orderNo);
-		pkt.AddParameter("localOrderNo"      , stBody.stBody.localOrderNo);
+		pkt.AddParameter("localOrderNo", stBody.stBody.localOrderNo);    // 本地报单号 (not null)
 		pkt.AddParameter("matchType"         , stBody.stBody.matchType);
 		pkt.AddParameter("acctNo"            , stBody.acctNo);
 		pkt.AddParameter("RspCode"           , stBody.stRsp.RspCode);
@@ -2453,7 +2489,7 @@ public:
 		pkt.GetParameterVal("marginRate"        , stBody.stBody.marginRate);
 		pkt.GetParameterVal("rateType"          , stBody.stBody.rateType);
 		pkt.GetParameterVal("orderNo"           , stBody.stBody.orderNo);
-		pkt.GetParameterVal("localOrderNo"      , stBody.stBody.localOrderNo);
+		pkt.GetParameterVal("localOrderNo", stBody.stBody.localOrderNo);    // 本地报单号 (not null)
 		pkt.GetParameterVal("acctNo"            , stBody.acctNo);
 		pkt.GetParameterVal("RspCode"           , stBody.stRsp.RspCode);
 		pkt.GetParameterVal("RspMsg"            , stBody.stRsp.RspMsg);
@@ -2477,7 +2513,7 @@ public:
 		pkt.AddParameter("marginRate"        , stBody.stBody.marginRate);
 		pkt.AddParameter("rateType"          , stBody.stBody.rateType);
 		pkt.AddParameter("orderNo"           , stBody.stBody.orderNo);
-		pkt.AddParameter("localOrderNo"      , stBody.stBody.localOrderNo);
+		pkt.AddParameter("localOrderNo", stBody.stBody.localOrderNo);    // 本地报单号 (not null)
 		pkt.AddParameter("acctNo"            , stBody.acctNo);
 		pkt.AddParameter("RspCode"           , stBody.stRsp.RspCode);
 		pkt.AddParameter("RspMsg"            , stBody.stRsp.RspMsg);
@@ -2500,9 +2536,12 @@ public:
 		pkt.GetParameterVal("matchTime"         , stBody.stBody.matchTime);
 		pkt.GetParameterVal("price"             , stBody.stBody.price);
 		pkt.GetParameterVal("volume"            , stBody.stBody.volume);
-		pkt.GetParameterVal("offSetFlag"        , stBody.stBody.offsetFlag);
+		pkt.GetParameterVal("offSetFlag", stBody.stBody.offsetFlag);   // 开平仓标志 (not null)
+
+
+
 		pkt.GetParameterVal("orderNo"           , stBody.stBody.orderNo);
-		pkt.GetParameterVal("localOrderNo"      , stBody.stBody.localOrderNo);
+		pkt.GetParameterVal("localOrderNo", stBody.stBody.localOrderNo);    // 本地报单号 (not null)
 		pkt.GetParameterVal("acctNo"            , stBody.acctNo);
 		pkt.GetParameterVal("RspCode"           , stBody.stRsp.RspCode);
 		pkt.GetParameterVal("RspMsg"            , stBody.stRsp.RspMsg);
@@ -2523,9 +2562,11 @@ public:
 		pkt.AddParameter("matchTime"         , stBody.stBody.matchTime);
 		pkt.AddParameter("price"             , stBody.stBody.price);
 		pkt.AddParameter("volume"            , stBody.stBody.volume);
-		pkt.AddParameter("offSetFlag"        , stBody.stBody.offsetFlag);
+		//pkt.AddParameter("offSetFlag"        , stBody.stBody.offsetFlag);
+		pkt.AddParameter("offSetFlag", stBody.stBody.offsetFlag);   // 开平仓标志 (not null)
+
 		pkt.AddParameter("orderNo"           , stBody.stBody.orderNo);
-		pkt.AddParameter("localOrderNo"      , stBody.stBody.localOrderNo);
+		pkt.AddParameter("localOrderNo", stBody.stBody.localOrderNo);    // 本地报单号 (not null)
 		pkt.AddParameter("acctNo"            , stBody.acctNo);
 		pkt.AddParameter("RspCode"           , stBody.stRsp.RspCode);
 		pkt.AddParameter("RspMsg"            , stBody.stRsp.RspMsg);
@@ -2547,7 +2588,7 @@ public:
 		pkt.GetParameterVal("matchDate"         , stBody.stBody.matchDate);
 		pkt.GetParameterVal("matchTime"         , stBody.stBody.matchTime);
 		pkt.GetParameterVal("orderNo"           , stBody.stBody.orderNo);
-		pkt.GetParameterVal("localOrderNo"      , stBody.stBody.LocalOrderNo);
+		pkt.GetParameterVal("localOrderNo", stBody.stBody.LocalOrderNo);    // 本地报单号 (not null)
 		pkt.GetParameterVal("middleFlag"        , stBody.stBody.middleFlag);
 		pkt.GetParameterVal("acctNo"            , stBody.acctNo);
 		pkt.GetParameterVal("RspCode"           , stBody.stRsp.RspCode);
@@ -2568,7 +2609,7 @@ public:
 		pkt.AddParameter("matchDate"         , stBody.stBody.matchDate);
 		pkt.AddParameter("matchTime"         , stBody.stBody.matchTime);
 		pkt.AddParameter("orderNo"           , stBody.stBody.orderNo);
-		pkt.AddParameter("localOrderNo"      , stBody.stBody.LocalOrderNo);
+		pkt.AddParameter("localOrderNo", stBody.stBody.LocalOrderNo);    // 本地报单号 (not null)
 		pkt.AddParameter("middleFlag"        , stBody.stBody.middleFlag);
 		pkt.AddParameter("acctNo"            , stBody.acctNo);
 		pkt.AddParameter("RspCode"           , stBody.stRsp.RspCode);

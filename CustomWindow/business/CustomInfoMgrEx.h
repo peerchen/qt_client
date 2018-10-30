@@ -55,6 +55,7 @@ public:
 
 	//依托本地的大边信息计算冻结保证金
 	double  CalculateFrozenCapital(const QString & ProdCode, const QString & ExchId  , double  orderCapital);
+
 protected:
 	// 从报文中获取持仓信息到内存
 	void RefreshPosi( const HashtableMsg &hsmPosi );

@@ -306,6 +306,7 @@ typedef struct tagRsp1020 : public tagRspBase
 		this->c_cust_abbr = Other.c_cust_abbr;
 		this->c_acct_stat = Other.c_acct_stat;
 		this->c_branch_id = Other.c_branch_id;
+
 	}
 
 	void CopyFundInfo(const tagRsp1020& Other)
@@ -822,7 +823,12 @@ typedef struct tagReq5101
 	string       cert_type_id         ; //提货人证件类型    
 	string       cert_num             ; //提货人证件号码    
 	string       app_pwd              ; //提货密码    
-	string       app_record           ; //申请录入人    
+	string       app_record           ; //申请录入人   
+	string       pickup_sourt		  ; //提货种类
+	string       tel                  ; //提货人联系方式
+	string       draw_type            ; //提货类型
+	string       self_amount          ; //自提重量
+	string       trade_amount         ; //交提重量
 	string       take_date            ; //预备提货日    
 	string       start_date           ; //申请交易起始日期    8位日期表示，查询用
 	string       end_date             ; //申请交易结束日期    8位日期表示，查询用
@@ -2977,6 +2983,7 @@ public:
 		pkt.GetParameterVal("auto_send_way"     , stBody.auto_send_way);
 		pkt.GetParameterVal("auto_send_comp"    , stBody.auto_send_comp);
 		pkt.GetParameterVal("auto_send_price"   , stBody.auto_send_price);
+		pkt.GetParameterVal("order_type"        , stBody.order_type);
 		return 0;
 	};
 
@@ -3006,6 +3013,7 @@ public:
 		pkt.AddParameter("auto_send_way"     , stBody.auto_send_way);
 		pkt.AddParameter("auto_send_comp"    , stBody.auto_send_comp);
 		pkt.AddParameter("auto_send_price"   , stBody.auto_send_price);
+		pkt.AddParameter("order_type"        , stBody.order_type);
 		return 0;
 	};
 
@@ -3185,6 +3193,12 @@ public:
 		pkt.GetParameterVal("take_date"         , stBody.take_date);
 		pkt.GetParameterVal("start_date"        , stBody.start_date);
 		pkt.GetParameterVal("end_date"          , stBody.end_date);
+		pkt.GetParameterVal("pickup_sourt"      , stBody.pickup_sourt);
+		pkt.GetParameterVal("tel"               , stBody.tel);
+		pkt.GetParameterVal("draw_type"         , stBody.draw_type);
+		pkt.GetParameterVal("self_amount"       , stBody.self_amount);
+		pkt.GetParameterVal("trade_amount"      , stBody.trade_amount);
+		
 		return 0;
 	};
 
@@ -3208,6 +3222,11 @@ public:
 		pkt.AddParameter("take_date"         , stBody.take_date);
 		pkt.AddParameter("start_date"        , stBody.start_date);
 		pkt.AddParameter("end_date"          , stBody.end_date);
+		pkt.AddParameter("pickup_sourt"      , stBody.pickup_sourt);
+		pkt.AddParameter("tel"               , stBody.tel);
+		pkt.AddParameter("draw_type"         , stBody.draw_type);
+		pkt.AddParameter("self_amount"       , stBody.self_amount);
+		pkt.AddParameter("trade_amount"      , stBody.trade_amount);
 		return 0;
 	};
 

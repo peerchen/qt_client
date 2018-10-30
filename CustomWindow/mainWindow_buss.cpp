@@ -79,24 +79,28 @@ void mainWindow::SwitchMode(uint && uMode)
 
 		break;
 	case 2:  // 远期
-		ui.pushButton_yanqi->setEnabled(true);
-		ui.pushButton_zhonglicang->setEnabled(true);
-		ui.pushButton_jiaoshou->setEnabled(true);
+		ui.pushButton_yanqi->setEnabled(false);
+		ui.pushButton_zhonglicang->setEnabled(false);
+		ui.pushButton_jiaoshou->setEnabled(false);
 
 		ui.pushButton_buy->setEnabled(true);
 		ui.pushButton_sell->setEnabled(true);
 
 		ui.pushButton_kaicang->setEnabled(true);
-		ui.pushButton_pingcang->setEnabled(true);
+		
 
 		//m_comboKP.EnableWindow(TRUE);
 		slotChangeOrderType();
+
+		disableYqZlJsOrderCtl();//kenny  20180809
 		slotChangeOpenCloseType();
 
 
 		ui.spinBox_order_num->setValue(1);
 		ui.spinBox_order_price->setEnabled(true);
 
+		ui.pushButton_pingcang->setEnabled(false);
+		break;
 	default:
 		break;
 	}
@@ -129,33 +133,29 @@ uint mainWindow::GetLastPrice(const QUOTATION &qt)
 // 用最新价填充edit控件，仅当行情价格与当前输入框不同的时候才修改
 void mainWindow::ShowLastPrice(const QUOTATION &qt)
 {
-
 		double dValue = GetLastPrice(qt) / g_Global.m_dQTFactor;
 		if (CHJGlobalFun::CompareDouble(dValue, ui.spinBox_order_price->text().toDouble()) != 0)
 			ui.spinBox_order_price->setValue(dValue);
-
 }
 
+void mainWindow::setSpinBox(QDoubleSpinBox *Control, const double & min ,const double & max,const double & step)
+{
+	Control->setMinimum(min);
+	Control->setMaximum(max);
+	Control->setSingleStep(step);
+	Control->show();
+}
 void mainWindow::ShowPriceInfo(const string &&sInsID, const QUOTATION&& qt)
 {
 
 	// 设置价格控件的属性
 	// mod by Jerry Lee, 2013-3-7, 将输入改为无限制
 	if (sInsID == "Ag99.9" || sInsID == "Ag(T+D)")
-	{
-		//m_editPrice.IniInt(CNumCommn::e_both, 2, 0.00, 100000.00, false);
-
-		ui.spinBox_order_price->setMinimum(0.00);
-		ui.spinBox_order_price->setMaximum(100000.00);
-		ui.spinBox_order_price->setSingleStep(1);
-	}
+		setSpinBox(ui.spinBox_order_price, 0, 100000, 1);
+	else if (sInsID == "Au(T+N1)" || sInsID == "Au(T+N2)")
+		setSpinBox(ui.spinBox_order_price, 0, 100000, 0.05);
 	else
-	{
-		//m_editPrice.IniFloat(CNumCommn::e_both, 2, 0.01, 2, 0.00, 100000.00, false);
-		ui.spinBox_order_price->setMinimum(0.00);
-		ui.spinBox_order_price->setMaximum(100000.00);
-		ui.spinBox_order_price->setSingleStep(0.01);
-	}
+		setSpinBox(ui.spinBox_order_price, 0, 100000, 0.01);
 
 	// 填充价格，用最新价填充
 	//if(ui.label_pricetype->mLastPriceMode)
@@ -177,6 +177,8 @@ void mainWindow::AskModeChange()
 		QString csExchName(g_TraderCpMgr.GetExchName(sExchCode));
 
 		if (sExchCode == CONSTANT_EXCH_CODE_DELIVERY_LONG || sExchCode == CONSTANT_EXCH_CODE_DELIVERY_SHORT)
+			ui.pushButton_order->setText(csExchName);
+		else if(sExchCode == CONSTANT_EXCH_CODE_FORWARD_LONG || sExchCode == CONSTANT_EXCH_CODE_FORWARD_SHORT)
 			ui.pushButton_order->setText(csExchName);
 		else // 不是延期交收的话则去掉前面两个字（现货、延期）
 			//m_btnOK.SetWindowText(csExchName.Mid(4));
@@ -336,8 +338,6 @@ void mainWindow::SetQuotation(QUOTATION* wparam)
 	SetOrderQuotation(wparam);
 }
 
-
-
 //点击报单按钮时检查界面的输入合法性
 bool mainWindow::CheckInput()
 {
@@ -437,31 +437,32 @@ void mainWindow::slotSendOrder()
 		QString sProdCode = ui.securityComboBox->currentText();
 		// 价格
 		QString csPrice =ui.spinBox_order_price->text();
+
 		//报单类型
 		QString csOrderType = ui.indiComboBox->currentText();
 		int nType = -1;
 
-		if (csOrderType == "普通限价指令")
+		if (csOrderType == "限价报单")//普通限价指令")
 		{
 			nType = 0;
 		}
-		else	if (csOrderType == "限价FOK指令")
+		else	if (csOrderType == "限价FOK")
 		{
 			nType = 1;
 		}
-		else	if (csOrderType == "限价FAK指令")
+		else	if (csOrderType == "限价FAK")
 		{
 			nType = 2;
 		}
-		else	if (csOrderType == "市价剩余转限价指令")
+		else	if (csOrderType == "市价转限价")
 		{
 			nType = 3;
 		}
-		else	if (csOrderType == "市价FOK指令")
+		else	if (csOrderType == "市价FOK")
 		{
 			nType = 4;
 		}
-		else	if (csOrderType == "市价FAK指令")
+		else	if (csOrderType == "市价FAK")
 		{
 			nType = 5;
 		}
@@ -624,7 +625,6 @@ void mainWindow::GetCangWeiTd(const string& prodCode, QString& usefullong, QStri
 	{
 		/*usefullong.Format("%d", stPosi.infoLong.iUsefulAmt);
 		usefulshort.Format("%d", stPosi.infoShort.iUsefulAmt);*/
-
 		usefullong   = QString::number(stPosi.infoLong.iUsefulAmt);
 		usefulshort  = QString::number(stPosi.infoShort.iUsefulAmt);
 	}
@@ -797,16 +797,14 @@ int mainWindow::GetUsefulStore(const string &sProdCode)
 }
 
 
-
-
-
 void mainWindow::InitAllData()
 {
 	RefreshPosi();//加载持仓
 	RefreshStore();//加载库存
-	RefreshAccount();//加载中账户
+	RefreshAccount();//加载账户
 	RefreshCapital();//加载资金表
 	RefreshMatch();//加载成交流水
+	RefreshOrder();//加载报单表
 
 	//加载报盘区域
 	ProdCodeInfo info;
@@ -959,11 +957,7 @@ void mainWindow::InsertNewEntrFlow(const string&& LocalOrderNo, const string&& O
 {
 	if (CHJCommon::CheckEntrFlowIsInvalidate(State, RemainAmount))// 如果报单流水无效，则不插入
 	{
-		//#ifdef _WRITE_LOG
-		//		CString csTemp;
-		//		csTemp.Format("插入报单流水失败 本地报单号为%s 报单状态为%s, 未成交数量为%d", LocalOrderNo.c_str(), State.c_str(), RemainAmount);
-		//		g_Global.WriteLog(csTemp);
-		//#endif
+		//CRLog(E_DEBUG, "插入报单流水失败 本地报单号为%s 报单状态为%s, 未成交数量为%d", LocalOrderNo.c_str(), State.toLatin1(), RemainAmount);
 	}
 	else
 	{
@@ -1067,6 +1061,10 @@ void mainWindow::DeleteEntrFlowByLocalOrderNo(const string &sNo)
 void mainWindow::HandleDeferOrder(void *  wparam)
 {
 	DeferOrder* pDeferOrder = (DeferOrder*)wparam;
+
+	//多账户，需要过滤  20180823
+	if (g_Global.m_strUserID != pDeferOrder->clientID.c_str())
+		return;
 
 	int index = CheckEntrFlowExist(pDeferOrder->localOrderNo);
 
@@ -1287,7 +1285,7 @@ void mainWindow::DealOneLine(const string &sProdCode, const DeferPosiInfo &stDef
 		{
 			tableModel->setItem(iPos, j, new QStandardItem(GetPosiValue(stDeferPosiInfo, m_vecColumnIndexs.at(j))));//序号
 
-			if (m_vecColumnIndexs.at(j) >= 7 && m_vecColumnIndexs.at(j) <= 7)
+			if (m_vecColumnIndexs.at(j) >= 7 && m_vecColumnIndexs.at(j) <= 7)//持仓盈亏字段，在库里排第7位
 			{
 				//盈亏的颜色样式
 				if (stDeferPosiInfo.dPosi_PL > 0 /*&& (j >= 7 && j <= 7)*/)
@@ -1602,6 +1600,11 @@ void mainWindow::HandleRtnForwardMatch(void * wParam)
 void mainWindow::HandleRtnDeferMatch(void * wParam)
 {
 	DeferMatch *body = (DeferMatch*)wParam;
+
+	
+	//多账户，需要过滤
+	if (g_Global.m_strUserID != body->clientID.c_str())
+		return;
 
 	//如果key存在，则返回
 	if (!CheckKeyExist(body->matchNo, body->orderNo))
@@ -1961,7 +1964,7 @@ void mainWindow::RefreshAccount()
 	ui.label_static_right_val->setText(CHJGlobalFun::FormatFloat(CHJGlobalFun::DoubleToQString(stFund.dAllBalance)));//静态权益
 	ui.label_static_right_val->setStyleSheet("QLabel{font-size: 18px;color:#227dc3}");
 
-	ui.label_account_risk_val->setText("0.0");//风险度
+	//ui.label_account_risk_val->setText("0.0");//风险度
 	ui.label_account_risk_val->setStyleSheet("QLabel{font-size: 18px;color:#227dc3}");
 
 	//kenny   20171219
@@ -2065,56 +2068,58 @@ void mainWindow::RefreshCapital()
 //响应交易状态变化【连续交易】
 void mainWindow::OnInstStateUpdate(void * wparam)
 {
-	uint pos = *((uint *)wparam) > g_TraderCpMgr.m_vInstState.size()-1  ?  0 : *((uint *)wparam);
-	if (pos > 50)
+	uint index = g_TraderCpMgr.m_vInstState.size() - 1;
+	if (index < 0)
 		return;
-	const InstState  &instate = g_TraderCpMgr.m_vInstState.at(pos);
 
-	int rowIndex = -1;
-	if (instate.instID.compare("Ag(T+D)") == 0)
-	{
-		rowIndex = 0;
-	}
-	else if (instate.instID.compare("Au(T+D)") == 0)
-	{
-		rowIndex = 1;
-	}
-	else if (instate.instID.compare("mAu(T+D)") == 0)
-	{
-		rowIndex = 2;
-	}
-	else if (instate.instID.compare("Au99.99") == 0)
-	{
-		rowIndex = 3;
-	}
-	else if (instate.instID.compare("Au99.95") == 0)
-	{
-		rowIndex = 4;
-	}
-	else if (instate.instID.compare("Au100g") == 0)
-	{
-		rowIndex = 5;
-	}
-	else if (instate.instID.compare("Au(T+N1)") == 0)
-	{
-		rowIndex = 6;
-	}
-	else if (instate.instID.compare("Au(T+N2)") == 0)
-	{
-		rowIndex = 7;
-	}
-	else if (instate.instID.compare("Au99.5") == 0)
-	{
-		rowIndex = 8;
-	}
+	//uint pos = *((uint *)wparam) > index ? index : *((uint *)wparam);
+	//if (pos > 50)
+	//	return;
+	InstState body = g_TraderCpMgr.m_vInstState[index];
 
 
-	if (rowIndex != -1)
+	//kenny  20180807  动态添加交易状态
+	QString buf;
+
+	QVector<int> vecUserInsIndexs;
+	App::GetPriProfileString(g_Global.GetListIniPath("InsID"), "Info", "UserColumnIndexs", buf);
+	CHJGlobalFun::SplitStrToVector(buf, LIST_INI_SPLITER, vecUserInsIndexs);
+
+	//读取合约列表
+	QVector<QString> vecAllNames;
+	App::GetPriProfileString(g_Global.GetListIniPath("InsID"), "Info", "AllColumnNames", buf);
+	CHJGlobalFun::SplitStrToVector(buf, LIST_INI_SPLITER, vecAllNames);
+
+
+	for (InstState &instate : g_TraderCpMgr.m_vInstState)
 	{
-		QString csValue = g_TraderCpMgr.GetInsStateNameFromID(g_TraderCpMgr.GetInsStateID(CHJGlobalFun::str2qstr(instate.instID)));
-		//m_list.SetItemTextEx(iPos, "tradestate", csValue);
-		ui.tableViewMarketPrice->updateCell(rowIndex,2, csValue);//状态改变时，修改交易状态值
+		
+		int rowIndex = -1;
+		for (size_t i = 0; i < vecUserInsIndexs.size(); i++)
+		{
+
+			// 加载该品种的行情
+			QString  inst = vecAllNames.at(vecUserInsIndexs.at(i));
+			if (instate.instID == CHJGlobalFun::qstr2str(inst))
+			{
+				//
+				rowIndex = i;
+				break;
+			}
+			
+		}
+		
+		
+		if (rowIndex != -1)
+		{
+			//KENNY  20180725 
+			QString csValue = g_TraderCpMgr.GetInsStateNameFromID(g_TraderCpMgr.GetInsStateID(CHJGlobalFun::str2qstr(instate.instID)));
+
+			ui.tableViewMarketPrice->updateCell(rowIndex, 2, csValue);//状态改变时，修改交易状态值
+		}
+
 	}
+	
 
 }
 

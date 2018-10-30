@@ -15,7 +15,7 @@ ClickLabel::~ClickLabel()
 
 void ClickLabel::slotClicked()
 {
-	std::string val = "指定价";
+	std::string val  = "指定价";
 	std::string val2 = "跟盘价";
 	std::string str =  CHJGlobalFun::qstr2str(text());
 	if (str == "指定价")

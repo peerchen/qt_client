@@ -20,7 +20,6 @@ public:
 	void setOrderId(const int &val);
 	int OrderId();
 
-	
 
 private:
 	void *mpWVal;
@@ -30,3 +29,17 @@ private:
 	int       n_val;
 	int       m_orderId;
 };
+
+//class QSurplusEvent : public QEvent
+//{
+//
+//public:
+//	explicit QSurplusEvent(QEvent::Type type);
+//	~QSurplusEvent();
+//
+//	void setDefer(DeferPosi &param);
+//	DeferPosi &getDefer();
+//
+//private:
+//	DeferPosi  posi;
+//};

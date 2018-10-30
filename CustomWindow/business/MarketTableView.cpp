@@ -1,15 +1,10 @@
 ﻿#include "MarketTableView.h"
 
-//#include "LxCustomSortModel.h"
+
 #include <QHBoxLayout>
 #include <time.h>
 
-//#include "lock/Owner.hpp"
-//#include "plugin/SessionCheck.h"
-//#include "StrategySystem/SessionManager.h"
-//#include "StrategySystem/FirstSession.h"
-//#include "objects/ReportData.h"
-//#include "MainFrm/LxSysThemeMgr.h"
+
 #include "QuoteStandardItemModel.h"
 #include "TableItemDelegate.h"
 #include "macrodefs.h"
@@ -64,6 +59,8 @@ MarketTableView::MarketTableView(QSplitter *spliter,QAbstractItemModel *model, Q
 
 	connect(selectionModel(), SIGNAL(currentRowChanged(const QModelIndex &, const QModelIndex &)),
 		parent, SLOT(showPosiOperationDetails(const QModelIndex &, const QModelIndex &)));
+
+	readCfg();
 }
 
 MarketTableView::~MarketTableView()
@@ -189,42 +186,6 @@ void  MarketTableView::InitColumn()
 
 }
 
-//void  MarketTableView::UpdateQuotationImp(QUOTATION * quote)
-//{
-//	QString buf;
-//
-//	App::GetPriProfileString(g_Global.GetListIniPath("Quotation"), "Info", "UserColumnIndexs", buf);
-//	CHJGlobalFun::SplitStrToVector(buf, LIST_INI_SPLITER, m_vecColumnIndexs);
-//
-//	// 加载默认的品种到行情列表
-//	QIniFilesManager mag;
-//	vector<QString> vecUserNames;
-//	mag.ReadUserChoose(g_Global.GetListIniPath("InsID"), "UserColumnIndexs", true, vecUserNames);
-//
-//	QuoteStandardItemModel* tableModel = (QuoteStandardItemModel *)m_pmodel;
-//
-//	for (size_t i = 0; i < vecUserNames.size(); i++)
-//	{
-//		QString csValue;
-//		QString sInsID = vecUserNames.at(i);
-//		tableModel->insertRow(i);
-//		tableModel->setItem2(i, 0, QString::number(i + 1));//序号
-//														   //tableModel->setItem2(i, 1, sInsID);//合约编码
-//														   //tableModel->setItem2(i, 2, g_TraderCpMgr.GetProdCodeName(sInsID));//显示合约名称
-//														   // 加载该品种的行情
-//		const QUOTATION& qt = g_TraderCpMgr.m_QMapQuotation[CHJGlobalFun::qstr2str(vecUserNames.at(i))];
-//		for (size_t j = 0; j < m_vecColumnIndexs.size(); j++)
-//		{
-//			int colPos = m_vecColumnIndexs.at(j);
-//			if (colPos > 0)
-//			{
-//				tableModel->setItem2(i, m_vecColumnIndexs.at(j), GetQuotationValue(vecUserNames.at(i), qt, i, colPos));//序号
-//			}
-//		}
-//
-//	}
-//
-//}
 void  MarketTableView::InitRowData()
 {
 	QString buf;
@@ -262,7 +223,10 @@ void  MarketTableView::InitRowData()
 		{
 			int col = vecUserColumnIndexs.at(j);
 
-			tableModel->setItem2(i, col, GetQuotationValue(inst, qt, i,col));//序号
+			QStandardItem *item = new QStandardItem();
+			tableModel->setItem(i, col, item);
+
+			tableModel->InitItem(i, col, GetQuotationValue(inst, qt, i,col));//序号
 			this->setColumnWidth(col, vecAllColumnWidths.at(col));
 
 		}
@@ -272,11 +236,11 @@ void  MarketTableView::InitRowData()
 
 }
 
-
+//Quotation.ini表里面的AllColumnNames作为ipos的位置值
 QString MarketTableView::GetQuotationValue(const QString &lpszInsId, const QUOTATION &quotation, const int rowIndex,const int &iPos)
 {
 	QString strValue = "";
-	//索引值，见Quotation.ini的DefaultColumnIndexs
+
 	switch (iPos)
 	{
 	case 10:
@@ -402,7 +366,6 @@ QString MarketTableView::GetQuotationValue(const QString &lpszInsId, const QUOTA
 		*/
 	case 23:
 		//unsigned int uiTime = quotation.m_uiTime; // 行情时间
-
 		strValue.sprintf("%02d:%02d:%02d", quotation.m_uiTime / 10000, quotation.m_uiTime / 100 - quotation.m_uiTime / 10000 * 100, quotation.m_uiTime % 100);
 
 		break;
@@ -426,11 +389,8 @@ QString MarketTableView::GetQuotationValue(const QString &lpszInsId, const QUOTA
 	return strValue;
 }
 
-
-//制作更新
-void MarketTableView::updateQuotation(QUOTATION *quote)
+void MarketTableView::readCfg()
 {
-	//qDebug() << "Date:" << QString::fromStdString(quote->instID);
 	m_vecColumnIndexs.clear();
 	QString buf;
 
@@ -446,17 +406,17 @@ void MarketTableView::updateQuotation(QUOTATION *quote)
 	//vector<QString> vecUserIndexs;
 	//mag.ReadUserChoose(g_Global.GetListIniPath("InsID"), "UserColumnIndexs", true, vecUserIndexs);
 
-
-	QVector<QString> vecAllNames;
 	App::GetPriProfileString(g_Global.GetListIniPath("InsID"), "Info", "AllColumnNames", buf);
 	CHJGlobalFun::SplitStrToVector(buf, LIST_INI_SPLITER, vecAllNames);
 
-	QVector<int> vecUserIndexs;
+
 	App::GetPriProfileString(g_Global.GetListIniPath("InsID"), "Info", "UserColumnIndexs", buf);
 	CHJGlobalFun::SplitStrToVector(buf, LIST_INI_SPLITER, vecUserIndexs);
-
-
-
+}
+//制作更新
+void MarketTableView::updateQuotation(QUOTATION *quote)
+{
+	//qDebug() << "Date:" << QString::fromStdString(quote->instID);
 	QuoteStandardItemModel* tableModel = (QuoteStandardItemModel *)m_pmodel;
 
 	for (size_t i = 0; i < vecUserIndexs.size(); i++)
@@ -468,236 +428,42 @@ void MarketTableView::updateQuotation(QUOTATION *quote)
 			for (size_t j = 0; j < m_vecColumnIndexs.size(); j++)
 			{
 				int colPos = m_vecColumnIndexs.at(j);
-
 				QString ttt = GetQuotationValue(vecAllNames.at(vecUserIndexs.at(i)), *quote, i, colPos);
 
-				tableModel->setItem2(i, m_vecColumnIndexs.at(j), ttt);//序号
+				updateCell(i, colPos, ttt);
+
+				//tableModel->setItem2(i, m_vecColumnIndexs.at(j), ttt);//序号
+									
+				//if (colPos != 0 && colPos != 1 && colPos != 2)
+				//{
+				//	//取旧值
+				//	QString strText = tableModel->data(m_pmodel->index(i, colPos, QModelIndex())).toString();
+				//	//QString &strText = tableModel->item(i, colPos)->text();
+				//	//设置字体居中,字体大小  20171209
+				//	//tableModel_order->item(iLine, i)->setTextAlignment(Qt::AlignCenter);
+				//	//tableModel_order->item(iLine, i)->setFont(QFont("宋体", 10, QFont::Normal));
+
+				//	if (ttt.toDouble() >= strText.toDouble())
+				//		tableModel->setColor(i,colPos,1);
+				//	else
+				//		tableModel->setColor(i, colPos, -1);
+				//}
 
 			}
+			////颜色还原
+			//for (size_t j = 0; j < m_vecColumnIndexs.size(); j++)
+			//{
+			//	int colPos = m_vecColumnIndexs.at(j);		
+			//	//设置字体居中,字体大小  20171209
+			//	//tableModel_order->item(iLine, i)->setTextAlignment(Qt::AlignCenter);
+			//	if (colPos != 0 && colPos != 1 && colPos != 2)
+			//		tableModel->setColor(i, colPos, 0);
+			//}
 			return;
 		}
 
 	}
 }
-
-/*
-//更新实时行情值【自己管理的数据】
-void MarketTableView::updateQuotation(QUOTATION *quote)
-{
-	///////////////////////////////////////////////////////////////////////////////////////////
-
-	///////////////////////////////////////////////////////////////////////////////////////////
-	//加载字段配置
-	QString strPath = QString("%1QueryConfig\\Quotation.ini").arg(g_Global.GetSystemPath());
-
-	QString strValue;
-	QString strAligns;
-	int i;
-	QVector<QString> vecAllNames;
-	QVector<int> vecColumnIndexs;
-
-	QString buf;
-
-	// 读取全部字段名称，并分割到vector
-	App::GetPriProfileString(strPath, "Info", "AllColumnNames", buf);
-	strValue = buf;
-	CHJGlobalFun::SplitStrToVector(strValue, QUERY_INI_SPLITER, vecAllNames);
-
-	// 读取位置字段，并且分割到vector
-	App::GetPriProfileString(strPath, "Info", "UserColumnIndexs", buf);
-	strValue = buf;
-	CHJGlobalFun::SplitStrToVector(strValue, QUERY_INI_SPLITER, vecColumnIndexs);
-
-	// 加载当前显示项
-	for (i = 0; i < vecColumnIndexs.size(); i++)
-	{
-		//添加进界面
-		QListWidgetItem * item = new QListWidgetItem();
-		item->setCheckState(Qt::Checked);
-		item->setText(vecAllNames.at(vecColumnIndexs.at(i)));
-		//ui.listWidget->addItem(item);
-
-		//ui.listWidget->setItemWidget(item, list[list.count() - 1]);
-		//设置自定义值
-		item->setData(Qt::UserRole, vecColumnIndexs.at(i));
-
-	}
-
-	int rowIndex = 0;
-	if (quote->instID.compare("Ag(T+D)") == 0)
-	{
-		rowIndex = 0;
-	}
-	else if (quote->instID.compare("Au(T+D)") == 0)
-	{
-		rowIndex = 1;
-	}
-	else if (quote->instID.compare("mAu(T+D)") == 0)
-	{
-		rowIndex = 2;
-	}
-	else if (quote->instID.compare("Au99.99") == 0)
-	{
-		rowIndex = 3;
-	}
-	else if (quote->instID.compare("Au99.95") == 0)
-	{
-		rowIndex = 4;
-	}
-	else if (quote->instID.compare("Au100g") == 0)
-	{
-		rowIndex = 5;
-	}
-	else if (quote->instID.compare("Au(T+N1)") == 0)
-	{
-		rowIndex = 6;
-	}
-	else if (quote->instID.compare("Au(T+N2)") == 0)
-	{
-		rowIndex = 7;
-	}
-	else if (quote->instID.compare("Au99.5") == 0)
-	{
-		rowIndex = 8;
-	}
-
-	QuoteStandardItemModel* p = (QuoteStandardItemModel *)m_pmodel;
-	float oldVal = m_pmodel->data(m_pmodel->index(rowIndex, 2, QModelIndex())).toString().toFloat();
-	float val = (float)quote->m_uiLast / 100;
-/*
-	if (oldVal != val)
-	{
-		/*p->setItem2(rowIndex, 2, CHJGlobalFun::FormatFloatQuote(QString::number((float)quote->m_uiLast / 100,'f',2)));
-		if(val > oldVal)
-		p->item(rowIndex, 2)->setForeground(QBrush(QColor("#ff786e")));
-		else
-		p->item(rowIndex, 2)->setForeground(QBrush(QColor("#6cad3c")));
-	}
-*/
-	//p->setItem2(rowIndex, 3, QString::number(quote->m_uiUpDown / g_Global.m_dQTFactor, 'f', 2));
-	//p->setItem2(rowIndex, 4, QString::number(quote->m_dUpDownRate, 'f', 2));
-
-	//oldVal = m_pmodel->data(m_pmodel->index(rowIndex, 5, QModelIndex())).toString().toFloat();
-	//val = (float)(quote->m_uiHigh - quote->m_uiLow) / quote->m_uilastClose;
-	//if (oldVal != val)
-	//{
-	//	p->setItem2(rowIndex, 5, CHJGlobalFun::FormatFloatQuote(QString::number(val)));
-	//	if (val > oldVal)
-	//		p->item(rowIndex, 5)->setForeground(QBrush(QColor("#ff786e")));
-	//	else
-	//		p->item(rowIndex, 5)->setForeground(QBrush(QColor("#6cad3c")));
-	//}
-
-	//oldVal = m_pmodel->data(m_pmodel->index(rowIndex, 6, QModelIndex())).toString().toFloat();
-	//val = (float)quote->m_Bid[0].m_uiPrice / g_Global.m_dQTFactor;
-	//if (oldVal != val)
-	//{
-	//	p->setItem2(rowIndex, 6, CHJGlobalFun::FormatFloatQuote(QString::number(val)));
-
-	//	if (val > oldVal)
-	//		p->item(rowIndex, 6)->setBackground(QBrush(QColor("#ff786e")));
-	//	else
-	//		p->item(rowIndex, 6)->setBackground(QBrush(QColor("#6cad3c")));
-	//}
-
-	//p->setItem2(rowIndex, 7, QString::number(quote->m_Bid[0].m_uiVol));
-	//p->setItem2(rowIndex, 9, QString::number(quote->m_Ask[0].m_uiVol));
-
-
-
-	//oldVal = m_pmodel->data(m_pmodel->index(rowIndex, 8, QModelIndex())).toString().toFloat();
-	//val = (float)quote->m_Ask[0].m_uiPrice / g_Global.m_dQTFactor;
-	//if (oldVal != val)
-	//{
-	//	p->setItem2(rowIndex, 8, CHJGlobalFun::FormatFloatQuote(QString::number(val)));
-
-	//	if (val > oldVal)
-	//		p->item(rowIndex, 8)->setBackground(QBrush(QColor("#ff786e")));
-	//	else
-	//		p->item(rowIndex, 8)->setBackground(QBrush(QColor("#6cad3c")));
-	//}
-
-
-	//oldVal = m_pmodel->data(m_pmodel->index(rowIndex, 10, QModelIndex())).toString().toFloat();
-	//val = (float)quote->m_uiLastSettle / g_Global.m_dQTFactor;
-	//if (oldVal != val)
-	//{
-	//	p->setItem2(rowIndex, 10, CHJGlobalFun::FormatFloatQuote(QString::number(val)));
-
-	//	if (val > oldVal)
-	//		p->item(rowIndex, 10)->setBackground(QBrush(QColor("#ff786e")));
-	//	else
-	//		p->item(rowIndex, 10)->setBackground(QBrush(QColor("#6cad3c")));
-	//}
-
-	//oldVal = m_pmodel->data(m_pmodel->index(rowIndex, 11, QModelIndex())).toString().toFloat();
-	//val = (float)quote->m_uilastClose / g_Global.m_dQTFactor;
-	//if (oldVal != val)
-	//{
-	//	p->setItem2(rowIndex, 11, CHJGlobalFun::FormatFloatQuote(QString::number(val)));
-
-	//	if (val > oldVal)
-	//		p->item(rowIndex, 11)->setBackground(QBrush(QColor("#ff786e")));
-	//	else
-	//		p->item(rowIndex, 11)->setBackground(QBrush(QColor("#6cad3c")));
-	//}
-
-
-
-	//oldVal = m_pmodel->data(m_pmodel->index(rowIndex, 12, QModelIndex())).toString().toFloat();
-	//val = (float)quote->m_uiOpenPrice / g_Global.m_dQTFactor;
-	//if (oldVal != val)
-	//{
-	//	p->setItem2(rowIndex, 12, CHJGlobalFun::FormatFloatQuote(QString::number(val)));
-
-	//	if (val > oldVal)
-	//		p->item(rowIndex, 12)->setBackground(QBrush(QColor("#ff786e")));
-	//	else
-	//		p->item(rowIndex, 12)->setBackground(QBrush(QColor("#6cad3c")));
-	//}
-
-	//oldVal = m_pmodel->data(m_pmodel->index(rowIndex, 13, QModelIndex())).toString().toFloat();
-	//val = (float)quote->m_uiHigh / 100;
-	//if (oldVal != val)
-	//{
-	//	p->setItem2(rowIndex, 13, CHJGlobalFun::FormatFloatQuote(QString::number(val)));
-
-	//	if (val > oldVal)
-	//		p->item(rowIndex, 13)->setBackground(QBrush(QColor("#ff786e")));
-	//	else
-	//		p->item(rowIndex, 13)->setBackground(QBrush(QColor("#6cad3c")));
-	//}
-
-
-	//oldVal = m_pmodel->data(m_pmodel->index(rowIndex, 14, QModelIndex())).toString().toFloat();
-	//val = (float)quote->m_uiLow / g_Global.m_dQTFactor;
-	//if (oldVal != val)
-	//{
-	//	p->setItem2(rowIndex, 14, CHJGlobalFun::FormatFloatQuote(QString::number(val)));
-
-	//	if (val > oldVal)
-	//		p->item(rowIndex, 14)->setBackground(QBrush(QColor("#ff786e")));
-	//	else
-	//		p->item(rowIndex, 14)->setBackground(QBrush(QColor("#6cad3c")));
-	//}
-
-
-	//oldVal = m_pmodel->data(m_pmodel->index(rowIndex, 15, QModelIndex())).toString().toFloat();
-	//val = (float)quote->m_uiClose / g_Global.m_dQTFactor;
-	//if (oldVal != val)
-	//{
-	//	p->setItem2(rowIndex, 15, CHJGlobalFun::FormatFloatQuote(QString::number(val)));
-
-	//	if (val > oldVal)
-	//		p->item(rowIndex, 15)->setBackground(QBrush(QColor("#ff786e")));
-	//	else
-	//		p->item(rowIndex, 15)->setBackground(QBrush(QColor("#6cad3c")));
-	//}
-
-//
-//	this->update();
-//
-//}
 
 
 QString MarketTableView::FormatPrice(unsigned int uiPrice)
@@ -713,7 +479,7 @@ void MarketTableView::SelMenu(QAction *pAction)
 {
     QList<QAction*> pActionlist = Option->menu()->actions();
     int col = 0;
-    for (QList<QAction*>::iterator it = pActionlist.begin(); it != pActionlist.end(); ++it)
+    for (auto it = pActionlist.begin(); it != pActionlist.end(); ++it)
     {
         if (*it == pAction)
         {
@@ -742,33 +508,6 @@ void  MarketTableView::RowClickSelected(const QModelIndex &index)
 	msg->setWParam(&state);
 	QApplication::sendEvent(m_mainWndid, msg);// , WPARAM(&state), 0);
 
-    //QString ExchangeName = m_pmodel->data(m_pmodel->index(index.row(), 1, QModelIndex())).toString();
-    //QStringList ContractList = ContractName.split('(',QString::SkipEmptyParts);
-
-    //if (2 == ContractList.size())
-    //{
-    //    ContractName = ContractList.at(0);  ///changed by chengp 1 changeinto 0
-    //    ContractName.remove(')');
-    //}
-    //ContractName += '.';
-    //if (ExchangeName == _MY_TEXT("中金所"))
-    //{
-    //    ContractName += "CFFEX";
-    //}
-    //else if (ExchangeName == _MY_TEXT("上期所"))
-    //{
-    //    ContractName += "SHFE";
-    //}
-    //else if (ExchangeName == _MY_TEXT("郑商所"))
-    //{
-    //    ContractName += "CZCE";
-    //}
-    //else if (ExchangeName == _MY_TEXT("大商所"))
-    //{
-    //    ContractName += "DCE";
-    //}
-    //emit    ContractLocked(ContractName);
-    //emit   StateChanged(true);
 }
 
 void MarketTableView::RowRightClicked(const QModelIndex &index)
@@ -783,22 +522,7 @@ void MarketTableView::RowRightClicked(const QModelIndex &index)
         ContractName.remove(')');
     }
     ContractName += '.';
-  /*  if (ExchangeName == _MY_TEXT("中金所"))
-    {
-        ContractName += "CFFEX";
-    }
-    else if (ExchangeName == _MY_TEXT("上期所"))
-    {
-        ContractName += "SHFE";
-    }
-    else if (ExchangeName == _MY_TEXT("郑商所"))
-    {
-        ContractName += "CZCE";
-    }
-    else if (ExchangeName == _MY_TEXT("大商所"))
-    {
-        ContractName += "DCE";
-    }*/
+  
     m_Contract = ContractName;
     if (m_pMenu)
         m_pMenu->exec(QCursor::pos());
@@ -921,6 +645,8 @@ void MarketTableView::responseTimer()
 	//	p->item(i, 14)->setBackground(QBrush(QColor("#181a1d")));
 	//	p->item(i, 15)->setBackground(QBrush(QColor("#181a1d")));
 	//}
+	//p->item(0, 6)->setBackground(QBrush(QColor("#181a1d")));
+	p->recoverAllBackground();
 	this->update();
 
     //SESSION_CHECK sc = CFirstSession::GetInstance()->GetSessionCheck();
@@ -1259,11 +985,6 @@ void MarketTableView::slotRowDoubleClicked(const QModelIndex& index)
 	}
 }
 
-
-
-
-
-
 //更新实时行情值【自己管理的数据】
 void MarketTableView::updateCell(int rowIndex,int columnIndex,QString& val)
 {
@@ -1272,6 +993,8 @@ void MarketTableView::updateCell(int rowIndex,int columnIndex,QString& val)
 
 	if (oldVal != val)
 	{
-		p->setItem2(rowIndex, columnIndex, val);
+		//p->setItem2(rowIndex, columnIndex, val);
+		p->updateItem(rowIndex, columnIndex, val);
 	}
 }
+

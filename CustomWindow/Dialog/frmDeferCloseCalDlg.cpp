@@ -6,7 +6,7 @@
 #include "Mgr/QuotationMgr.h"
 #include "TranMessage.h"
 #include "HJGlobalFun.h"
-
+#include "CustomInfoMgrEx.h"
 
 frmDeferCloseCalDlg::frmDeferCloseCalDlg(QWidget *parent)
 	: frmFramelessDialogBase(parent)
@@ -30,8 +30,8 @@ frmDeferCloseCalDlg::frmDeferCloseCalDlg(QWidget *parent)
 	ui.comboBox_code->setCurrentIndex(0);
 
 
-	ui.comboBox_type->insertItem(0,QStringLiteral("延期平空仓"),"b");//b
-	ui.comboBox_type->insertItem(1,QStringLiteral("延期平多仓"),"s");//s
+	ui.comboBox_type->insertItem(0, QStringLiteral("延期平空仓"), "b");//b
+	ui.comboBox_type->insertItem(1, QStringLiteral("延期平多仓"), "s");//s
 	ui.comboBox_type->setCurrentIndex(0);
 
 
@@ -50,7 +50,8 @@ frmDeferCloseCalDlg::frmDeferCloseCalDlg(QWidget *parent)
 		ui.doubleSpinBox_price->setSingleStep(1);
 	}
 	else
-	{	ui.doubleSpinBox_price->setMinimum(0.01);
+	{
+		ui.doubleSpinBox_price->setMinimum(0.01);
 		ui.doubleSpinBox_price->setSingleStep(0.01);
 	}
 
@@ -66,8 +67,48 @@ frmDeferCloseCalDlg::frmDeferCloseCalDlg(QWidget *parent)
 	ui.spinBox_num->setSingleStep(1);
 	ui.spinBox_num->setValue(1);
 
-	ui.label_up_val->setText(QStringLiteral("0"));
-	ui.label_down_val->setText(QStringLiteral("0"));
+	//多空值
+	ProdCodeInfo info;
+	GetCurProdCodeInfo(info); // 获得当前合约代码的信息
+	if (info.market_id == CONSTANT_B_MARKET_ID_SPOT) // Au99.9是现货品种，但是只能做远期交易，所以还是显示尺寸
+	{
+		// 获取当前品种的可用库存
+		int iStore = g_CusInfo.GetUsefulStore(CHJGlobalFun::qstr2str(info.prod_code));
+		double dou = (double)iStore / 1000.00;
+		//CString cstr;
+		//cstr.Format("%.3f", dou);
+		//sTips = cstr + " 千克";
+
+		//sTips = QString::number(dou, 'f', 3) + "千克";//保留小数点3位
+
+	}
+	else
+	{
+		// 如果是远期，则显示远期多空仓量
+		QString sUsefulLong = "0";
+		QString sUsefulShort = "0";
+
+		// 获取该品种的仓位信息
+		DeferPosi stPosi;
+		if (g_CusInfo.GetPosiInfo(stPosi, CHJGlobalFun::qstr2str(info.prod_code)))
+		{
+			/*usefullong.Format("%d", stPosi.infoLong.iUsefulAmt);
+			usefulshort.Format("%d", stPosi.infoShort.iUsefulAmt);*/
+
+			sUsefulLong = QString::number(stPosi.infoLong.iUsefulAmt);
+			sUsefulShort = QString::number(stPosi.infoShort.iUsefulAmt);
+		}
+
+
+		//kenny 暂时屏蔽
+		//sTips += "仓位";
+
+		ui.label_up_val->setText(sUsefulLong);
+		ui.label_down_val->setText(sUsefulShort);
+	}
+
+
+	
 
 	connect(ui.comboBox_code, SIGNAL(currentIndexChanged(QString)), this, SLOT(slotChangeCode(QString)));
 
@@ -130,6 +171,49 @@ void frmDeferCloseCalDlg::slotChangeCode(QString str)
 		ui.doubleSpinBox_price->setMinimum(0.01);
 		ui.doubleSpinBox_price->setSingleStep(0.01);
 	}
+
+
+
+	//多空值
+	ProdCodeInfo info;
+	GetCurProdCodeInfo(info); // 获得当前合约代码的信息
+	if (info.market_id == CONSTANT_B_MARKET_ID_SPOT) // Au99.9是现货品种，但是只能做远期交易，所以还是显示尺寸
+	{
+		// 获取当前品种的可用库存
+		int iStore = g_CusInfo.GetUsefulStore(CHJGlobalFun::qstr2str(info.prod_code));
+		double dou = (double)iStore / 1000.00;
+		//CString cstr;
+		//cstr.Format("%.3f", dou);
+		//sTips = cstr + " 千克";
+
+		//sTips = QString::number(dou, 'f', 3) + "千克";//保留小数点3位
+
+	}
+	else
+	{
+		// 如果是远期，则显示远期多空仓量
+		QString sUsefulLong = "0";
+		QString sUsefulShort = "0";
+
+		// 获取该品种的仓位信息
+		DeferPosi stPosi;
+		if (g_CusInfo.GetPosiInfo(stPosi, CHJGlobalFun::qstr2str(info.prod_code)))
+		{
+			/*usefullong.Format("%d", stPosi.infoLong.iUsefulAmt);
+			usefulshort.Format("%d", stPosi.infoShort.iUsefulAmt);*/
+
+			sUsefulLong = QString::number(stPosi.infoLong.iUsefulAmt);
+			sUsefulShort = QString::number(stPosi.infoShort.iUsefulAmt);
+		}
+
+
+		//kenny 暂时屏蔽
+		//sTips += "仓位";
+
+		ui.label_up_val->setText(sUsefulLong);
+		ui.label_down_val->setText(sUsefulShort);
+	}
+
 }
 
 
@@ -186,4 +270,21 @@ void frmDeferCloseCalDlg::slotCal()
 		ui.label_down_count->setText(CHJGlobalFun::FormatFloat(CHJGlobalFun::str2qstr(rsp.remain_short)));
 
 	}
+}
+
+
+// 获得当前合约代码的相关信息，如果没找到则返回false，否则返回true
+bool frmDeferCloseCalDlg::GetCurProdCodeInfo(ProdCodeInfo &info)
+{
+	for (size_t i = 0; i < g_TraderCpMgr.m_vProdCode.size(); i++)
+	{
+		if (g_TraderCpMgr.m_vProdCode.at(i).prod_code == ui.comboBox_code->currentText())
+		{
+			info = g_TraderCpMgr.m_vProdCode.at(i);
+
+			return true;
+		}
+	}
+
+	return false;
 }

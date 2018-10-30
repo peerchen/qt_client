@@ -2,22 +2,10 @@
 
 #include "frmlogindialog.h"
 
-//#include "WorkspaceTemplateManager.h"
-//#include "ViewTemplateManager.h"
-////#include "AccountManager.h"
-//#include "StrategySystem/StrategySystem.h"
-//#include "StrategySystem/ComponentPlugins.h"
-//#include "StrategySystem/FirstSession.h"
-//#include "NetworkRateManager/NetworkRateManagerProc.h"
-
 #include <qmessagebox.h>
 #include <qapplication.h>
 
 #include "Macrodefs.h"
-//#include "log/RunningLog.h"
-//#include "TraderDef.h"
-//#include "Public//TraderManager.h"
-
 
 QStartup::QStartup()
     :   m_pDlg(0)
@@ -44,7 +32,6 @@ bool QStartup::Initialize()
 
 	frmLoginDialog *pDlgLogin = (frmLoginDialog*)m_pDlg;
 
-
     // 装载View
     //pDlgLogin->SetLoginMessage("正在初始化...");
 
@@ -67,7 +54,6 @@ void QStartup::Release()
 	//CComponentPlugins::GetInstance()->Release();
  //   QWorkspaceTemplateManager::GetInstance()->Release();
  //   QViewTemplateManager::GetInstance()->Release();
-
 	//CRunningLog::GetInstance()->Release();
 }
 

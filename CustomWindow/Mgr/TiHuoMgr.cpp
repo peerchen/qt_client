@@ -104,7 +104,7 @@ bool CTiHuoMgr::HandleCalculate( const string &sOrderNo, const string sInsID, in
 	}
 	else
 	{
-		//map<string, FrozeInfo>::iterator it = m_mapFroze.find(sOrderNo);
+		//auto it = m_mapFroze.find(sOrderNo);
 		auto it = m_mapFroze.find(sOrderNo);
 		if( it != m_mapFroze.end() ) // 如果没有被处理过
 		{

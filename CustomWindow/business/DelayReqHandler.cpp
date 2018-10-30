@@ -55,7 +55,7 @@ bool CDelayReqHandler::Initlize( const string& sDelayTime )
 
 void CDelayReqHandler::SendReq( const deque<ReqPara> &deqReq )
 {
-	for( std::deque<ReqPara>::const_iterator it = deqReq.begin(); it != deqReq.end(); it++ )
+	for( auto it = deqReq.begin(); it != deqReq.end(); it++ )
 	{
         if( e_ReqType_CustomInfo == it->eReqType )
 		{

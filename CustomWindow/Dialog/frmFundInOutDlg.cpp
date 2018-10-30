@@ -98,7 +98,7 @@ void frmFundInOutDlg::slotCal()
 	//
 	g_DelayReqHandler.RequestFundInfo();
 	//m_list1.DeleteAllItems();
-	tableModel->clear();
+	tableModel->removeRows(0, tableModel->rowCount());
 
 	Rsp3010 rsp3010;
 	Req3010 req3010;
@@ -125,7 +125,7 @@ void frmFundInOutDlg::slotCal()
 			tableModel->setItem(i, 5, new QStandardItem(g_TraderCpMgr.GetCheck_staName(CHJGlobalFun::str2qstr(alm.GetStringEx(i, 8)))));
 
 			//m_list1.SetItemText(i, 6, alm.GetStringEx(i, 13).c_str()); 	 
-			tableModel->setItem(i, 6, new QStandardItem(CHJGlobalFun::str2qstr(alm.GetStringEx(i, 13))));// 备注
+			tableModel->setItem(i, 6, new QStandardItem(CHJGlobalFun::str2qstr(alm.GetStringEx(i, 12))));// 备注
 
 		}
 	}
@@ -143,7 +143,7 @@ bool frmFundInOutDlg::HandleTransferByHand(const QString &accessWay)
 	req3010.exch_bal = ui.lineEdit->text().toFloat();
 	//资金密码
 	QByteArray ba = ui.lineEdit_pswd->text().toLatin1();
-	req3010.fund_pwd = CHJGlobalFun::qstr2str(g_TraderCpMgr.GetEncryptPSW(ba.data(), false));//true
+	req3010.fund_pwd = CHJGlobalFun::qstr2str(g_TraderCpMgr.GetEncryptPSW(ba.data(), true));//true
 	Rsp1020 rsp1020 = g_CusInfo.Get1020();
 	req3010.account_no = rsp1020.c_account_no;
 	req3010.open_bank_name = rsp1020.c_open_bank_name;
@@ -164,8 +164,6 @@ bool frmFundInOutDlg::HandleTransferByHand(const QString &accessWay)
 		}
 		else
 		{
-			//AfxMessageBox(rsp3010.rsp_msg.c_str());
-			//QMessageBox::Information(CHJGlobalFun::str2qstr(rsp3010.rsp_msg));
 			if (strcmp(rsp3010.rsp_code.c_str(), "HJ2002  ") == 0)
 				rsp3010.rsp_msg = "资金密码不正确！";
 
@@ -174,7 +172,6 @@ bool frmFundInOutDlg::HandleTransferByHand(const QString &accessWay)
 	}
 	else
 	{
-		//AfxMessageBox(CONSTANT_CONNECT_SERVER_FAIL_TIPS, MB_TOPMOST);
 		QMessageBox::information(nullptr, QStringLiteral("系统提示"), QStringLiteral(CONSTANT_CONNECT_SERVER_FAIL_TIPS));
 	}
 

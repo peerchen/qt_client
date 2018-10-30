@@ -99,7 +99,7 @@ double CustomInfoMgrEx::CalculateFrozenCapital(const QString & ProdCode, const Q
 	{
 		// 合约代码
 		string sInsID = m_rsp1020.htm_prod_group_info.GetString(nPosInHtm, "td_prod_code");
-		if (sInsID == ExchId.toStdString())
+		if (sInsID == ProdCode.toStdString())
 		{
 			bFind = true;
 			groupId = m_rsp1020.htm_prod_group_info.GetString(nPosInHtm, "group_id");
@@ -277,8 +277,8 @@ void CustomInfoMgrEx::HandleRecvQuotation( const QUOTATION& stQuotation )
 	m_csMutex.Lock();
 
 	// 获取该品种的持仓信息，计算持仓盈亏
-	//map<string, DeferPosi>::iterator it = m_mapDeferPosi.find(stQuotation.instID);
-	unordered_map<string,DeferPosi>::iterator it = m_mapDeferPosi.find(stQuotation.instID);
+	//auto it = m_mapDeferPosi.find(stQuotation.instID);
+	auto it = m_mapDeferPosi.find(stQuotation.instID);
 	if( it != m_mapDeferPosi.end() )
 	{
 		// 获取行情品种对应的持仓信息
@@ -316,6 +316,9 @@ void CustomInfoMgrEx::HandleRecvQuotation( const QUOTATION& stQuotation )
 
 double CustomInfoMgrEx::GetPosiSurplus( UINT uiLast, double dPosiAve, int iTotalHand, double dUnite,bool bLong )
 {
+	if (uiLast <= 0)
+		return 0;
+
 	double dNewest = uiLast / g_Global.m_dQTFactor;
 
 	// 获取盈亏价，注意如果是空仓的话，盈亏相反
@@ -512,3 +515,4 @@ void CustomInfoMgrEx::CalculateSurplus( DeferPosi& stDeferPosi, UINT uiLast )
 			false);
 	}
 }
+

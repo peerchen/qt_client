@@ -35,7 +35,7 @@ reportDrawWidget::reportDrawWidget(QWidget* parent)
 	TITLE_BEGIN_Y = 42;//kenny  2018-01-05
 	LINE_Y = 48;      //标题下面那条横线的y值
 
-					  //table1的数据（前三个表格）
+	//table1的数据（前三个表格）
 	TABLE1_LINE_TITLE_COUNT = 3; //用于前三个表格，每个表格每一行有三个title
 								 //#define TABLE1_TITLE_HEIGHT 114   //第一种表格标题的高度，比如客户信息，资金信息等这些字，表格内的标题的高度没有另外设置，理由很简单
 								 //table2的数据（后三个表格）

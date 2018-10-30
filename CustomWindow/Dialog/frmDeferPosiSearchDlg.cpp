@@ -76,7 +76,7 @@ void frmDeferPosiSearchDlg::OnBnClickedOption()
 {
 	frmOptionDlg dlg;
 	dlg.selectTreeItem("16");
-	dlg.exec();
+	dlg.setModal(false);
 }
 
 void frmDeferPosiSearchDlg::OnBnClickedOutTExcel()

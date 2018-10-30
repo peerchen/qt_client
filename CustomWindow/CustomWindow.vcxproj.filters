@@ -761,9 +761,6 @@
     <ClCompile Include="GeneratedFiles\Release\moc_CommonStandardItemModel.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="common\QParamEvent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Dialog\frmChangeAccountDlg.cpp">
       <Filter>Dialog</Filter>
     </ClCompile>
@@ -772,6 +769,27 @@
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_frmChangeAccountDlg.cpp">
       <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_frmRiskNotifyDlg.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_frmRiskNotifyDlg.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog\frmRiskNotifyDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QButtonSplitter.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QButtonSplitter.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="common\QButtonSplitter.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\QParamEvent.cpp">
+      <Filter>Common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1084,14 +1102,26 @@
     <CustomBuild Include="business\CommonStandardItemModel.h">
       <Filter>Bussiness\Table</Filter>
     </CustomBuild>
-    <CustomBuild Include="common\QParamEvent.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="Dialog\frmChangeAccountDlg.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
     <CustomBuild Include="Dialog\frmChangeAccountDlg.h">
       <Filter>Dialog</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialog\frmRiskNotifyDlg.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Dialog\frmRiskNotifyDlg.h">
+      <Filter>Dialog</Filter>
+    </CustomBuild>
+    <CustomBuild Include="common\HJQueryBase.h">
+      <Filter>Common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="common\QButtonSplitter.h">
+      <Filter>Common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="common\QParamEvent.h">
+      <Filter>Common</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -1341,9 +1371,6 @@
     <ClInclude Include="common\MyExcel.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="common\HJQueryBase.h">
-      <Filter>Common</Filter>
-    </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_frmNoticeDetailDlg.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
@@ -1408,6 +1435,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_frmChangeAccountDlg.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_frmRiskNotifyDlg.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>

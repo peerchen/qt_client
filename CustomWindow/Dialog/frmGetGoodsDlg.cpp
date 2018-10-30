@@ -42,7 +42,6 @@ frmGetGoodsDlg::frmGetGoodsDlg(QWidget *parent)
 	{
 		ArrayListMsg &aMsg = g_Global.m_almTake_Man_List.GetValue(i); // 获取结果的第一个组数据
 		//ui.comboBox_person.InsertString(i, aMsg.GetStringEx(0).c_str());
-
 		ui.comboBox_person->insertItem(i,CHJGlobalFun::str2qstr(aMsg.GetStringEx(0)));
 	}
 	QComboBox  test;
@@ -52,10 +51,9 @@ frmGetGoodsDlg::frmGetGoodsDlg(QWidget *parent)
 	ui.comboBox_person->setCurrentIndex(0);
 
 	if (ui.comboBox_person->count() < 2)
-	{
 		ui.comboBox_person->setEnabled(false);
-		//m_combperson.EnableWindow(FALSE);
-	}
+	else
+		ui.comboBox_person->setEnabled(true);
 
 	OnCbnSelchangeComboPerson();
 	ui.lineEdit_pswd->setEchoMode(QLineEdit::Password);
@@ -71,6 +69,38 @@ frmGetGoodsDlg::frmGetGoodsDlg(QWidget *parent)
 	//GetDlgItem(IDC_COMBO_TAKE_DATE)->ShowWindow(m_bShowTakeSheetDate);
 
 	ui.comboBox_last_getgoods_day->setEnabled(m_bShowTakeSheetDate);
+	QStringList list;
+	list << u8"自提" << u8"交提" << u8"部分交提";
+	ui.comboBox_get_type->addItems(list);
+
+	connect(ui.comboBox_get_type, &QComboBox::currentTextChanged, [&](const QString& text)
+	{
+		if (text == u8"自提")
+		{
+			ui.lineEdit_ziti->setEnabled(true);
+			ui.lineEdit_ziti->clear();
+			ui.lineEdit_jiaoti->setText("0");
+			ui.lineEdit_jiaoti->setEnabled(false);
+		}
+		else if (text == u8"交提")
+		{
+			ui.lineEdit_jiaoti->setEnabled(true);
+			ui.lineEdit_jiaoti->clear();
+		
+			ui.lineEdit_ziti->setText("0");
+			ui.lineEdit_ziti->setEnabled(false);
+		}
+		else
+		{
+			ui.lineEdit_ziti->setEnabled(true);
+			ui.lineEdit_ziti->clear();
+			ui.lineEdit_jiaoti->setEnabled(true);
+			ui.lineEdit_jiaoti->clear();
+		}
+	});
+
+	ui.label_7->hide();
+	ui.comboBox_last_getgoods_day->hide();
 	if (m_bShowTakeSheetDate)
 	{
 		//m_cmbTakeDate.ResetContent();
@@ -192,7 +222,15 @@ frmGetGoodsDlg::frmGetGoodsDlg(QWidget *parent)
 	setFixedSize(1001, 661);
 	ui.widget->setGeometry(0, 0, 1001, 561);
 	setContent(ui.widget);
-	setWindowTitle(QStringLiteral("提货"));
+	setWindowTitle(u8"提货");
+	ui.comboBox_get_type->currentTextChanged(u8"自提");
+
+	connect(ui.comboBox_person, static_cast<void(QComboBox::*)(int)>(&QComboBox::currentIndexChanged), [&](int index)
+	{
+		OnCbnSelchangeComboPerson();
+	});
+
+	ui.pushButton_print->hide();
 }
 
 frmGetGoodsDlg::~frmGetGoodsDlg()
@@ -328,6 +366,7 @@ void frmGetGoodsDlg::OnCbnSelchangeComboPerson()
 		//m_combidtype.EnableWindow(false);
 		ui.comboBox_credit->setEnabled(false);
 	}
+
 }
 
 ArrayListMsg* frmGetGoodsDlg::GetTakeShhetDate()
@@ -660,12 +699,42 @@ bool frmGetGoodsDlg::CheckInput()
 		return false;
 	}
 
+	if (ui.comboBox_get_type->currentIndex() == 0)
+	{
+		if (ui.lineEdit_ziti->text().toInt() < 1)
+		{
+			QMessageBox::information(nullptr, QStringLiteral("提示"), QStringLiteral("自提重量设置错误，请重新输入"));
+			return false;
+		}
+	}
+	else if (ui.comboBox_get_type->currentIndex() == 1)
+	{
+		if (ui.lineEdit_jiaoti->text().toInt() < 1)
+		{
+			QMessageBox::information(nullptr, QStringLiteral("提示"), QStringLiteral("交提重量设置错误，请重新输入"));
+			return false;
+		}
+	}
+	else
+	{
+		if (ui.lineEdit_ziti->text().toInt() < 1 || ui.lineEdit_jiaoti->text().toInt() < 1)
+		{
+			QMessageBox::information(nullptr, QStringLiteral("提示"), QStringLiteral("自提或交提重量设置错误，请重新输入"));
+			return false;
+		}
+	}
+
 	//判断提货重量是否正确
 	if (!IsWeightRight())
 	{
 		//GetDlgItem(IDC_EDIT_WEIGHT)->SetFocus();
 
-		ui.lineEdit_weight->setFocus();
+		//ui.lineEdit_weight->setFocus();
+		if (ui.comboBox_get_type->currentText() == u8"自提")
+			ui.lineEdit_ziti->setFocus();//atoi(m_editweight);
+		else
+			ui.lineEdit_jiaoti->setFocus();
+
 		return false;
 	}
 
@@ -736,19 +805,39 @@ void frmGetGoodsDlg::OnApplyGoods()
 			req.stor_id = GetStoreId(CHJGlobalFun::qstr2str(text));
 
 			//提货品种id
-			index = ui.comboBox_db->currentIndex();
+			index = ui.comboBox_type->currentIndex();
 
 			int nIndex = ui.comboBox_type->itemData(index).toInt();//(int)m_combgoodstype.GetItemData(index);
 			req.variety_id = CHJGlobalFun::qstr2str(g_TraderCpMgr.m_vVariety.at(nIndex).variety_id);
+			
+			//默认提货种类
+			req.pickup_sourt = "1";
+			req.draw_type =  CHJGlobalFun::qstr2str(QString::number(ui.comboBox_get_type->currentIndex()));
 			//申请提货重量
-			req.app_amount = CHJGlobalFun::qstr2str(ui.lineEdit_weight->text());
-
+			if (req.draw_type == "0")
+			{
+				req.app_amount = CHJGlobalFun::qstr2str(ui.lineEdit_ziti->text());
+			}
+			else if (req.draw_type == "1")
+			{
+				req.app_amount = CHJGlobalFun::qstr2str(ui.lineEdit_jiaoti->text());
+			}
+			else
+			{
+				req.app_amount = CHJGlobalFun::qstr2str(QString::number(ui.lineEdit_ziti->text().toInt() + ui.lineEdit_jiaoti->text().toInt()));
+			}
+			
+			//req.draw_type    = CHJGlobalFun::qstr2str(ui.comboBox_get_type->currentText());
+			req.self_amount  = CHJGlobalFun::qstr2str(ui.lineEdit_ziti->text());
+			req.trade_amount = CHJGlobalFun::qstr2str(ui.lineEdit_jiaoti->text());
 			//提货人
 			index = ui.comboBox_person->currentIndex();
 			//index = m_combperson.GetCurSel();
 			//m_combperson.GetLBText(index, text);
 			req.take_man = CHJGlobalFun::qstr2str(ui.comboBox_person->currentText());
 
+			req.tel     = CHJGlobalFun::qstr2str(ui.lineEdit_contract->text());
+			
 			//证件类型
 			index = ui.comboBox_credit->currentIndex();
 			//m_combidtype.GetLBText(index, text);
@@ -767,6 +856,7 @@ void frmGetGoodsDlg::OnApplyGoods()
 				//m_cmbTakeDate.GetLBText(index, text);
 				req.take_date = CHJGlobalFun::qstr2str(ui.comboBox_last_getgoods_day->currentText());
 			}
+			
 
 			Rsp5101 rsp; //应答报文体
 			if (0 != g_TraderCpMgr.HandlePacket(rsp, req, "5101"))
@@ -828,8 +918,11 @@ bool frmGetGoodsDlg::IsWeightRight()
 			break;
 		}
 	}
+	if(ui.comboBox_get_type->currentText() == u8"自提")
+		input = ui.lineEdit_ziti->text().toInt();//atoi(m_editweight);
+	else
+		input = ui.lineEdit_jiaoti->text().toInt();
 
-	input = ui.lineEdit_weight->text().toInt();//atoi(m_editweight);
 	if (input < min_pickup)//是否满足最小提货量
 	{
 		QMessageBox::information(nullptr, QStringLiteral("提示"), QStringLiteral("输入提货重量小于最小提货重量"));
@@ -1026,8 +1119,8 @@ void frmGetGoodsDlg::OnSearch()
 	//	""))
 
 		if (g_TiHuoMgr.Query(rsp,
-			CHJGlobalFun::qstr2str(ui.dateEdit_st->text()),
-			CHJGlobalFun::qstr2str(ui.dateEdit_end->text()),
+			CHJGlobalFun::qstr2str(ui.dateEdit_st->date().toString("yyyyMMdd")),
+			CHJGlobalFun::qstr2str(ui.dateEdit_end->date().toString("yyyyMMdd")),
 			""))
 	{
 		for (size_t i = 0; i < rsp.htm_take_sheet_detail.size(); i++)
@@ -1126,9 +1219,9 @@ void frmGetGoodsDlg::OnCancel()
 		{
 			Req5101 req; //请求报文体
 			req.oper_flag = 3;
-			req.local_sheet_no = CHJGlobalFun::qstr2str(tableModel->item(0, 1)->text());//提货流水号
+			req.local_sheet_no = CHJGlobalFun::qstr2str(tableModel->item(index, 0)->text());//提货流水号
 			req.acct_no = CHJGlobalFun::qstr2str(g_Global.m_strUserID);
-			req.take_man = CHJGlobalFun::qstr2str(tableModel->item(0, 1)->text());//提货申请人
+			req.take_man = CHJGlobalFun::qstr2str(ui.comboBox_person->currentText());//提货申请人
 
 			Rsp5101 rsp; //应答报文体
 			if (0 != g_TraderCpMgr.HandlePacket(rsp, req, "5101"))

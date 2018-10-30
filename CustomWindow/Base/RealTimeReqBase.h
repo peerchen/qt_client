@@ -30,10 +30,11 @@ struct RTReqPara
 		nFailTry = 2;
 		nFailWaitTime = 0;
 		nCurReqCount = 0;
+
 #ifdef _WIN32
-                dLastReqTick = ::GetTickCount64();
+        dLastReqTick = ::GetTickCount64();
 #else
-                dLastReqTick = ::mach_absolute_time();
+         dLastReqTick = ::mach_absolute_time();
 #endif
 
 		dIniWait = 0;

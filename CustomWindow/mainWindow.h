@@ -27,6 +27,9 @@
 #include <functional>
 #include "ui_mainwindow.h"
 #include <unordered_map>
+#include "QButtonSplitter.h"
+
+
 //【报单流水】字段值
 const int constOrderNo = 10;
 const int constOrderType = 6;
@@ -75,16 +78,18 @@ class mainWindow : public QMainWindow,public CUnlockListener
 {	
 
 	Q_OBJECT
-	
-
 public:
 	mainWindow(QWidget *parent = 0);
 	~mainWindow();
 
+	void Init();
 	//DECLARE_MSG_MAP()
 
 	//void OnTest(lparam, wparam);
 	//void OnData(lparam, wparam);
+
+	void  handleTimeout();  //超时处理函数  
+	void timerEvent(QTimerEvent *event) override;
 
 	void customEvent(QEvent *e);
 	//锁屏回报
@@ -211,24 +216,26 @@ public:
 	void RefreshMultiAccount();
 	void cleanWidgetContent();
 
+
+	void setSpinBox(QDoubleSpinBox *Control, const double & min, const double & max, const double & step);
 public slots:
 	void handle2FourSlot();
 	void handle2FiveSlot();
     //右键响应菜单
-	void show_contextmenuPosi(const QPoint& pos);
-	void show_contextmenuStore(const QPoint& pos);
-	void show_contextmenuCapital(const QPoint& pos);
+	//void show_contextmenuPosi(const QPoint& pos);
+	//void show_contextmenuStore(const QPoint& pos);
+	//void show_contextmenuCapital(const QPoint& pos);
 
-	void show_contextmenuOrderReturn(const QPoint& pos);
+	//void show_contextmenuOrderReturn(const QPoint& pos);
 	//右键功能响应
-	void actionPosiOneSlot();
-	void actionPosiTwoSlot();
-	void actionPosiThreeSlot();
+	//void actionPosiOneSlot();
+	//void actionPosiTwoSlot();
+	//void actionPosiThreeSlot();
 
-	void actionStoreOneSlot();
-	void actionCapitalOneSlot();
+	//void actionStoreOneSlot();
+	//void actionCapitalOneSlot();
 
-	void actionOrderReturnOneSlot();//改单
+	//void actionOrderReturnOneSlot();//改单
 
 	void titleButtonClick(WindowTitle::ButtonStatus status);
 	void slotChangeQuote(const QString &string);
@@ -261,8 +268,8 @@ public slots:
 	void showPosiOperationDetails(const QModelIndex &current, const QModelIndex &previous);
 	void showStoreOperationDetails(const QModelIndex &current, const QModelIndex &previous);
 	
-	void slotDeepQuote();
-	void slotCloseDeepQuoteDlg();
+	//void slotDeepQuote();
+	//void slotCloseDeepQuoteDlg();
 	void slotChangeAccount();
 	void slotLoginAccount(const QString & str);
 protected:
@@ -390,8 +397,9 @@ public:
 
 	int  OnUITask(void* wparam, void* lparam);
 
+	void  getRiskNotify();
 private:
-	int m_uiLockCount;
+	int   m_uiLockCount;
 	//定义状态值
 	bool  showCapital;
 
@@ -413,6 +421,9 @@ private:
 
 	CConfigImpl*		    m_pConfig;
 	std::mutex      m_quote_mutex;
+
+	int m_nTimerID;
+	int m_nTimerPosiID;
 };
 
 #endif // mainWindow_H

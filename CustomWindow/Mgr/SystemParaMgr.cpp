@@ -20,7 +20,7 @@ CSystemParaMgr& CSystemParaMgr::GetInstance()
 
 QString CSystemParaMgr::GetParaValue( const QString &sParaID, const QString &sDefaultValue )
 {
-	QMap<QString, QString>::iterator it = m_mapSystemPara->find( sParaID );
+	auto it = m_mapSystemPara->find( sParaID );
 	if( it == m_mapSystemPara->end() )
 	{
 		Rsp9030 rsp9030;

@@ -125,37 +125,45 @@ void  frmDefersettlementQuoteDlg::customEvent(QEvent *e)
 	QParamEvent *msg = static_cast<QParamEvent *>(e);
 	if (msg->type() == MSG_RECV_DEFERDELIVERY_QUOTATION)//ÐÐÇé¹ã²¥
 	{
-		OnDeferDeliveryQuotation(*((int *)msg->wparam()));
+		//OnDeferDeliveryQuotation(*((int *)msg->wparam()));
+		OnDeferDeliveryQuotation(msg->OrderId());
 	}
-
 }
-
 
 
 void frmDefersettlementQuoteDlg::OnDeferDeliveryQuotation(int wParam)
 {
-	int iPos = (int)wParam;
-	DeferDeliveryQuotation quotation = g_TraderCpMgr.m_vecDDQuotation.at(iPos);
-
-	bool bExist = false;
-	int i;
-	for (i = 0; i < tableModel->rowCount(); i++)
+	try
 	{
-		
-		if (tableModel->item(i, 0)->text() == CHJGlobalFun::str2qstr( quotation.instID) )
+		int index = g_TraderCpMgr.m_vecDDQuotation.size() - 1;
+
+		int iPos = wParam > index ? index : wParam;
+		DeferDeliveryQuotation quotation = g_TraderCpMgr.m_vecDDQuotation.at(iPos);
+
+		bool bExist = false;
+		int i;
+		for (i = 0; i < tableModel->rowCount(); i++)
 		{
-			bExist = true;
-			break;
+
+			if (tableModel->item(i, 0)->text() == CHJGlobalFun::str2qstr(quotation.instID))
+			{
+				bExist = true;
+				break;
+			}
+		}
+
+		if (bExist)
+		{
+			SetListOneLineData(quotation, i, false);
+		}
+		else
+		{
+			SetListOneLineData(quotation, tableModel->rowCount(), true);
 		}
 	}
+	catch (...)
+	{
 
-	if (bExist)
-	{
-		SetListOneLineData(quotation, i, false);
-	}
-	else
-	{
-		SetListOneLineData(quotation, tableModel->rowCount(),true);
 	}
 
 	return ;

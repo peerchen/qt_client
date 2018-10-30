@@ -117,15 +117,16 @@
     <ClCompile>
       <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;HAVE_STRUCT_TIMESPEC;WIN32_LEAN_AND_MEAN;QT_PRINTSUPPORT_LIB;QT_NETWORK_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\GeneratedFiles;.\GeneratedFiles\Release;.;$(QTDIR)\include;E:\GCN\QTTest\CustomWindow\CustomWindow\trunk\CustomWindow\GeneratedFiles\Release;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;.\Public;.\gess;.\Dialog;.\UI;$(BOOST64_BASE);.\GESSPacket;.\net;.\gess\include;.\gess\Include\zlib_1_2_5;E:\GCN\20170911SVN_CLIENT\trunk\Framwork\CommFramwork\Include;E:\GCN\20170911SVN_CLIENT\trunk\Framwork\Utility\Include;E:\GCN\20170911SVN_CLIENT\trunk\Framwork\Include\pthread;E:\GCN\20170911SVN_CLIENT\trunk\Framwork\NetMgr\Include;E:\GCN\20170911SVN_CLIENT\trunk\Framwork\FramworkAp\Include;.\business;$(QTDIR)\include\QtPrintSupport;.\common;.\base;$(QTDIR)\include\\ActiveQt;.\preOrder;$(QTDIR)\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DebugInformationFormat />
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <Optimization>Disabled</Optimization>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;.\gess\lib\zlib_1_2_5;.\gess\lib\openssl_dll;E:\GCN\QTTest\CustomWindow\CustomWindow\trunk\Win32\release;.\GESS\lib\pthread;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>Ws2_32.lib;qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5NetWork.lib;user32.lib;libeay32.lib;ssleay32.lib;zlibwapid.lib;BlockMsg.lib;pthreadVC2.lib;CommFramwork.lib;Utility.lib;FramworkAp.lib;NetMgr.lib;Qt5PrintSupport.lib;Qt5AxBase.lib;Qt5AxContainer.lib;Qt5Network.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -133,18 +134,19 @@
     <ClCompile>
       <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB;QT_NETWORK_LIB;HAVE_STRUCT_TIMESPEC;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\GeneratedFiles;.\GeneratedFiles\release;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;.\business;.\public;.\Dialog;.\UI;$(BOOST64_BASE);.\GESSPacket;.\net;.\gess;.\gess\include;.\gess\Include\zlib_1_2_5;..\Framwork\CommFramwork\Include;..\Framwork\Utility\Include;..\Framwork\Include\pthread;..\Framwork\NetMgr\Include;..\Framwork\FramworkAp\Include;$(QTDIR)\include\QtPrintSupport;.\common;.\base;$(QTDIR)\include\ActiveQt;.\PreOrder;$(QTDIR)\include\QtNetwork;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DebugInformationFormat>None</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <StructMemberAlignment>Default</StructMemberAlignment>
-      <Optimization>Disabled</Optimization>
-      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <Optimization>MaxSpeed</Optimization>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <ExceptionHandling>Sync</ExceptionHandling>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;.\gess\lib\zlib_1_2_5_64;..\Framwork\lib\pthread_64;.\GESS\lib\openssl_64;..\x64\Release\;$(QTDIR)\plugins\platforms;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
       <AdditionalDependencies>Ws2_32.lib;qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5NetWork.lib;user32.lib;libeay32.lib;ssleay32.lib;Qt5PrintSupport.lib;Qt5Network.lib;BlockMsg.lib;pthreadVC2.lib;CommFramwork.lib;Utility.lib;FramworkAp.lib;NetMgr.lib;Qt5AxContainer.lib;Qt5AxBase.lib;zlibwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -167,6 +169,7 @@
     <ClCompile Include="common\keyBoardlabel.cpp" />
     <ClCompile Include="common\ModifySetting.cpp" />
     <ClCompile Include="common\MyExcel.cpp" />
+    <ClCompile Include="common\QButtonSplitter.cpp" />
     <ClCompile Include="common\QButtonTabWidget.cpp" />
     <ClCompile Include="common\QExcel.cpp" />
     <ClCompile Include="common\QParamEvent.cpp" />
@@ -210,6 +213,7 @@
     <ClCompile Include="Dialog\frmOption_6.cpp" />
     <ClCompile Include="Dialog\frmOption_base.cpp" />
     <ClCompile Include="Dialog\frmReportDlg.cpp" />
+    <ClCompile Include="Dialog\frmRiskNotifyDlg.cpp" />
     <ClCompile Include="Dialog\frmSetPreOrderDlg.cpp" />
     <ClCompile Include="Dialog\frmStopOutDialog.cpp" />
     <ClCompile Include="Dialog\frmStoreSearchDialog.cpp" />
@@ -358,6 +362,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_frmRiskNotifyDlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_frmSetPreOrderDlg.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
@@ -391,6 +399,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_mainWindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QButtonSplitter.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -558,6 +570,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_frmRiskNotifyDlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_frmSetPreOrderDlg.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -591,6 +607,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_mainWindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QButtonSplitter.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -943,7 +963,32 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_NETWORK_LIB -DHAVE_STRUCT_TIMESPEC -DWIN32_LEAN_AND_MEAN -D_UNICODE  "-I.\GeneratedFiles" "-I.\GeneratedFiles\release" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I.\business" "-I.\public" "-I.\Dialog" "-I.\UI" "-I$(BOOST64_BASE)\." "-I.\GESSPacket" "-I.\net" "-I.\gess" "-I.\gess\include" "-I.\gess\Include\zlib_1_2_5" "-I.\..\Framwork\CommFramwork\Include" "-I.\..\Framwork\Utility\Include" "-I.\..\Framwork\Include\pthread" "-I.\..\Framwork\NetMgr\Include" "-I.\..\Framwork\FramworkAp\Include" "-I$(QTDIR)\include\QtPrintSupport" "-I.\common" "-I.\base" "-I$(QTDIR)\include\ActiveQt" "-I.\PreOrder" "-I$(QTDIR)\include\QtNetwork"</Command>
     </CustomBuild>
-    <ClInclude Include="common\HJQueryBase.h" />
+    <CustomBuild Include="common\HJQueryBase.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+    </CustomBuild>
     <ClInclude Include="common\IniFilesManager.h" />
     <ClInclude Include="common\ModifySetting.h" />
     <ClInclude Include="common\MyExcel.h" />
@@ -998,6 +1043,24 @@
       </Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </Command>
+    </CustomBuild>
+    <CustomBuild Include="common\QButtonSplitter.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DHAVE_STRUCT_TIMESPEC -DWIN32_LEAN_AND_MEAN -DQT_PRINTSUPPORT_LIB -DQT_NETWORK_LIB -D_UNICODE "-I.\GeneratedFiles" "-I.\GeneratedFiles\Debug" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I.\business" "-I.\public" "-I.\Dialog" "-I.\UI" "-I$(BOOST64_BASE)\." "-I.\GESSPacket" "-I.\net" "-I.\gess" "-I.\gess\include" "-I.\gess\Include\zlib_1_2_5" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\CommFramwork\Include" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\Utility\Include" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\Include\pthread" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\NetMgr\Include" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\FramworkAp\Include" "-I$(QTDIR)\include\QtPrintSupport" "-I.\common" "-I.\base" "-I$(QTDIR)\include\ActiveQt" "-I.\PreOrder" "-I$(QTDIR)\include\QtNetwork"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DHAVE_STRUCT_TIMESPEC -DQT_NETWORK_LIB -DWIN32_LEAN_AND_MEAN -D_UNICODE "-I.\GeneratedFiles" "-I.\GeneratedFiles\Debug" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I.\business" "-I.\public" "-I.\Dialog" "-I.\UI" "-I$(BOOST64_BASE)\." "-I.\GESSPacket" "-I.\net" "-I.\gess" "-I.\gess\include" "-I.\gess\Include\zlib_1_2_5" "-I.\..\..\trunk\Framwork\CommFramwork\Include" "-I.\..\..\trunk\Framwork\Utility\Include" "-I.\..\..\trunk\Framwork\Include\pthread" "-I.\..\..\trunk\Framwork\NetMgr\Include" "-I.\..\..\trunk\Framwork\FramworkAp\Include" "-I$(QTDIR)\include\QtPrintSupport" "-I.\common" "-I.\base" "-I$(QTDIR)\include\ActiveQt" "-I.\PreOrder" "-I$(QTDIR)\include\QtNetwork"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DHAVE_STRUCT_TIMESPEC -DWIN32_LEAN_AND_MEAN -DQT_PRINTSUPPORT_LIB -DQT_NETWORK_LIB -D_MBCS "-I.\GeneratedFiles" "-I.\GeneratedFiles\Release" "-I." "-I$(QTDIR)\include" "-IE:\GCN\QTTest\CustomWindow\CustomWindow\trunk\CustomWindow\GeneratedFiles\Release" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I.\Public" "-I.\gess" "-I.\Dialog" "-I.\UI" "-I$(BOOST64_BASE)\." "-I.\GESSPacket" "-I.\net" "-I.\gess\include" "-I.\gess\Include\zlib_1_2_5" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\CommFramwork\Include" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\Utility\Include" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\Include\pthread" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\NetMgr\Include" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\FramworkAp\Include" "-I.\business" "-I$(QTDIR)\include\QtPrintSupport" "-I.\common" "-I.\base" "-I$(QTDIR)\include\ActiveQt" "-I.\preOrder" "-I$(QTDIR)\include\QtNetwork"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_NETWORK_LIB -DHAVE_STRUCT_TIMESPEC -DWIN32_LEAN_AND_MEAN -D_UNICODE "-I.\GeneratedFiles" "-I.\GeneratedFiles\release" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I.\business" "-I.\public" "-I.\Dialog" "-I.\UI" "-I$(BOOST64_BASE)\." "-I.\GESSPacket" "-I.\net" "-I.\gess" "-I.\gess\include" "-I.\gess\Include\zlib_1_2_5" "-I.\..\Framwork\CommFramwork\Include" "-I.\..\Framwork\Utility\Include" "-I.\..\Framwork\Include\pthread" "-I.\..\Framwork\NetMgr\Include" "-I.\..\Framwork\FramworkAp\Include" "-I$(QTDIR)\include\QtPrintSupport" "-I.\common" "-I.\base" "-I$(QTDIR)\include\ActiveQt" "-I.\PreOrder" "-I$(QTDIR)\include\QtNetwork"</Command>
     </CustomBuild>
     <ClInclude Include="common\ReportBase.h" />
     <ClInclude Include="common\reportDrawWidget.h" />
@@ -1774,6 +1837,24 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_NETWORK_LIB -DHAVE_STRUCT_TIMESPEC -DWIN32_LEAN_AND_MEAN -D_UNICODE  "-I.\GeneratedFiles" "-I.\GeneratedFiles\release" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I.\business" "-I.\public" "-I.\Dialog" "-I.\UI" "-I$(BOOST64_BASE)\." "-I.\GESSPacket" "-I.\net" "-I.\gess" "-I.\gess\include" "-I.\gess\Include\zlib_1_2_5" "-I.\..\Framwork\CommFramwork\Include" "-I.\..\Framwork\Utility\Include" "-I.\..\Framwork\Include\pthread" "-I.\..\Framwork\NetMgr\Include" "-I.\..\Framwork\FramworkAp\Include" "-I$(QTDIR)\include\QtPrintSupport" "-I.\common" "-I.\base" "-I$(QTDIR)\include\ActiveQt" "-I.\PreOrder" "-I$(QTDIR)\include\QtNetwork"</Command>
     </CustomBuild>
+    <CustomBuild Include="Dialog\frmRiskNotifyDlg.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DHAVE_STRUCT_TIMESPEC -DWIN32_LEAN_AND_MEAN -DQT_PRINTSUPPORT_LIB -DQT_NETWORK_LIB -D_UNICODE "-I.\GeneratedFiles" "-I.\GeneratedFiles\Debug" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I.\business" "-I.\public" "-I.\Dialog" "-I.\UI" "-I$(BOOST64_BASE)\." "-I.\GESSPacket" "-I.\net" "-I.\gess" "-I.\gess\include" "-I.\gess\Include\zlib_1_2_5" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\CommFramwork\Include" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\Utility\Include" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\Include\pthread" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\NetMgr\Include" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\FramworkAp\Include" "-I$(QTDIR)\include\QtPrintSupport" "-I.\common" "-I.\base" "-I$(QTDIR)\include\ActiveQt" "-I.\PreOrder" "-I$(QTDIR)\include\QtNetwork"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DHAVE_STRUCT_TIMESPEC -DQT_NETWORK_LIB -DWIN32_LEAN_AND_MEAN -D_UNICODE "-I.\GeneratedFiles" "-I.\GeneratedFiles\Debug" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I.\business" "-I.\public" "-I.\Dialog" "-I.\UI" "-I$(BOOST64_BASE)\." "-I.\GESSPacket" "-I.\net" "-I.\gess" "-I.\gess\include" "-I.\gess\Include\zlib_1_2_5" "-I.\..\..\trunk\Framwork\CommFramwork\Include" "-I.\..\..\trunk\Framwork\Utility\Include" "-I.\..\..\trunk\Framwork\Include\pthread" "-I.\..\..\trunk\Framwork\NetMgr\Include" "-I.\..\..\trunk\Framwork\FramworkAp\Include" "-I$(QTDIR)\include\QtPrintSupport" "-I.\common" "-I.\base" "-I$(QTDIR)\include\ActiveQt" "-I.\PreOrder" "-I$(QTDIR)\include\QtNetwork"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DHAVE_STRUCT_TIMESPEC -DWIN32_LEAN_AND_MEAN -DQT_PRINTSUPPORT_LIB -DQT_NETWORK_LIB -D_MBCS "-I.\GeneratedFiles" "-I.\GeneratedFiles\Release" "-I." "-I$(QTDIR)\include" "-IE:\GCN\QTTest\CustomWindow\CustomWindow\trunk\CustomWindow\GeneratedFiles\Release" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I.\Public" "-I.\gess" "-I.\Dialog" "-I.\UI" "-I$(BOOST64_BASE)\." "-I.\GESSPacket" "-I.\net" "-I.\gess\include" "-I.\gess\Include\zlib_1_2_5" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\CommFramwork\Include" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\Utility\Include" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\Include\pthread" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\NetMgr\Include" "-IE:\GCN\20170911SVN_CLIENT\trunk\Framwork\FramworkAp\Include" "-I.\business" "-I$(QTDIR)\include\QtPrintSupport" "-I.\common" "-I.\base" "-I$(QTDIR)\include\ActiveQt" "-I.\preOrder" "-I$(QTDIR)\include\QtNetwork"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_NETWORK_LIB -DHAVE_STRUCT_TIMESPEC -DWIN32_LEAN_AND_MEAN -D_UNICODE  "-I.\GeneratedFiles" "-I.\GeneratedFiles\release" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I.\business" "-I.\public" "-I.\Dialog" "-I.\UI" "-I$(BOOST64_BASE)\." "-I.\GESSPacket" "-I.\net" "-I.\gess" "-I.\gess\include" "-I.\gess\Include\zlib_1_2_5" "-I.\..\Framwork\CommFramwork\Include" "-I.\..\Framwork\Utility\Include" "-I.\..\Framwork\Include\pthread" "-I.\..\Framwork\NetMgr\Include" "-I.\..\Framwork\FramworkAp\Include" "-I$(QTDIR)\include\QtPrintSupport" "-I.\common" "-I.\base" "-I$(QTDIR)\include\ActiveQt" "-I.\PreOrder" "-I$(QTDIR)\include\QtNetwork"</Command>
+    </CustomBuild>
     <ClInclude Include="GeneratedFiles\ui_frmCapitalChangeSearchDialog.h" />
     <ClInclude Include="GeneratedFiles\ui_frmCapitalSearchDialog.h" />
     <ClInclude Include="GeneratedFiles\ui_frmChangeAccountDlg.h" />
@@ -1808,6 +1889,7 @@
     <ClInclude Include="GeneratedFiles\ui_frmOption_5.h" />
     <ClInclude Include="GeneratedFiles\ui_frmOption_6.h" />
     <ClInclude Include="GeneratedFiles\ui_frmReportDlg.h" />
+    <ClInclude Include="GeneratedFiles\ui_frmRiskNotifyDlg.h" />
     <ClInclude Include="GeneratedFiles\ui_frmSetPreOrderDlg.h" />
     <ClInclude Include="GeneratedFiles\ui_frmStopOutDialog.h" />
     <ClInclude Include="GeneratedFiles\ui_frmStoreSearchDialog.h" />
@@ -2875,6 +2957,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <CustomBuild Include="Dialog\frmRiskNotifyDlg.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

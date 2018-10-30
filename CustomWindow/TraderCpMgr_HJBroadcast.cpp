@@ -9,9 +9,6 @@
 #include "DelayReqHandler.h"
 #include "Business.h"
 
-//#include "Test/QMessageDef.h"
-//#include "test/QMessageMap.h"
-
 
 //广播类报文对应的处理成员函数配置表 去掉初始化结构内最后一行后面的逗号
 CTraderCpMgr::Cmd2Api CTraderCpMgr::m_Cmd2Api[] =
@@ -914,7 +911,7 @@ int CTraderCpMgr::DealRecvInstStateUpdate( CBroadcastPacket& pkt, const int &iBr
 	InstState body;
 	body.Packet2Struct(pkt);
 
-	/*vector<InstState>::iterator it = m_vInstState.begin();
+	/*auto it = m_vInstState.begin();
 	for(; it != m_vInstState.end(); it++ )
 	{
 		if( it->instID == body.instID )
@@ -936,7 +933,7 @@ int CTraderCpMgr::DealRecvInstStateUpdate( CBroadcastPacket& pkt, const int &iBr
 	int iPos = GetInstStatePos(body.instID.c_str());
 	if(iPos != -1)
 	{
-		//m_vInstState.at(iPos).tradeState = body.tradeState;
+		m_vInstState[iPos].tradeState = body.tradeState.c_str();
 	}
 	else
 	{
@@ -944,8 +941,9 @@ int CTraderCpMgr::DealRecvInstStateUpdate( CBroadcastPacket& pkt, const int &iBr
 		iPos = m_vInstState.size()-1;
 	}
 
-	uint *pos = new uint(iPos);
-	m_mapBdr[iBroadcastID].Broadcast(WM_INST_STATE_UPDATE, &pos, 0, false);
+	//KENNY 20180725
+	//uint *pos = new uint(iPos);
+	m_mapBdr[iBroadcastID].Broadcast(WM_INST_STATE_UPDATE, &iPos, 0, false);
 
 //#ifdef _WRITE_LOG
 //	CString csLog;
@@ -1146,21 +1144,22 @@ int CTraderCpMgr::onSessionKey(CBroadcastPacket& pkt)
 // 广播 接口 [onRecvRtnSpotMarketStateUpdate]SpotMarketState 的业务实现
 int CTraderCpMgr::onRecvRtnSpotMarketStateUpdate(CBroadcastPacket& pkt)
 {
-    return 0;
+	return DealRecvInstStateUpdate(pkt, E_ONRECVRTNSPOTMARKETSTATEUPDATE);
+    //return 0;
 };
 
 // 广播 接口 [onRecvRtnForwardMarketStateUpdate]ForwardMarketState 的业务实现
 int CTraderCpMgr::onRecvRtnForwardMarketStateUpdate(CBroadcastPacket& pkt)
 {
-
-    return 0;
+	return DealRecvInstStateUpdate(pkt, E_ONRECVRTNFORWARDMARKETSTATEUPDATE);
+   // return 0;
 };
 
 // 广播 接口 [onRecvRtnDeferMarketStateUpdate]DeferMarketState 的业务实现
 int CTraderCpMgr::onRecvRtnDeferMarketStateUpdate(CBroadcastPacket& pkt)
 {
-
-    return 0;
+	return DealRecvInstStateUpdate(pkt, E_ONRECVRTNDEFERMARKETSTATEUPDATE);
+    //return 0;
 };
 
 

@@ -54,24 +54,28 @@ int CReqHandlerBase::ThreadEntry()
 	return 0;
 }
 
+
 void CReqHandlerBase::AddReq( const ReqPara &stReq )
 {
 	m_deqCondMutex.Lock();
 
 	// 遍历
 	bool bAdd = true;
-	for( std::deque<ReqPara>::iterator it = m_deqReq.begin(); it != m_deqReq.end(); it++ )
+	
+	for (auto val : m_deqReq)
 	{
-		if( it->eReqType == stReq.eReqType )
+		if (val.eReqType == stReq.eReqType)
 		{
 			// 如果是无效，则不添加
-			if( IsUseless(*it,stReq) )
+			if (IsUseless(val, stReq))
 			{
 				bAdd = false;
 				break;
 			}
 		}
+
 	}
+
 	if( bAdd )
 	{
 		m_deqReq.push_back(stReq);

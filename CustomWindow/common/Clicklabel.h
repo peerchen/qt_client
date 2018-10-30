@@ -22,8 +22,6 @@ public slots:
 public:
 	
 	void mousePressEvent(QMouseEvent * event);
-
-
 	bool mLastPriceMode;//true为“最新价”，false为“指定价”
 };
 

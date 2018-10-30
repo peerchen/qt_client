@@ -17,6 +17,9 @@ CGlobal::CGlobal(void)
 #else
 	m_bRiskMode1 = true;
 #endif
+
+	m_bRiskMode1 = false;// 显示风险度2
+
 	m_bAlwaysShowUpPanel = true;
 	m_bAskConfirm = true;
 	m_bCommitLeft = true;
@@ -81,14 +84,6 @@ CGlobal::CGlobal(void)
 	m_bForceTerminate = false;
 
 	m_ndpiX  = m_ndpiY = 96;
-	//CWnd*  pWnd = CWnd::FromHandle(GetDesktopWindow()); 
-	//if (pWnd != NULL)
-	//{
-	//	CDC* pDC = pWnd->GetDC();
-	//	m_ndpiX = pDC->GetDeviceCaps (LOGPIXELSX);
-	//	m_ndpiY = pDC->GetDeviceCaps (LOGPIXELSY);
-	//	ReleaseDC(pWnd->m_hWnd,pDC->GetSafeHdc());
-	//}
 }
 
 CGlobal::~CGlobal(void)
@@ -126,9 +121,6 @@ QString CGlobal::GetListIniPath(const QString & csFileName)
 #else
     QString strPath = QString("%1QueryConfig/%2.ini").arg(m_strSystemPath).arg(csFileName);
 #endif
-
-
-    //strPath.Format("%sQueryConfig\\%s.ini", m_strSystemPath, csFileName);
 
     return strPath;
 }
@@ -186,43 +178,6 @@ bool CGlobal::IsRunSingle()
 		return false;
 }
 
-//BOOL FileExists(LPCTSTR lpszFile)
-//{
-//    WIN32_FIND_DATA wfd;
-//    HANDLE hFile = FindFirstFile(lpszFile, &wfd);
-//    if (hFile != INVALID_HANDLE_VALUE)
-//    {
-//        FindClose(hFile);
-//        return TRUE;
-//    }
-//    else
-//    {
-//        return false;
-//    }
-//}
-//
-//void CGlobal::ChangeUserIniFile(LPCTSTR lpszUserCode)
-//{
-//    QString strUserIniFile = lpszUserCode;
-//
-//    strUserIniFile += ".ini";
-//
-//    QString strNewFile = m_strSystemPath + strUserIniFile;
-//
-//    if (!FileExists(strNewFile))
-//    {
-//		QString strOldFile = m_strSystemPath + CONSTANT_USER_INI_NAME;
-//        if (CopyFile(strOldFile, strNewFile, true))
-//        {
-//            m_csUserIniFile = strUserIniFile;
-//        }
-//    }
-//    else
-//    {
-//        m_csUserIniFile = strUserIniFile;
-//    }
-//}
-//
 QString CGlobal::GetUserDataIniPath()
 {
     QString strUserDataIni;
@@ -261,52 +216,3 @@ bool CGlobal::IsTipsAddPreOrder()
 {
 	return m_bTipsAddPreOrder;
 }
-//
-////#include "FileMgr.h"
-//bool CGlobal::TestCreateFile( QString strFilePath )
-//{
-//	HANDLE hFileHandle = CreateFile(  
-//		strFilePath, // 文件的路径  
-//		GENERIC_WRITE, // 写文件
-//		FILE_SHARE_READ | FILE_SHARE_WRITE, // 共享读写 
-//		NULL, // 缺省安全属性。 
-//		CREATE_NEW, // 打开一个已经存在的文件
-//		FILE_ATTRIBUTE_NORMAL, // 一般的文件。 
-//		NULL // 模板文件为空。
-//		);  
-//	if (INVALID_HANDLE_VALUE == hFileHandle && GetLastError() != 0x50)
-//	{
-//		if (IDNO == ::MessageBox(NULL, "你当前不是用管理员账户登陆系统，不能修改相关的配置，继续登陆有风险！是否继续？",
-//			"警告",  MB_YESNO|MB_ICONWARNING))
-//		{
-//			return false;
-//		}
-//		//g_bEnableIniFile = false;
-//		m_bEnableIniFile = false;
-//		g_Global.WriteLog("当前系统登录用户不是管理员");
-//	}
-//	else if (GetLastError() == 0x50 || GetLastError() == S_OK)
-//	{
-//		//  解决没有关闭句柄则删除失败的问题
-//		if( INVALID_HANDLE_VALUE != hFileHandle )
-//			CloseHandle(hFileHandle);
-//		
-//		DeleteFile(strFilePath);
-//	}
-//	return TRUE;
-//}
-//
-//bool CGlobal::ShowTips()
-//{
-//	m_bEnableIniFile = false;
-//
-//	if (IDNO == ::MessageBox(NULL, "你当前不是用管理员账户登陆系统，不能修改相关的配置，继续登陆有风险！是否继续？",
-//		"警告",  MB_YESNO|MB_ICONWARNING))
-//	{
-//		return false;
-//	}
-//	else
-//	{
-//		return true;
-//	}
-//}

@@ -45,7 +45,7 @@ void CStopPLMgr::Initialize(  )
 // 获取一个品种的止损止盈配置信息
 PLInfo* CStopPLMgr::GetPLInfo( const string &sInsID )
 {
-	map<string, PLInfo>::iterator it = m_mapInfo.find( sInsID );
+	auto it = m_mapInfo.find( sInsID );
 	if( it != m_mapInfo.end() )
 	{
 		return &it->second;

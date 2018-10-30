@@ -283,6 +283,8 @@ void CBroadcaster::Broadcast(UINT uMsg, void * wParam,void * lParam,BOOL bAsyn)
 
 }
 
+
+
 int CBroadcaster::Find(QWidget * val)
 {
 	int nRet = -1;
@@ -509,6 +511,9 @@ int CTraderCpMgr::UserLogin(const QString &sLoginMode /* = CONSTANT_LOGIN_TYPE_C
 	stBodyReq.session_id        = g_Global.m_strSessionID.toStdString();
 
 	stBodyReq.isSign = "0";
+
+	//g_HeaderReq.SetUserID(g_Global.m_strUserID.toStdString());
+	//g_HeaderReq.SetUserType("2");
 
 
 	CCommHandler* pCommHandler = CCommHandler::Instance();
@@ -816,6 +821,7 @@ int CTraderCpMgr::UserLogout()
 	{
 		//LOG("请求退出成功");
 		m_bLoginSucceed = false;
+
 		return 0;
 	}
 	else
@@ -1035,249 +1041,249 @@ bool CTraderCpMgr::CheckQt(const QUOTATION& stQuotation)
 int CTraderCpMgr::TranslateUnzipPacket(CBroadcastPacket& oPktSrc, QUOTATION& stQuotation)
 {
 	//
-	QString strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("name", strTmp.toStdString()))
+	string strTmp = "";
+	if (0 == oPktSrc.GetParameterVal("name", strTmp))
 	{
-		stQuotation.name = strTmp.toStdString();
+		stQuotation.name =strTmp;
 	}
 
-	if (0 == oPktSrc.GetParameterVal("sequenceNo", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("sequenceNo", strTmp))
 	{
-		stQuotation.m_uiSeqNo = strTmp.toUInt();
-	}
-
-	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("quoteDate", strTmp.toStdString()))
-	{
-		stQuotation.m_uiDate = strTmp.toUInt();
+		stQuotation.m_uiSeqNo = RoundToInt<unsigned int>(FromString<unsigned int>(strTmp));
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("quoteTime", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("quoteDate", strTmp))
 	{
-		//QVector<QString> v = strutils::explode(":",strTmp);
-		QStringList  v = strTmp.split(QRegExp(":"));
+		stQuotation.m_uiDate = RoundToInt<unsigned int>(FromString<unsigned int>(strTmp));
+	}
+
+	strTmp = "";
+	if (0 == oPktSrc.GetParameterVal("quoteTime", strTmp))
+	{
+		vector<string> v = strutils::explode(":",strTmp);
+		//QStringList  v = strTmp.split(QRegExp(":"));
 		if (v.size() == 3)
 		{
-			int nHour = v[0].toInt();
-			int nMin = v[1].toInt();
-			int nSec = v[2].toInt();
+			int nHour = RoundToInt<int>(FromString<int>(v[0]));
+			int nMin = RoundToInt<int>(FromString<int>(v[1]));
+			int nSec = RoundToInt<int>(FromString<int>(v[2]));
 			//stQuotation.m_uiTime = nHour * 10000 + nMin * 100 + nSec;
 			stQuotation.m_uiTime = nHour * 10000000 + nMin * 100000 + nSec * 1000 + 0;
 		}
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("open", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("open", strTmp))
 	{
-		//stQuotation.m_uiOpenPrice = RoundToInt<double>(FromQString<double>(strTmp),2);
-		stQuotation.m_uiOpenPrice = strTmp.toDouble();
+		stQuotation.m_uiOpenPrice = RoundToInt<int>(FromString<int>(strTmp),2);
+		//stQuotation.m_uiOpenPrice = strTmp.toDouble();
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("high", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("high", strTmp))
 	{
-		//stQuotation.m_uiHigh = RoundToInt<double>(FromQString<double>(strTmp),2);
-		stQuotation.m_uiHigh = strTmp.toDouble();
+		stQuotation.m_uiHigh = RoundToInt<double>(FromString<double>(strTmp),2);
+		//stQuotation.m_uiHigh = strTmp.toDouble();
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("low", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("low", strTmp))
 	{
-		//stQuotation.m_uiLow = RoundToInt<double>(FromQString<double>(strTmp),2);
+		stQuotation.m_uiLow = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("lastClose", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("lastClose", strTmp))
 	{
-		//stQuotation.m_uilastClose = RoundToInt<double>(FromQString<double>(strTmp),2);
+		stQuotation.m_uilastClose = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("last", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("last", strTmp))
 	{
-		//stQuotation.m_uiLast = RoundToInt<double>(FromQString<double>(strTmp),2);
+		stQuotation.m_uiLast = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("volume", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("volume", strTmp))
 	{
-		//stQuotation.m_uiVolume = (unsigned int)(FromQString<unsigned int>(strTmp));
+		stQuotation.m_uiVolume = (unsigned int)(FromString<unsigned int>(strTmp));
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("close", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("close", strTmp))
 	{// 今收盘
-	 //stQuotation.m_uiClose = RoundToInt<double>(FromQString<double>(strTmp),2);
+	 stQuotation.m_uiClose = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("ask1", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("ask1", strTmp))
 	{
-		//stQuotation.m_Ask[0].m_uiPrice = RoundToInt<double>(FromQString<double>(strTmp),2);
+		stQuotation.m_Ask[0].m_uiPrice = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("ask2", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("ask2", strTmp))
 	{
-		//stQuotation.m_Ask[1].m_uiPrice = RoundToInt<double>(FromQString<double>(strTmp),2);
+		stQuotation.m_Ask[1].m_uiPrice = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("ask3", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("ask3", strTmp))
 	{
-		//stQuotation.m_Ask[2].m_uiPrice = RoundToInt<double>(FromQString<double>(strTmp),2);
+		stQuotation.m_Ask[2].m_uiPrice = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("ask4", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("ask4", strTmp))
 	{
-		//stQuotation.m_Ask[3].m_uiPrice = RoundToInt<double>(FromQString<double>(strTmp),2);
+		stQuotation.m_Ask[3].m_uiPrice = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("ask5", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("ask5", strTmp))
 	{
-		//stQuotation.m_Ask[4].m_uiPrice = RoundToInt<double>(FromQString<double>(strTmp),2);
+		stQuotation.m_Ask[4].m_uiPrice = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("askLot1", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("askLot1", strTmp))
 	{
-		//stQuotation.m_Ask[0].m_uiVol = (unsigned int)(FromQString<unsigned int>(strTmp));
+		stQuotation.m_Ask[0].m_uiVol = (unsigned int)(FromString<unsigned int>(strTmp));
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("askLot2", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("askLot2", strTmp))
 	{
-		//stQuotation.m_Ask[1].m_uiVol = (unsigned int)(FromQString<unsigned int>(strTmp));
+		stQuotation.m_Ask[1].m_uiVol = (unsigned int)(FromString<unsigned int>(strTmp));
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("askLot3", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("askLot3", strTmp))
 	{
-		//stQuotation.m_Ask[2].m_uiVol = (unsigned int)(FromQString<unsigned int>(strTmp));
+		stQuotation.m_Ask[2].m_uiVol = (unsigned int)(FromString<unsigned int>(strTmp));
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("askLot4", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("askLot4", strTmp))
 	{
-		//stQuotation.m_Ask[3].m_uiVol = (unsigned int)(FromQString<unsigned int>(strTmp));
+		stQuotation.m_Ask[3].m_uiVol = (unsigned int)(FromString<unsigned int>(strTmp));
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("askLot5", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("askLot5", strTmp))
 	{
-		//stQuotation.m_Ask[4].m_uiVol = (unsigned int)(FromQString<unsigned int>(strTmp));
+		stQuotation.m_Ask[4].m_uiVol = (unsigned int)(FromString<unsigned int>(strTmp));
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("bid1", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("bid1", strTmp))
 	{
-		//stQuotation.m_Bid[0].m_uiPrice = RoundToInt<double>(FromQString<double>(strTmp),2);
+		stQuotation.m_Bid[0].m_uiPrice = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("bid2", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("bid2", strTmp))
 	{
-		//stQuotation.m_Bid[1].m_uiPrice = RoundToInt<double>(FromQString<double>(strTmp),2);
+		stQuotation.m_Bid[1].m_uiPrice = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("bid3", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("bid3", strTmp))
 	{
-		//stQuotation.m_Bid[2].m_uiPrice = RoundToInt<double>(FromQString<double>(strTmp),2);
+		stQuotation.m_Bid[2].m_uiPrice = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("bid4", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("bid4", strTmp))
 	{
-		//stQuotation.m_Bid[3].m_uiPrice = RoundToInt<double>(FromQString<double>(strTmp),2);
+		stQuotation.m_Bid[3].m_uiPrice = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("bid5", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("bid5", strTmp))
 	{
-		//stQuotation.m_Bid[4].m_uiPrice = RoundToInt<double>(FromQString<double>(strTmp),2);
+		stQuotation.m_Bid[4].m_uiPrice = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("bidLot1", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("bidLot1", strTmp))
 	{
-		//stQuotation.m_Bid[0].m_uiVol = (unsigned int)(FromQString<unsigned int>(strTmp));
+		stQuotation.m_Bid[0].m_uiVol = (unsigned int)(FromString<unsigned int>(strTmp));
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("bidLot2", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("bidLot2", strTmp))
 	{
-		//stQuotation.m_Bid[1].m_uiVol = (unsigned int)(FromQString<unsigned int>(strTmp));
+		stQuotation.m_Bid[1].m_uiVol = (unsigned int)(FromString<unsigned int>(strTmp));
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("bidLot3", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("bidLot3", strTmp))
 	{
-		//stQuotation.m_Bid[2].m_uiVol = (unsigned int)(FromQString<unsigned int>(strTmp));
+		stQuotation.m_Bid[2].m_uiVol = (unsigned int)(FromString<unsigned int>(strTmp));
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("bidLot4", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("bidLot4", strTmp))
 	{
-		//stQuotation.m_Bid[3].m_uiVol = (unsigned int)(FromQString<unsigned int>(strTmp));
+		stQuotation.m_Bid[3].m_uiVol = (unsigned int)(FromString<unsigned int>(strTmp));
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("bidLot5", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("bidLot5", strTmp))
 	{
-		//stQuotation.m_Bid[4].m_uiVol = (unsigned int)(FromQString<unsigned int>(strTmp));
+		stQuotation.m_Bid[4].m_uiVol = (unsigned int)(FromString<unsigned int>(strTmp));
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("turnOver", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("turnOver", strTmp))
 	{//再 /１００００
-	 //stQuotation.m_dbTurnOver = (FromQString<double>(strTmp)/10000);
-	 //stQuotation.m_uiTurnOver = RoundToInt<double>(FromQString<double>(strTmp),-2);
+	 //stQuotation.m_dbTurnOver = (FromString<double>(strTmp)/10000);
+	 stQuotation.m_uiTurnOver = RoundToInt<double>(FromString<double>(strTmp),-2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("highLimit", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("highLimit", strTmp))
 	{// 涨停板
-	 //stQuotation.m_uiHighLimit = RoundToInt<double>(FromQString<double>(strTmp),2);
+	 stQuotation.m_uiHighLimit = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("lowLimit", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("lowLimit", strTmp))
 	{// 跌停板
-	 //stQuotation.m_uiLowLimit = RoundToInt<double>(FromQString<double>(strTmp),2);
+	 stQuotation.m_uiLowLimit = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("average", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("average", strTmp))
 	{// 跌停板
-	 //stQuotation.m_uiAverage = RoundToInt<double>(FromQString<double>(strTmp),2);
+	 stQuotation.m_uiAverage = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("weight", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("weight", strTmp))
 	{// 跌停板
-	 //stQuotation.m_uiWeight = RoundToInt<double>(FromQString<double>(strTmp),3);
+	 stQuotation.m_uiWeight = RoundToInt<double>(FromString<double>(strTmp),3);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("Posi", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("Posi", strTmp))
 	{
-		//stQuotation.m_uiChiCangLiang = (unsigned int)(FromQString<unsigned int>(strTmp));
+		stQuotation.m_uiChiCangLiang = (unsigned int)(FromString<unsigned int>(strTmp));
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("settle", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("settle", strTmp))
 	{
-		//stQuotation.m_uiSettle = RoundToInt<double>(FromQString<double>(strTmp),2);
+		stQuotation.m_uiSettle = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 
 	strTmp = "";
-	if (0 == oPktSrc.GetParameterVal("lastSettle", strTmp.toStdString()))
+	if (0 == oPktSrc.GetParameterVal("lastSettle", strTmp))
 	{
-		//stQuotation.m_uiLastSettle = RoundToInt<double>(FromQString<double>(strTmp),2);
+		stQuotation.m_uiLastSettle = RoundToInt<double>(FromString<double>(strTmp),2);
 	}
 	return 0;
 }
@@ -1344,6 +1350,8 @@ int CTraderCpMgr::TranslateZipPacket(CBroadcastPacket& oPktSrc, QUOTATION& stQuo
 		}
 		//uiValue = (unsigned int)dbValue;
 		uiValue = (INT64)dbValue;
+
+		//CRLog(E_PROINFO, "Decode  sZipBuff  value: %.2f", dbValue);
 		switch (cField)
 		{
 		case FIELDKEY_LASTSETTLE:
@@ -1575,13 +1583,14 @@ int CTraderCpMgr::DealRecvQuotation(CBroadcastPacket& pkt, const int& iBroadcast
 	else
 	{
 		const string &sInstID = pQuotation->instID;
+
 		if (bPosi_PL)
 		{
 			// 计算持仓盈亏
-			//g_CusInfo.HandleRecvQuotation(*pQuotation);
+			g_CusInfo.HandleRecvQuotation(*pQuotation);
 
 			// 处理
-			//m_cPreOrder.HandleRecQuotation( sInstID, pQuotation->m_uiLast );
+			m_cPreOrder.HandleRecQuotation( sInstID, pQuotation->m_uiLast );
 
 #ifdef _WRITE_LOG
 			/*
@@ -1602,7 +1611,7 @@ int CTraderCpMgr::DealRecvQuotation(CBroadcastPacket& pkt, const int& iBroadcast
 
 CBroadcaster* CTraderCpMgr::GetBroadcaster(int nBdrType)
 {
-	QMapBDR::iterator it = m_mapBdr.find(nBdrType);
+	auto it = m_mapBdr.find(nBdrType);
 	if (it != m_mapBdr.end())
 	{
 		return &(it.value());// &(it.value);
@@ -2124,7 +2133,7 @@ bool CTraderCpMgr::GetProdeCode(ProdCodeInfo& stProdCode, const QString &sProdCo
 // 从今仓中依照顺序平掉iHand手  20121107 因为要保存延期成交流水信息，所以不删除流水
 void CTraderCpMgr::RemoveMatchFlow(LISTDeferMatch &listMatch, int iHand)
 {
-	for (LISTDeferMatch::iterator it = listMatch.begin(); it != listMatch.end(); it++)
+	for (auto it = listMatch.begin(); it != listMatch.end(); it++)
 	{
 		if (it->iHand >= iHand) // 如果当前流水的手数不小于剩余手数，则记录平掉的手数，退出循环
 		{
@@ -2173,19 +2182,19 @@ void CTraderCpMgr::CalculateOtherValue(const QString &sProdCode, DeferPosiInfo &
 											  // 最后的总保证金
 	double dTotalMoney = stDeferPosiInfo.fYesAvgPosPrice * stDeferPosiInfo.iYesAmt; // 用昨仓的持仓保证金初始化
 
-																					// modify by  20130222 根据金联通的要求，开仓均价与服务器保持一致
-																					//// 总的开仓手数，用昨日的原始仓位初始化
-																					//int iOpenTotalHand = stDeferPosiInfo.iYesOrgAmt;
-																					//// 总的开仓金额，用昨日的原始开仓金额初始化
-																					//double dOpenTotalMoney = stDeferPosiInfo.dYesAvgOpenPosPrice * stDeferPosiInfo.iYesOrgAmt;
+	// modify by  20130222 根据金联通的要求，开仓均价与服务器保持一致
+	//// 总的开仓手数，用昨日的原始仓位初始化
+	//int iOpenTotalHand = stDeferPosiInfo.iYesOrgAmt;
+	//// 总的开仓金额，用昨日的原始开仓金额初始化
+	//double dOpenTotalMoney = stDeferPosiInfo.dYesAvgOpenPosPrice * stDeferPosiInfo.iYesOrgAmt;
 
-																					// 总的开仓手数，用昨日的原始仓位初始化
+	// 总的开仓手数，用昨日的原始仓位初始化
 	int iOpenTotalHand = stDeferPosiInfo.iYesAmt;
 	// 总的开仓金额，用昨日的原始开仓金额初始化
 	double dOpenTotalMoney = stDeferPosiInfo.dYesAvgOpenPosPrice * stDeferPosiInfo.iYesAmt;
 
 	// 加上今仓的保证金
-	for (LISTDeferMatch::const_iterator it = listMatch.begin(); it != listMatch.end(); ++it)
+	for (auto it = listMatch.begin(); it != listMatch.end(); ++it)
 	{
 		dTotalMoney += it->dPrice * it->iHand;
 		iTotalHand += it->iHand;
@@ -2220,7 +2229,7 @@ void CTraderCpMgr::CalculateOtherValue(const QString &sProdCode, DeferPosiInfo &
 		stDeferPosiInfo.dTotalFare = 0.00;
 	}
 
-	for (LISTDeferMatch::const_iterator it = listMatch.begin(); it != listMatch.end(); ++it)
+	for (auto it = listMatch.begin(); it != listMatch.end(); ++it)
 	{
 		stDeferPosiInfo.dTotalFare += it->dPosiMoney*it->iHand / it->iTotalHand;
 	}
@@ -2253,7 +2262,7 @@ void CTraderCpMgr::CalculateOtherValue(const QString &sProdCode, DeferPosiInfo &
 	double dOpenTotalMoney = stDeferPosiInfo.dYesAvgOpenPosPrice * stDeferPosiInfo.iYesAmt;
 
 	// 加上今仓的保证金
-	for (LISTDeferMatch::const_iterator it = listMatch.begin(); it != listMatch.end(); ++it)
+	for (auto it = listMatch.begin(); it != listMatch.end(); ++it)
 	{
 		double d = it->dPrice;
 		int h = it->iHand;
@@ -2336,7 +2345,7 @@ void CTraderCpMgr::CalculateOtherValue(const QString &sProdCode, DeferPosiInfo &
 		stDeferPosiInfo.dTotalFare = 0.00;
 	}
 
-	for (LISTDeferMatch::const_iterator it = listMatch.begin(); it != listMatch.end(); ++it)
+	for (auto it = listMatch.begin(); it != listMatch.end(); ++it)
 	{
 		stDeferPosiInfo.dTotalFare += it->dPosiMoney*it->iHand / it->iTotalHand;
 	}
@@ -2415,7 +2424,7 @@ iRemainAmount：剩余手数
 bool CTraderCpMgr::DealDeferCancelFreezePosi(const QString &instID, bool bLong, bool bExist, int iTotalAmount, int iRemainAmount)
 {
 	// 根据合约代码获取该品种的在该仓位上的持仓信息
-	QMap<QString, DeferPosi>::iterator itPosi = m_QMapDeferPosi.find(instID);
+	auto itPosi = m_QMapDeferPosi.find(instID);
 	DeferPosiInfo &info = bLong ? itPosi.value().infoLong : itPosi.value().infoShort;
 
 	// 根据该撤单的本地报单号查找是否在报单流水中存在
@@ -2637,7 +2646,7 @@ void CTraderCpMgr::LoadDeferPosiBaseData(const ArrayListMsg &alm_result)
 		QString sProdCode = aMsg.GetStringEx(0).c_str();
 
 		// 获取该合约代码对应的持仓信息
-		QMap<QString, DeferPosi>::iterator it = m_QMapDeferPosi.find(sProdCode);
+		auto it = m_QMapDeferPosi.find(sProdCode);
 		if (it == m_QMapDeferPosi.end())
 		{
 			DeferPosi stDeferPosi;
@@ -2713,7 +2722,7 @@ void CTraderCpMgr::LoadForwardPosiBaseData(const ArrayListMsg &alm_result)
 		QString sProdCode = aMsg.GetStringEx(0).c_str();
 
 		// 获取该合约代码在内存中对应的持仓信息
-		QMap<QString, DeferPosi>::iterator it = m_QMapDeferPosi.find(sProdCode);
+		auto it = m_QMapDeferPosi.find(sProdCode);
 		if (it == m_QMapDeferPosi.end())
 		{
 			// 如果不存在则插入
@@ -2787,7 +2796,7 @@ void CTraderCpMgr::LoadStoreBaseData(const ArrayListMsg &alm_result)
 		const QString &sProdCode = CHJGlobalFun::str2qstr(aMsg.GetStringEx(0));
 
 		// 获取该合约代码对应的库存信息
-		QMap<QString, StoreInfo>::iterator it = m_QMapStoreInfo.find(sProdCode);
+		auto it = m_QMapStoreInfo.find(sProdCode);
 		if (it == m_QMapStoreInfo.end())
 		{
 			StoreInfo stStore;
@@ -2875,13 +2884,12 @@ double CTraderCpMgr::CalculateTradeFee(const ProdCodeInfo &info, const QString &
 	// 本金（发生货款）   计量单位*委托价格*手数，（注：参照服务器代码，对结果做了处理）
 	double dOrgCost = CHJGlobalFun::DoubleFormat(dUnite * iHand * dPrice);
 
-	
-
 	FareInfo stFareInfo;
 	if (info.market_id == CONSTANT_B_MARKET_ID_SPOT) // 现货市场
 	{
 		// 获取手续费信息（会员和交易所）
 		ExchFare ef_exch_fare;
+
 
 		// 现货买入
 		if (sExchID == CONSTANT_EXCH_CODE_SPOT_BUY)
@@ -2902,6 +2910,7 @@ double CTraderCpMgr::CalculateTradeFee(const ProdCodeInfo &info, const QString &
 			else
 				fTotalMoney = dOrgCost + ef_exch_fare.sumSingle() + ef_diff_margin.sumSingle();
 
+
 			// 如果是报单信息则记录报单的冻结信息
 			if (!localOrderNo.isEmpty())
 			{
@@ -2920,6 +2929,7 @@ double CTraderCpMgr::CalculateTradeFee(const ProdCodeInfo &info, const QString &
 				fTotalMoney = dOrgCost - ef_exch_fare.sum();
 			else
 				fTotalMoney = dOrgCost - ef_exch_fare.sumSingle();
+
 		}
 	}
 	else if (info.market_id == CONSTANT_B_MARKET_ID_DEFER) // 延期
@@ -2929,7 +2939,7 @@ double CTraderCpMgr::CalculateTradeFee(const ProdCodeInfo &info, const QString &
 		{
 			// 获取手续费信息（会员和交易所）
 			ExchFare ef_exch_fare = CHJCommon::GetExchFareValueByExchBal(sProd_Code, dUnite, dOrgCost, iHand, 
-																		GetBFareValue(sProd_Code, CONSTANT_OPEN_FARE_ID), GetMFareValue(sProd_Code, CONSTANT_OPEN_FARE_ID));
+														GetBFareValue(sProd_Code, CONSTANT_OPEN_FARE_ID), GetMFareValue(sProd_Code, CONSTANT_OPEN_FARE_ID));//开仓手续费
 
 			if (bMatch)
 			{
@@ -2939,21 +2949,21 @@ double CTraderCpMgr::CalculateTradeFee(const ProdCodeInfo &info, const QString &
 			else
 			{
 				// 保证金计算（会员和交易所）
-				QString sFareCode;
-
-				sFareCode = CONSTANT_EXCH_BAIL_FARE_ID;
+				QString sFareCode = CONSTANT_EXCH_BAIL_FARE_ID;
 
 				ExchFare ef_margin = CHJCommon::GetExchFareValueByExchBal(sProd_Code, dUnite, dOrgCost, iHand,	
-														GetBFareValue(sProd_Code, sFareCode), GetMFareValue(sProd_Code, sFareCode));
+														GetBFareValue(sProd_Code, sFareCode), GetMFareValue(sProd_Code, sFareCode));//开仓保证金
 				//1.判断大边是否同方向
 				//kenny  冻结资金  
-				double frozen = g_CusInfo.CalculateFrozenCapital(sProd_Code, sExchID, dOrgCost);
+				double  fOrderValue = ef_margin.sumSingle();
+				double frozen = g_CusInfo.CalculateFrozenCapital(sProd_Code, sExchID, fOrderValue);
 				
 				// 开仓手续费+开仓保证金
 				if(frozen <= -1)
 					fTotalMoney = ef_exch_fare.sumSingle() + ef_margin.sumSingle();
 				else
-					fTotalMoney = ef_exch_fare.sumSingle() + frozen;
+					fTotalMoney =  frozen;//大边逻辑
+
 
 				// 如果是报单信息则记录报单的冻结信息
 				if (!localOrderNo.isEmpty())
@@ -3464,7 +3474,7 @@ void CTraderCpMgr::HandleDeferCovReleaseFee(const QString &sProdCode, double dPr
 	d_cov_surplus = 0.00;
 
 	// 根据持仓方向获取对应的持仓信息
-	QMap<QString, DeferPosi>::iterator it = m_QMapDeferPosi.find(sProdCode);
+	auto it = m_QMapDeferPosi.find(sProdCode);
 	if (it == m_QMapDeferPosi.end())
 	{
 		return;
@@ -3502,7 +3512,7 @@ void CTraderCpMgr::HandleDeferCovReleaseFee(const QString &sProdCode, double dPr
 	if (iCovToday > 0)
 	{
 		const LISTDeferMatch &listMatch = info.listMatch;
-		for (LISTDeferMatch::const_iterator it = listMatch.begin(); it != listMatch.end(); )
+		for (auto it = listMatch.begin(); it != listMatch.end(); )
 		{
 			dDifPrice = bLong ? (dPrice - it->dPrice) : (it->dPrice - dPrice);
 
@@ -3696,7 +3706,7 @@ sDDAProdCode：该值为空时表示处理的是普通的现货报单
 bool CTraderCpMgr::HandleTradeStore(const QString &sProdCode, int iHand, bool bFreeze, const QString &sDDAProdCode)
 {
 	// 根据合约代码找到该笔库存
-	QMap<QString, StoreInfo>::iterator itStore = m_QMapStoreInfo.find(sProdCode);
+	auto itStore = m_QMapStoreInfo.find(sProdCode);
 	if (itStore != m_QMapStoreInfo.end())
 	{
 #ifdef _WRITE_SPOT_LOG
@@ -3933,7 +3943,7 @@ double CTraderCpMgr::GetDeferDeliveryPrice(const QString &sProdCode)
 // 根据系统参数ID获取系统参数值，获取失败的话则用默认的（sDefaultValue）
 QString CTraderCpMgr::GetParaValue(const QString &sParaID, const QString &sDefaultValue)
 {
-	QMap<QString, QString>::const_iterator it = m_QMapSystemPara.find(sParaID);
+	auto it = m_QMapSystemPara.find(sParaID);
 	//if( it != m_QMapSystemPara.end() )
 	//{
 	//	return it.value;
@@ -3997,7 +4007,7 @@ double CTraderCpMgr::GetOpenFare(const QString &sProdCode, bool bLong, double fU
 	if (fi.fare_mode_id == CONSTANT_CT_FARE_MODE_BAL) // 按金额模式计算保证金
 	{
 		// 根据持仓方向获取对应的持仓信息
-		QMap<QString, DeferPosi>::iterator it = m_QMapDeferPosi.find(sProdCode);
+		auto it = m_QMapDeferPosi.find(sProdCode);
 		const DeferPosiInfo &info = bLong ? it->infoLong : it->infoShort;
 
 		// 获取行情中上的上日结算价
@@ -4018,7 +4028,7 @@ double CTraderCpMgr::GetOpenFare(const QString &sProdCode, bool bLong, double fU
 
 			// 加上今仓的平仓手续费
 			const LISTDeferMatch &listMatch = info.listMatch;
-			for (LISTDeferMatch::const_iterator it = listMatch.begin(); it != listMatch.end(); )
+			for (auto it = listMatch.begin(); it != listMatch.end(); )
 			{
 				if (it->iHand > iHand || it->iHand == iHand) // 如果当前流水的手数不小于剩余手数
 				{
@@ -4045,7 +4055,7 @@ double CTraderCpMgr::GetOpenFareOrg(const QString &sProdCode, bool bLong, double
 	double dTotalMoney;
 
 	// 根据持仓方向获取对应的持仓信息
-	QMap<QString, DeferPosi>::iterator it = m_QMapDeferPosi.find(sProdCode);
+	auto it = m_QMapDeferPosi.find(sProdCode);
 	const DeferPosiInfo &info = bLong ? it->infoLong : it->infoShort;
 
 	// 获取行情中上的上日结算价，也可用从内存中的持仓信息获得
@@ -4065,7 +4075,7 @@ double CTraderCpMgr::GetOpenFareOrg(const QString &sProdCode, bool bLong, double
 
 		// 加上今仓的平仓手续费
 		const LISTDeferMatch &listMatch = info.listMatch;
-		for (LISTDeferMatch::const_iterator it = listMatch.begin(); it != listMatch.end(); )
+		for (auto it = listMatch.begin(); it != listMatch.end(); )
 		{
 			if (it->iHand > iHand || it->iHand == iHand) // 如果当前流水的手数不小于剩余手数
 			{
@@ -4517,7 +4527,7 @@ double CTraderCpMgr::GetRealeaseMoney(const QString &localOrderNo, int iHand)
 	if (!localOrderNo.isEmpty())
 	{
 		// 获取该笔单的冻结信息
-		QMap<QString, OrderFrozeInfo>::iterator it = m_QMapOrderFroze.find(localOrderNo);
+		auto it = m_QMapOrderFroze.find(localOrderNo);
 		if (it != m_QMapOrderFroze.end())
 		{
 			// 获取解冻资金
@@ -4534,7 +4544,7 @@ double CTraderCpMgr::GetRealeaseMoney(const QString &localOrderNo, int iHand)
 double CTraderCpMgr::GetMatchUnReleaseMoney(const QString &localOrderNo)
 {
 	double dFrozenTradeFee = 0.00;
-	QMap<QString, int>::iterator it = m_QMapMatchUnFindInfo.find(localOrderNo);
+	auto it = m_QMapMatchUnFindInfo.find(localOrderNo);
 	if (it != m_QMapMatchUnFindInfo.end())
 	{
 		dFrozenTradeFee = GetRealeaseMoney(localOrderNo, it.value());
@@ -4548,8 +4558,8 @@ double CTraderCpMgr::HandleMatchReleaseMoney(const QString &localOrderNo, int iH
 {
 	double dFrozenTradeFee = 0.00; //
 
-								   // 根据本地报单号查找该笔报单的冻结信息
-	QMap<QString, OrderFrozeInfo>::iterator it = m_QMapOrderFroze.find(localOrderNo);
+	 // 根据本地报单号查找该笔报单的冻结信息
+	auto it = m_QMapOrderFroze.find(localOrderNo);
 	if (it != m_QMapOrderFroze.end()) // 如果存在
 	{
 		// 获取该笔单的冻结信息
@@ -4563,7 +4573,7 @@ double CTraderCpMgr::HandleMatchReleaseMoney(const QString &localOrderNo, int iH
 	else
 	{
 		// 没找到则表示处理成交的解冻资金失败，记录本地报单号和手数
-		QMap<QString, int>::iterator it = m_QMapMatchUnFindInfo.find(localOrderNo);
+		auto it = m_QMapMatchUnFindInfo.find(localOrderNo);
 		if (it != m_QMapMatchUnFindInfo.end())
 		{
 			it.value() += iHand;
@@ -4734,7 +4744,7 @@ void CTraderCpMgr::IniTodayTransfer()
 QString CTraderCpMgr::FormatCurTransferStr()
 {
 	QString sValue;
-	for (QMap<QString, QString>::iterator it = m_QMapTransfer.begin(); it != m_QMapTransfer.end(); it++)
+	for (auto it = m_QMapTransfer.begin(); it != m_QMapTransfer.end(); it++)
 	{
 		sValue = sValue + it.key() + "｜" + it.value() + "｜" + "∧";;
 	}
@@ -4746,7 +4756,7 @@ void CTraderCpMgr::CustomerUsefulPosi(const QString& prodCode, int& iUsefullong,
 {
 	iUsefullong = iUsefulshort = 0;
 	// 获取该品种的仓位信息
-	QMap<QString, DeferPosi>::const_iterator it = g_TraderCpMgr.m_QMapDeferPosi.find(prodCode);
+	auto it = g_TraderCpMgr.m_QMapDeferPosi.find(prodCode);
 	if (it != g_TraderCpMgr.m_QMapDeferPosi.end())
 	{
 		iUsefullong = it->infoLong.iUsefulAmt;
@@ -4788,7 +4798,7 @@ void CTraderCpMgr::WriteTodayTransferToFile()
 // 流水则内存中不存在则返回true，存在则返回false
 bool CTraderCpMgr::DealOneHandTransfer(const QString &sSerialNo, QString sExchBal, bool bIn)
 {
-	QMap<QString, QString>::iterator it = m_QMapTransfer.find(sSerialNo);
+	auto it = m_QMapTransfer.find(sSerialNo);
 	if (it == m_QMapTransfer.end())
 	{
 		// 如果是出金，则判断原来的金额字符串是否带负号，没有则加上
@@ -5000,7 +5010,16 @@ int CTraderCpMgr::CommitOrder(const QString &sProdCode, const QString &csPrice, 
 {
 	// 发送报单
 	Rsp4001 rsp;
-	int iRspID = CTranMessage::Handle4001(rsp, sProdCode, csPrice.toFloat(), csAmount.toInt(), sExchID, orderType, false);
+
+	//20180711 修正AGTD报价控件容许小数位输入
+	double price = csPrice.toFloat();
+	if (sProdCode == "Ag(T+D)")
+	{
+		int test = price;
+		price = test;
+	}
+
+	int iRspID = CTranMessage::Handle4001(rsp, sProdCode, price, csAmount.toInt(), sExchID, orderType, false);
 
 	   // added by Jerry Lee, 2013-4-1, 增加对报单错误码的判断
 	   string strCode = rsp.rsp_code;
@@ -5125,7 +5144,7 @@ int CTraderCpMgr::CancelOrder(QString &csOrderNo)
 
 int CTraderCpMgr::GetDlgHandleFromID(const EDLGID &eDlgID)
 {
-	QMap<EDLGID, int>::const_iterator it = m_QMapDlgHandle.find(eDlgID);
+	auto it = m_QMapDlgHandle.find(eDlgID);
 	if (it != m_QMapDlgHandle.end())
 		return it.value();
 	else
@@ -5142,7 +5161,7 @@ void CTraderCpMgr::AddDlgHandle(const EDLGID &eDlgID, const int &hDlg)
 */
 bool CTraderCpMgr::bIsOrderUnMatch(const QString &sLocalOrderNo, bool bErase)
 {
-	for (list<QString>::iterator it = m_QMapUnMatchOrder.begin(); it != m_QMapUnMatchOrder.end(); it++)
+	for (auto it = m_QMapUnMatchOrder.begin(); it != m_QMapUnMatchOrder.end(); it++)
 	{
 		if ((*it == sLocalOrderNo))
 		{
@@ -5340,7 +5359,12 @@ bool CTraderCpMgr::CallUpdateExe(void) const
 			csExeName = csFullName;
 		}
 
-		//ShellExecute( NULL, "open", g_Global.GetSystemPath()+csExeName, csPara, NULL, NULL );
+		//::ShellExecute( NULL, "open", g_Global.GetSystemPath()+csExeName, csPara, NULL, NULL );
+
+		QProcess process;
+		QString strCmd = "";
+		strCmd += g_Global.GetSystemPath() + csExeName;
+		process.start(strCmd);
 
 		return true;
 
@@ -5421,7 +5445,7 @@ void CTraderCpMgr::SetServerList(HashtableMsg &htm_server_list)
 			QString sID[5] = { "broadcast_ip", "query_ip", "risk_broadcast_ip", "trans_ip", "risk_trans_ip" };
 			for (int i = 0; i < 5; i++)
 			{
-				map<string, string>::iterator it = QMapValue.find(sID[i].toStdString());
+				auto it = QMapValue.find(sID[i].toStdString());
 				if (it != QMapValue.end())
 				{
 					// mod by Jerry Lee, 2013-3-27, 不需要转成ip
@@ -5439,7 +5463,12 @@ void CTraderCpMgr::SetServerList(HashtableMsg &htm_server_list)
 
 void CTraderCpMgr::resetAccount(QString && str)
 {
+	//先终端广播，里面有定时器进行认证
+
 	UserLogout();
+
+	//kenny 20180726  清理参数信息
+	ClearCodeTableList();
 
 	// 保存广播报文中成交流水数据
 	m_QMapSpotMatch.clear();
@@ -5468,6 +5497,7 @@ void CTraderCpMgr::resetAccount(QString && str)
 
 	m_QMapMatchUnFindInfo.clear();
 
+
 	int nRet = 0;
     //根据别名，读取账户信息，进行登陆
 	for (int i = 0; i < App::accMgr.size(); i++)
@@ -5478,6 +5508,16 @@ void CTraderCpMgr::resetAccount(QString && str)
 			g_Global.m_strPwdMD5 = g_TraderCpMgr.GetEncryptPSW(App::accMgr[i].psw.toStdString().c_str());
 
 			g_Global.m_bShowLastLoginInfo = false;
+
+
+			int ret = g_TraderCpMgr.Authenticate(App::accMgr[i].user.toStdString().c_str(),
+				App::accMgr[i].psw.toStdString().c_str(),
+				App::ip.toLatin1(),
+				App::port.toInt());
+
+			if (ret < 0)
+				return;
+
 			nRet = g_TraderCpMgr.UserLogin();
 			break;
 		}

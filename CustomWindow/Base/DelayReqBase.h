@@ -1,7 +1,5 @@
 #pragma once
 
-//#include "..\..\Framework\Utility\Include\Gess.h"
-
 #include "ThreadInterface.h"
 #include "Def.h"
 #include <vector>
@@ -47,7 +45,6 @@ public:
 	void SetDelayTime( int nTime );
 
 protected:
-
 	/*
 	判断添加的一笔请求是否无效（重复或者不需要），父类实现
 	*/
@@ -59,8 +56,8 @@ protected:
 	virtual void SendReq( const deque<ReqPara> &deqReq );
 
 protected:
-	int ThreadEntry();
-	int End();
+	int  ThreadEntry();
+	int  End();
 	void OnStart() { };
 	void OnStop() { };
 

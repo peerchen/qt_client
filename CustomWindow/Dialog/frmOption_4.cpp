@@ -26,6 +26,12 @@ void frmOption_4::saveIni()
 	m_bTipsCancelSus = ui.checkBox_4->isChecked();
 	m_bTipsCancelFail = ui.checkBox_5->isChecked();
 
+	g_Global.m_bTipsAskSus = m_bTipsAskSus;
+	g_Global.m_bTipsAskFail = m_bTipsAskFail;
+	g_Global.m_bTipsOrderMatch = m_bTipsOrderMatch;
+	g_Global.m_bTipsCancelSus = m_bTipsCancelSus;
+	g_Global.m_bTipsCancelFail = m_bTipsCancelFail;
+
 	CModifySetting::ModifyTipsAskSus(m_bTipsAskSus);
 	CModifySetting::ModifyTipsAskFail(m_bTipsAskFail);
 	CModifySetting::ModifyTipsOrderMatch(m_bTipsOrderMatch);

@@ -17,6 +17,11 @@ frmModifyOrderDlg::frmModifyOrderDlg(QWidget *parent)
 
 
 	connect(ui.pushButton_ok,SIGNAL(clicked()),this,SLOT(slotOk()));
+	connect(ui.pushButton_cancel, &QPushButton::clicked, [&]()
+	{
+		close();
+	});//
+
 }
 
 frmModifyOrderDlg::~frmModifyOrderDlg()
@@ -52,7 +57,7 @@ void frmModifyOrderDlg::slotOk()
 		if (nCommiOrderRsp != 0)
 		{
 
-			QMessageBox::information(nullptr, "系统提示", ("改单失败！原报单已经被撤销，如需恢复，请重新在报单窗口下单！"));
+			QMessageBox::information(nullptr, u8"系统提示", u8"改单失败！原报单已经被撤销，如需恢复，请重新在报单窗口下单！");
 
 		}
 		else
@@ -63,7 +68,7 @@ void frmModifyOrderDlg::slotOk()
 	else
 	{
 
-		QMessageBox::information(nullptr, "系统提示", ("由于撤单不成功，所以无法改单！"));
+		QMessageBox::information(nullptr, u8"系统提示", u8"由于撤单不成功，所以无法改单！");
 	}
 
 	close();

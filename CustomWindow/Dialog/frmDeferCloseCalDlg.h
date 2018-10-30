@@ -5,6 +5,7 @@
 
 #include "frmlogindialog.h"
 #include  "frmFramelessDialogBase.h"
+#include "StDef.h"
 
 class frmDeferCloseCalDlg :  public frmFramelessDialogBase//public QDialog
 {
@@ -15,6 +16,7 @@ public:
 	~frmDeferCloseCalDlg();
 
 	bool CheckInput();
+	bool GetCurProdCodeInfo(ProdCodeInfo &info);
 signals:
 	void currentIndexChanged(QString  str);
 

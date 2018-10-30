@@ -2,6 +2,8 @@
 
 #include <QString>
 #include <QMap>
+#include <unordered_map>
+
 #include "BroadcastPacketAndStruct.h"
 typedef enum
 {

@@ -4,8 +4,6 @@
 #include <QAbstractNativeEventFilter>
 
 
-
-
 class StyleSheetWidget : public QWidget 
 {
 public:

@@ -52,6 +52,7 @@ bool CTranMsg::Handle1002( Rsp1002 &rsp )
 {
 	Req1002 req;
 	req.oper_flag = 1;
+	req.measure_unit = 0;//measure_unit  Ä¬ÈÏÎª-nan  ?
 
 	return TranTemplate( rsp, req, "1002" );
 }

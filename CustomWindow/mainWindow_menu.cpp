@@ -150,9 +150,6 @@ void mainWindow::changToClassicLayout()
 	m_layout->removeWidget(orderReturnWidget);
 	m_layout->removeWidget(preOrderReturnWidget);
 
-	//合并tab页面，统一下按钮的布局
-        //setWidgetStyleFromQssFile(TabRight, _RES_STYLES_PATH + _MY_TEXT("DeepBlack\\positable.css"));
-
 #ifdef  _WIN32
 
         setWidgetStyleFromQssFile(TabRight, _RES_STYLES_PATH + _MY_TEXT("DeepBlack\\positable.css"));
@@ -195,27 +192,6 @@ void mainWindow::changToClassicLayout()
 
 }
 
-//展现深度行情
-void mainWindow::slotDeepQuote()
-{
-	//show非模态展示，open是模态，exec是ApplicationModal
-	deepQuoteDlg->show();
-	showDeepQuote = true;
-	ShowDeepQuoteUI();
-
-	quoteButton->setGeometry(240, 6, 75, 30);
-}
-
-//关闭十档行情
-void mainWindow::slotCloseDeepQuoteDlg()
-{
-	deepQuoteDlg->hide();
-	showDeepQuote = false;
-	ShowNormalQuoteUI();
-
-	quoteButton->setGeometry(400, 6, 75, 30);
-}
-
 //账户管理
 void mainWindow::slotChangeAccount()
 {
@@ -241,9 +217,6 @@ void mainWindow::InitTableContextMenu()
 {
 	//右键菜单信号槽---持仓区域
 	Tabview_1->setContextMenuPolicy(Qt::CustomContextMenu);
-	connect(Tabview_1, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(show_contextmenuPosi(const QPoint&)));
-	connect(Tabview_1, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(show_contextmenuStore(const QPoint&)));
-	connect(Tabview_1, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(show_contextmenuCapital(const QPoint&)));
 
 	menuPosi = new QMenu(Tabview_1);
 
@@ -258,26 +231,42 @@ void mainWindow::InitTableContextMenu()
 	menuPosi->addAction(m_actionPosiOne);
 	menuPosi->addAction(m_actionPosiTwo);
 	menuPosi->addAction(m_actionPosiThree);
-	connect(m_actionPosiOne, &QAction::triggered, this, &mainWindow::actionPosiOneSlot);
-	connect(m_actionPosiTwo, &QAction::triggered, this, &mainWindow::actionPosiTwoSlot);
-	connect(m_actionPosiThree, &QAction::triggered, this, &mainWindow::actionPosiThreeSlot);
+
+	connect(m_actionPosiOne, &QAction::triggered, [this]() {		OnBnClickedButtonOpp();  	});
+	connect(m_actionPosiTwo, &QAction::triggered, [this]() {		handle2OneSlot();  	});
+	connect(m_actionPosiThree, &QAction::triggered, [this]() {		
+		Req1020 req;
+		req.qry_defer = gc_YesNo_Yes.toStdString();
+
+		Rsp1020 rsp1020;
+		if (g_TradeHandler.GetCustomInfo(rsp1020, req, e_TipsShowType_Fail) == 0)
+		{
+			RefreshPosi();
+		}
+	});
 
 	//[库存]右键
 	Tabview_2->setContextMenuPolicy(Qt::CustomContextMenu);
-	connect(Tabview_2, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(show_contextmenuStore(const QPoint&)));
-
 	menuStore = new QMenu(Tabview_2);
 
 	m_actionStoreOne = new QAction(menuStore);
 	m_actionStoreOne->setText("刷新库存信息");
 
 	menuStore->addAction(m_actionStoreOne);
-	connect(m_actionStoreOne, &QAction::triggered, this, &mainWindow::actionStoreOneSlot);
+	connect(m_actionStoreOne, &QAction::triggered, [this]() {
+		Req1020 req;
+		req.qry_defer = gc_YesNo_Yes.toStdString();
+
+		Rsp1020 rsp1020;
+		if (g_TradeHandler.GetCustomInfo(rsp1020, req, e_TipsShowType_Fail) == 0)
+		{
+			RefreshStore();
+		}
+	});
 
 
-	//[资金]右键
+	//[资金]
 	Tabview_3->setContextMenuPolicy(Qt::CustomContextMenu);
-	connect(Tabview_3, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(show_contextmenuCapital(const QPoint&)));
 
 	menuCapital = new QMenu(Tabview_3);
 
@@ -285,11 +274,19 @@ void mainWindow::InitTableContextMenu()
 	m_actionCapitalOne->setText("刷新资金信息");
 
 	menuCapital->addAction(m_actionCapitalOne);
-	connect(m_actionCapitalOne, &QAction::triggered, this, &mainWindow::actionCapitalOneSlot);
+	connect(m_actionCapitalOne, &QAction::triggered, [this]() {
+		Req1020 req;
+		req.qry_defer = gc_YesNo_Yes.toStdString();
+
+		Rsp1020 rsp1020;
+		if (g_TradeHandler.GetCustomInfo(rsp1020, req, e_TipsShowType_Fail) == 0)
+		{
+			RefreshCapital();
+		}
+	});
 
 	//报单回报区域右键
 	orderReturnTable->setContextMenuPolicy(Qt::CustomContextMenu);
-	connect(orderReturnTable, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(show_contextmenuOrderReturn(const QPoint&)));
 
 	menuOrderReturn   = new QMenu(orderReturnTable);
 	m_actionOrderOne  = new QAction(menuOrderReturn);
@@ -298,118 +295,44 @@ void mainWindow::InitTableContextMenu()
 
 	menuOrderReturn->addAction(m_actionOrderOne);
 
-	connect(m_actionOrderOne, &QAction::triggered, this, &mainWindow::actionOrderReturnOneSlot);
-}
+	//connect(m_actionOrderOne, &QAction::triggered, this, &mainWindow::actionOrderReturnOneSlot);
 
 
-//////////////////////////////右键菜单逻辑////////////////////////////////////////////////////////////////////////
-
-//弹出右键菜单
-void mainWindow::show_contextmenuPosi(const QPoint& pos)
-{
-	QModelIndex index = Tabview_1->indexAt(pos);
-
-	if (index.isValid())
+	connect(Tabview_1, &mainWindow::customContextMenuRequested, [this](const QPoint& pos)
 	{
-		menuPosi->exec(QCursor::pos());//在当前鼠标位置显示
-	}
-}
+		QModelIndex index = Tabview_1->indexAt(pos);
+		if (index.isValid())
+		{
+			menuPosi->exec(QCursor::pos());//在当前鼠标位置显示
+		}
+	});
 
-//反手平仓-逻辑处理
-void mainWindow::actionPosiOneSlot()
-{
-	OnBnClickedButtonOpp();
-}
-//平仓试算-逻辑处理
-void mainWindow::actionPosiTwoSlot()
-{
-	handle2OneSlot();
-}
-//刷新持仓信息-逻辑处理
-void mainWindow::actionPosiThreeSlot()
-{
-	Req1020 req;
-	req.qry_defer = gc_YesNo_Yes.toStdString();
-
-	Rsp1020 rsp1020;
-	if (g_TradeHandler.GetCustomInfo(rsp1020, req, e_TipsShowType_Fail) == 0)
+	connect(Tabview_2, &mainWindow::customContextMenuRequested, [this](const QPoint& pos)
 	{
-		RefreshPosi();
-	}
-}
-
-//弹出库存右键菜单
-void mainWindow::show_contextmenuStore(const QPoint& pos)
-{
-	QModelIndex index = Tabview_2->indexAt(pos);
-
-	if (index.isValid())
+		QModelIndex index = Tabview_2->indexAt(pos);
+		if (index.isValid())
+		{
+			menuStore->exec(QCursor::pos());//在当前鼠标位置显示
+		}
+	});
+	connect(Tabview_3, &mainWindow::customContextMenuRequested, [this](const QPoint& pos)
 	{
-		menuStore->exec(QCursor::pos());//在当前鼠标位置显示
-	}
-}
-
-//刷新库存信息-逻辑代码
-void mainWindow::actionStoreOneSlot()
-{
-	Req1020 req;
-	req.qry_defer = gc_YesNo_Yes.toStdString();
-
-	Rsp1020 rsp1020;
-	if (g_TradeHandler.GetCustomInfo(rsp1020, req, e_TipsShowType_Fail) == 0)
+		QModelIndex index = Tabview_3->indexAt(pos);
+		if (index.isValid())
+		{
+			menuCapital->exec(QCursor::pos());//在当前鼠标位置显示
+		}
+	});
+	connect(orderReturnTable, &mainWindow::customContextMenuRequested, [this](const QPoint& pos)
 	{
-		RefreshStore();
-	}
-}
-
-//弹出库存右键菜单
-void mainWindow::show_contextmenuCapital(const QPoint& pos)
-{
-	QModelIndex index = Tabview_3->indexAt(pos);
-
-	if (index.isValid())
-	{
-
-		menuCapital->exec(QCursor::pos());//在当前鼠标位置显示
-	}
-}
-
-//刷新资金信息-逻辑代码
-void mainWindow::actionCapitalOneSlot()
-{
-	Req1020 req;
-	req.qry_defer = gc_YesNo_Yes.toStdString();
-
-	Rsp1020 rsp1020;
-	if (g_TradeHandler.GetCustomInfo(rsp1020, req, e_TipsShowType_Fail) == 0)
-	{
-		RefreshCapital();
-	}
-}
-
-
-//回报的右键
-void mainWindow::show_contextmenuOrderReturn(const QPoint& pos)
-{
-	QModelIndex index = orderReturnTable->indexAt(pos);
-
-	if (index.isValid())
-	{
-		menuOrderReturn->exec(QCursor::pos());//在当前鼠标位置显示
-	}
-}
-
-//报单流水-改单逻辑
-void mainWindow::actionOrderReturnOneSlot()
-{
+		QModelIndex index = orderReturnTable->indexAt(pos);
+		if (index.isValid())
+		{
+			menuOrderReturn->exec(QCursor::pos());//在当前鼠标位置显示
+		}
+	});
 
 }
-
-
-/////////////////////////////end/右键菜单/////////////////////////////////////////
-
-
-
 
 /////////////////////////////////start 菜单逻辑////////////////////////////////////////////
 //解锁回报

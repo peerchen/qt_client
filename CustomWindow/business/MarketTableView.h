@@ -87,6 +87,11 @@ public:
 	void    updateCell(int rowIndex, int columnIndex, QString& val);
 
 	//void setColor(QuoteStandardItemModel *p, int  rowIndex,  int  colIndex, int val, int oldval);
+
+	//提高速度
+	void readCfg();
+	QVector<QString> vecAllNames;
+	QVector<int> vecUserIndexs;
 private:
 	void Connect();
 	void init();
@@ -102,7 +107,7 @@ private:
 	void GetHeadNames();
 
 	QString FormatPrice(unsigned int uiPrice);
-	QString GetQuotationValue(const QString &lpszInsId, const QUOTATION &quotation, const int rowIndex, const int &iPos);
+	QString GetQuotationValue(const QString &lpszInsId, const QUOTATION &quotation, const int rowIndex, const int &iPos );
 
 
 	//void  UpdateQuotationImp(QUOTATION * quote);
