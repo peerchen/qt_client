@@ -1,0 +1,46 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "udpLib", "udpLib.vcproj", "{FDDDDCE3-9133-440C-8901-AB154E54405B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		debug_Completion|Win32 = debug_Completion|Win32
+		Debug_IOCPServer|Win32 = Debug_IOCPServer|Win32
+		Debug|Win32 = Debug|Win32
+		release_Completion|Win32 = release_Completion|Win32
+		Release_IOCPServer|Win32 = Release_IOCPServer|Win32
+		Release|Win32 = Release|Win32
+		sun_Send_debug|Win32 = sun_Send_debug|Win32
+		sun_send_release|Win32 = sun_send_release|Win32
+		交行测试|Win32 = 交行测试|Win32
+		交行测试-debug|Win32 = 交行测试-debug|Win32
+		交行模拟测试|Win32 = 交行模拟测试|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.debug_Completion|Win32.ActiveCfg = debug_Completion|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.debug_Completion|Win32.Build.0 = debug_Completion|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.Debug_IOCPServer|Win32.ActiveCfg = Debug_IOCPServer|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.Debug_IOCPServer|Win32.Build.0 = Debug_IOCPServer|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.Debug|Win32.Build.0 = Debug|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.release_Completion|Win32.ActiveCfg = release_Completion|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.release_Completion|Win32.Build.0 = release_Completion|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.Release_IOCPServer|Win32.ActiveCfg = Release_IOCPServer|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.Release_IOCPServer|Win32.Build.0 = Release_IOCPServer|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.Release|Win32.ActiveCfg = Release|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.Release|Win32.Build.0 = Release|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.sun_Send_debug|Win32.ActiveCfg = sun_Send_debug|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.sun_Send_debug|Win32.Build.0 = sun_Send_debug|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.sun_send_release|Win32.ActiveCfg = sun_send_release|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.sun_send_release|Win32.Build.0 = sun_send_release|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.交行测试|Win32.ActiveCfg = 交行测试|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.交行测试|Win32.Build.0 = 交行测试|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.交行测试-debug|Win32.ActiveCfg = 交行测试-debug|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.交行测试-debug|Win32.Build.0 = 交行测试-debug|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.交行模拟测试|Win32.ActiveCfg = 交行模拟测试|Win32
+		{FDDDDCE3-9133-440C-8901-AB154E54405B}.交行模拟测试|Win32.Build.0 = 交行模拟测试|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
