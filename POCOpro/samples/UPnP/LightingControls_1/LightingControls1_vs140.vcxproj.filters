@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Remoting">
+      <UniqueIdentifier>{8028a0a0-dad7-4531-a1d7-e973feb22bd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Remoting\Header Files">
+      <UniqueIdentifier>{396d8d4d-7653-48cf-9936-bd47578b22e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Remoting\Source Files">
+      <UniqueIdentifier>{6235d693-bd07-44a0-bc1e-5b2eebc55059}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{1696c528-e7dc-4b15-8f2a-cb874fd973f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Header Files">
+      <UniqueIdentifier>{39ecbd2c-91ab-4c46-ae6a-2a1dee51673c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Source Files">
+      <UniqueIdentifier>{e4deca50-4800-4b87-88fb-6b17edae4e40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interfaces">
+      <UniqueIdentifier>{2bbcd82d-ee15-468c-8ebb-dea47e00b4a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interfaces\Header Files">
+      <UniqueIdentifier>{6d6471cd-9a36-4163-a46a-b2ce788e31dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interfaces\Source Files">
+      <UniqueIdentifier>{564d2fa3-34bc-400e-ae9b-12ae6ce3394f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\UPnPS\LightingControls1\DimmingClientHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\DimmingEventDispatcher.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\DimmingEventSubscriber.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\DimmingProxy.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\DimmingProxyFactory.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\DimmingRemoteObject.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\DimmingServerHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\DimmingSkeleton.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\IDimming.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\ISwitchPower.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\SwitchPowerClientHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\SwitchPowerEventDispatcher.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\SwitchPowerEventSubscriber.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\SwitchPowerProxy.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\SwitchPowerProxyFactory.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\SwitchPowerRemoteObject.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\SwitchPowerServerHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\SwitchPowerSkeleton.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\LightingControls1.h">
+      <Filter>Core\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\Dimming.h">
+      <Filter>Interfaces\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\LightingControls1\SwitchPower.h">
+      <Filter>Interfaces\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\DimmingClientHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DimmingEventDispatcher.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DimmingEventSubscriber.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DimmingProxy.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DimmingProxyFactory.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DimmingRemoteObject.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DimmingServerHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DimmingSkeleton.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IDimming.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ISwitchPower.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SwitchPowerClientHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SwitchPowerEventDispatcher.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SwitchPowerEventSubscriber.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SwitchPowerProxy.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SwitchPowerProxyFactory.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SwitchPowerRemoteObject.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SwitchPowerServerHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SwitchPowerSkeleton.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Dimming.cpp">
+      <Filter>Interfaces\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SwitchPower.cpp">
+      <Filter>Interfaces\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

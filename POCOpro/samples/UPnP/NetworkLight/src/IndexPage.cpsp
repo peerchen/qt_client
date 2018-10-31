@@ -1,0 +1,18 @@
+<%@ page class="IndexPage" context="DimmableLight&" %>
+<%@ header include="DimmableLight.h" %>
+
+<html>
+<head>
+<title>Applied Informatics UPnP DimmableLight Demo</title>
+<meta http-equiv="refresh" content="1">
+</head>
+<body>
+<h1>Applied Informatics UPnP DimmableLight Demo</h1>
+<ul>
+<li>Status: <%= context().isOn() ? "ON" : "OFF" %></li>
+<li>Level: <%= (int) context().getLevel() %> %</li>
+</ul>
+<hr>
+<i>Copyright &copy; 2011 by Applied Informatics Software Engineering GmbH.</i>
+</body>
+</html>

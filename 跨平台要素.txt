@@ -1,0 +1,16 @@
+跨平台本地函数
+
+1.PostMessage与SendMessage
+
+2.HWND
+
+3.WPARAM,LPARAM
+
+4.
+
+
+1.虚拟安装MAC操作系统，熟悉MAC的开发环境。
+
+
+
+消息，事件传递，句柄等

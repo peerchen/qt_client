@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2eb5159e-c4ee-46c6-8c8f-3ddb2e243d05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7964a3ac-b243-4211-b3d0-28325441f079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{53af020f-bf84-4efe-8117-eeac74a0e5c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Header Files">
+      <UniqueIdentifier>{c05c1e0a-a2bf-4b84-987a-43758de30664}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Source Files">
+      <UniqueIdentifier>{c213bf6c-60db-474b-b6ac-d45480d027c0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Pizzeria\DeliveryAddress.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\Pizza.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\Topping.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\DeliveryAddressDeserializer.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\DeliveryAddressDetailsDeserializer.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\DeliveryAddressDetailsSerializer.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\DeliveryAddressSerializer.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\ExtToppingDeserializer.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\ExtToppingSerializer.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\IOrderCollectionEndpoint.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\IOrderEndpoint.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\IPizzaCollectionEndpoint.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\IToppingCollectionEndpoint.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\OrderCollectionEndpointClientHelper.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\OrderCollectionEndpointProxy.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\OrderCollectionEndpointProxyFactory.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\OrderDeserializer.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\OrderEndpointClientHelper.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\OrderEndpointProxy.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\OrderEndpointProxyFactory.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\OrderSerializer.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\PizzaCollectionEndpointClientHelper.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\PizzaCollectionEndpointProxy.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\PizzaCollectionEndpointProxyFactory.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\PizzaDeserializer.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\PizzaDetailsDeserializer.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\PizzaDetailsSerializer.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\PizzaSerializer.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\ToppingCollectionEndpointClientHelper.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\ToppingCollectionEndpointProxy.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\ToppingCollectionEndpointProxyFactory.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\ToppingDeserializer.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pizzeria\ToppingSerializer.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\DeliveryAddress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pizza.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PizzeriaClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Topping.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IOrderCollectionEndpoint.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IOrderEndpoint.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IPizzaCollectionEndpoint.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IToppingCollectionEndpoint.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OrderCollectionEndpointClientHelper.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OrderCollectionEndpointProxy.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OrderCollectionEndpointProxyFactory.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OrderEndpointClientHelper.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OrderEndpointProxy.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OrderEndpointProxyFactory.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PizzaCollectionEndpointClientHelper.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PizzaCollectionEndpointProxy.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PizzaCollectionEndpointProxyFactory.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ToppingCollectionEndpointClientHelper.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ToppingCollectionEndpointProxy.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ToppingCollectionEndpointProxyFactory.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

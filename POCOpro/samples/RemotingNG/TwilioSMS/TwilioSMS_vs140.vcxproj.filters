@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6eaa48d8-15a6-4cec-a78f-bf1d0a4bb7d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{bc699253-8e27-4baa-998a-3e7d4d3e2213}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{efadb9a6-967c-49a6-a759-8123b113f9b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Header Files">
+      <UniqueIdentifier>{108cf6d0-04c8-48c9-93ae-32deaf4f925f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Source Files">
+      <UniqueIdentifier>{7753f2e0-68e1-4e5d-8477-7af01bd541e5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Twilio\TwilioSMSEndpoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Twilio\ITwilioSMSEndpoint.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Twilio\TwilioSMSEndpointClientHelper.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Twilio\TwilioSMSEndpointProxy.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Twilio\TwilioSMSEndpointProxyFactory.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Twilio\TwilioSMSResponseDeserializer.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Twilio\TwilioSMSResponseSerializer.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\TwilioSMSClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ITwilioSMSEndpoint.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TwilioSMSEndpointClientHelper.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TwilioSMSEndpointProxy.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TwilioSMSEndpointProxyFactory.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="RemoteGen.xml" />
+  </ItemGroup>
+</Project>

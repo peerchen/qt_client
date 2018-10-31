@@ -1,0 +1,14 @@
+<%@ page class="IndexPage" 
+         contentLanguage="en"
+%>
+<html>
+<head>
+<title>Applied Informatics UPnP MediaServer Demo</title>
+</head>
+<body>
+<h1>Applied Informatics UPnP MediaServer Demo</h1>
+<p>A simple implementation of the UPnP MediaServer device.</p>
+<hr>
+<i>Copyright &copy; 2011 by Applied Informatics Software Engineering GmbH.</i>
+</body>
+</html>

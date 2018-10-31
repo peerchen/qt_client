@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Remoting">
+      <UniqueIdentifier>{56a68e8f-9251-43e3-b970-a707dfff1000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Remoting\Header Files">
+      <UniqueIdentifier>{62cbe820-2100-452d-9620-26a9e0698ceb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Remoting\Source Files">
+      <UniqueIdentifier>{15cfcf40-7652-4057-9d32-86946aee3ef9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{b960ef37-3bc1-45a2-ab85-05c9e7cb8429}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Header Files">
+      <UniqueIdentifier>{da382c9d-a505-459d-b745-b3592d66af80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Source Files">
+      <UniqueIdentifier>{14c2b951-6422-4d63-a350-12745c6fb86c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interfaces">
+      <UniqueIdentifier>{86b7992f-9e7a-409e-ac0c-2fdf452d785d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interfaces\Header Files">
+      <UniqueIdentifier>{a95a4958-f7dc-4efb-a281-aa9c94983ff3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interfaces\Source Files">
+      <UniqueIdentifier>{b8f16a39-fbca-48d0-aea7-1b015ec063b7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\UPnPS\MediaServer1\AVTransport1ClientHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\AVTransport1EventDispatcher.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\AVTransport1EventSubscriber.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\AVTransport1Proxy.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\AVTransport1ProxyFactory.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\AVTransport1RemoteObject.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\AVTransport1ServerHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\AVTransport1Skeleton.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ConnectionManager1ClientHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ConnectionManager1EventDispatcher.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ConnectionManager1EventSubscriber.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ConnectionManager1Proxy.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ConnectionManager1ProxyFactory.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ConnectionManager1RemoteObject.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ConnectionManager1ServerHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ConnectionManager1Skeleton.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ContentDirectory1ClientHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ContentDirectory1EventDispatcher.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ContentDirectory1EventSubscriber.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ContentDirectory1Proxy.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ContentDirectory1ProxyFactory.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ContentDirectory1RemoteObject.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ContentDirectory1ServerHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ContentDirectory1Skeleton.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\IAVTransport1.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\IConnectionManager1.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\IContentDirectory1.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\MediaServer1.h">
+      <Filter>Core\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\AVTransport1.h">
+      <Filter>Interfaces\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ConnectionManager1.h">
+      <Filter>Interfaces\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\MediaServer1\ContentDirectory1.h">
+      <Filter>Interfaces\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AVTransport1ClientHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AVTransport1EventDispatcher.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AVTransport1EventSubscriber.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AVTransport1Proxy.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AVTransport1ProxyFactory.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AVTransport1RemoteObject.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AVTransport1ServerHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AVTransport1Skeleton.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConnectionManager1ClientHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConnectionManager1EventDispatcher.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConnectionManager1EventSubscriber.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConnectionManager1Proxy.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConnectionManager1ProxyFactory.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConnectionManager1RemoteObject.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConnectionManager1ServerHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConnectionManager1Skeleton.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ContentDirectory1ClientHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ContentDirectory1EventDispatcher.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ContentDirectory1EventSubscriber.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ContentDirectory1Proxy.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ContentDirectory1ProxyFactory.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ContentDirectory1RemoteObject.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ContentDirectory1ServerHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ContentDirectory1Skeleton.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IAVTransport1.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IConnectionManager1.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IContentDirectory1.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AVTransport1.cpp">
+      <Filter>Interfaces\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConnectionManager1.cpp">
+      <Filter>Interfaces\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ContentDirectory1.cpp">
+      <Filter>Interfaces\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

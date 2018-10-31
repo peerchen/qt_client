@@ -1,0 +1,27 @@
+在这 18 个模块中，
+ Core Events、Notifications、Processes 、Tasks、Threading这几 个模块应用时，对于创建整体程序 架构的影响非常大基本上可以决定了一个
+
+
+
+
+
+
+qt 事件 通知  任务  EVENTLOOP
+
+QEventLoop loop;
+
+QConcurret current;
+current.run();
+
+QThread  thread;
+thread.MoveToThread();
+
+
+1.QThread  thread;（低层，控制性更好）
+
+2.QtConcurrent,QRunable(更上层，写的少)
+
+QThreadPool::globalInstance()->start(QRunable)
+
+
+

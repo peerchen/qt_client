@@ -1,0 +1,40 @@
+<AppConfig>
+	<UPnPGen>
+		<input>
+			<services>
+				<service>
+					<type>urn:schemas-upnp-org:service:AVTransport:1</type>
+					<description>xml/service/AVTransport1.xml</description>
+					<class>AVTransport1</class>
+					<implClass>AVTransport1Impl</implClass>
+				</service>
+				<service>
+					<type>urn:schemas-upnp-org:service:ContentDirectory:1</type>
+					<description>xml/service/ContentDirectory1.xml</description>
+					<class>ContentDirectory1</class>
+					<implClass>ContentDirectory1Impl</implClass>
+				</service>
+				<service>
+					<type>urn:schemas-upnp-org:service:ConnectionManager:1</type>
+					<description>xml/service/ConnectionManager1.xml</description>
+					<class>ConnectionManager1</class>
+					<implClass>ConnectionManager1Impl</implClass>
+				</service>
+			</services>
+		</input>
+		<output>
+			<namespace>UPnPS::MediaServer1</namespace>
+			<include>include/UPnPS/MediaServer1</include>
+			<src>src</src>
+			<library>MediaServer1</library>
+			<alwaysInclude>UPnPS/MediaServer1/MediaServer1.h</alwaysInclude>
+			<copyright>Copyright (c) 2011-2012, Applied Informatics Software Engineering GmbH.
+				All rights reserved.
+				
+				This is unpublished proprietary source code of Applied Informatics.
+				The contents of this file may not be disclosed to third parties, 
+				copied or duplicated in any form, in whole or in part.
+			</copyright>
+		</output>
+	</UPnPGen>
+</AppConfig>

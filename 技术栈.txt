@@ -1,0 +1,20 @@
+有价值的开源地址：
+
+https://inqlude.org/
+
+
+
+技术栈：
+poco++(基础工具库)
+boost库(基础工具库)
+C++11
+QT做界面
+插件框架(X3PY或者Nuclex.PluginArchitecture.Example)
+ZW库+pthread（通讯库）
+zlib压缩裤
+openssl加密库
+C++调用python
+
+
+后台：
+微服务Spring Boot

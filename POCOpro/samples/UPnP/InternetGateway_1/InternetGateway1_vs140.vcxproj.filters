@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Remoting">
+      <UniqueIdentifier>{ea2eb9ea-7871-4745-91c1-36be195a641a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Remoting\Header Files">
+      <UniqueIdentifier>{094e4a02-cc26-469c-a280-94a3d628b6be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Remoting\Source Files">
+      <UniqueIdentifier>{e9379563-496a-4691-bbf5-5803271aa90c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{9409ae20-abb2-477a-aefb-e999445b832a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Header Files">
+      <UniqueIdentifier>{7e0c780a-ff4b-469b-a9ca-48068f09e589}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Source Files">
+      <UniqueIdentifier>{e8981cb6-7a75-4b51-9004-45ce945d96e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interfaces">
+      <UniqueIdentifier>{e65f5a59-5f53-420c-abec-39a3cbb95487}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interfaces\Header Files">
+      <UniqueIdentifier>{e00c969c-51c1-47d1-9f7c-8642f2d7e59a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interfaces\Source Files">
+      <UniqueIdentifier>{4f7afade-c540-4e15-98c5-9bf223ef7439}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\UPnPS\InternetGateway1\ILANHostConfigManagement.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\ILayer3Forwarding.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\IWANCableLinkConfig.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\IWANCommonInterfaceConfig.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\IWANDSLLinkConfig.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\IWANEthernetLinkConfig.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\IWANIPConnection.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\IWANPOTSLinkConfig.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\IWANPPPConnection.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\LANHostConfigManagementClientHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\LANHostConfigManagementProxy.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\LANHostConfigManagementProxyFactory.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\LANHostConfigManagementRemoteObject.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\LANHostConfigManagementServerHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\LANHostConfigManagementSkeleton.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\Layer3ForwardingClientHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\Layer3ForwardingEventDispatcher.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\Layer3ForwardingEventSubscriber.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\Layer3ForwardingProxy.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\Layer3ForwardingProxyFactory.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\Layer3ForwardingRemoteObject.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\Layer3ForwardingServerHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\Layer3ForwardingSkeleton.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCableLinkConfigClientHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCableLinkConfigEventDispatcher.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCableLinkConfigEventSubscriber.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCableLinkConfigProxy.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCableLinkConfigProxyFactory.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCableLinkConfigRemoteObject.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCableLinkConfigServerHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCableLinkConfigSkeleton.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCommonInterfaceConfigClientHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCommonInterfaceConfigEventDispatcher.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCommonInterfaceConfigEventSubscriber.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCommonInterfaceConfigProxy.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCommonInterfaceConfigProxyFactory.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCommonInterfaceConfigRemoteObject.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCommonInterfaceConfigServerHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCommonInterfaceConfigSkeleton.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANDSLLinkConfigClientHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANDSLLinkConfigEventDispatcher.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANDSLLinkConfigEventSubscriber.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANDSLLinkConfigProxy.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANDSLLinkConfigProxyFactory.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANDSLLinkConfigRemoteObject.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANDSLLinkConfigServerHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANDSLLinkConfigSkeleton.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANEthernetLinkConfigClientHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANEthernetLinkConfigEventDispatcher.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANEthernetLinkConfigEventSubscriber.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANEthernetLinkConfigProxy.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANEthernetLinkConfigProxyFactory.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANEthernetLinkConfigRemoteObject.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANEthernetLinkConfigServerHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANEthernetLinkConfigSkeleton.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANIPConnectionClientHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANIPConnectionEventDispatcher.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANIPConnectionEventSubscriber.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANIPConnectionProxy.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANIPConnectionProxyFactory.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANIPConnectionRemoteObject.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANIPConnectionServerHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANIPConnectionSkeleton.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANPOTSLinkConfigClientHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANPOTSLinkConfigProxy.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANPOTSLinkConfigProxyFactory.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANPOTSLinkConfigRemoteObject.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANPOTSLinkConfigServerHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANPOTSLinkConfigSkeleton.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANPPPConnectionClientHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANPPPConnectionEventDispatcher.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANPPPConnectionEventSubscriber.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANPPPConnectionProxy.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANPPPConnectionProxyFactory.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANPPPConnectionRemoteObject.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANPPPConnectionServerHelper.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANPPPConnectionSkeleton.h">
+      <Filter>Remoting\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\InternetGateway1.h">
+      <Filter>Core\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\LANHostConfigManagement.h">
+      <Filter>Interfaces\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\Layer3Forwarding.h">
+      <Filter>Interfaces\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCableLinkConfig.h">
+      <Filter>Interfaces\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANCommonInterfaceConfig.h">
+      <Filter>Interfaces\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANDSLLinkConfig.h">
+      <Filter>Interfaces\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANEthernetLinkConfig.h">
+      <Filter>Interfaces\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANIPConnection.h">
+      <Filter>Interfaces\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANPOTSLinkConfig.h">
+      <Filter>Interfaces\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UPnPS\InternetGateway1\WANPPPConnection.h">
+      <Filter>Interfaces\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ILANHostConfigManagement.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ILayer3Forwarding.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IWANCableLinkConfig.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IWANCommonInterfaceConfig.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IWANDSLLinkConfig.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IWANEthernetLinkConfig.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IWANIPConnection.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IWANPOTSLinkConfig.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IWANPPPConnection.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LANHostConfigManagementClientHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LANHostConfigManagementProxy.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LANHostConfigManagementProxyFactory.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LANHostConfigManagementRemoteObject.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LANHostConfigManagementServerHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LANHostConfigManagementSkeleton.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Layer3ForwardingClientHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Layer3ForwardingEventDispatcher.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Layer3ForwardingEventSubscriber.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Layer3ForwardingProxy.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Layer3ForwardingProxyFactory.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Layer3ForwardingRemoteObject.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Layer3ForwardingServerHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Layer3ForwardingSkeleton.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCableLinkConfigClientHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCableLinkConfigEventDispatcher.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCableLinkConfigEventSubscriber.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCableLinkConfigProxy.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCableLinkConfigProxyFactory.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCableLinkConfigRemoteObject.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCableLinkConfigServerHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCableLinkConfigSkeleton.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCommonInterfaceConfigClientHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCommonInterfaceConfigEventDispatcher.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCommonInterfaceConfigEventSubscriber.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCommonInterfaceConfigProxy.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCommonInterfaceConfigProxyFactory.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCommonInterfaceConfigRemoteObject.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCommonInterfaceConfigServerHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCommonInterfaceConfigSkeleton.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANDSLLinkConfigClientHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANDSLLinkConfigEventDispatcher.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANDSLLinkConfigEventSubscriber.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANDSLLinkConfigProxy.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANDSLLinkConfigProxyFactory.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANDSLLinkConfigRemoteObject.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANDSLLinkConfigServerHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANDSLLinkConfigSkeleton.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANEthernetLinkConfigClientHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANEthernetLinkConfigEventDispatcher.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANEthernetLinkConfigEventSubscriber.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANEthernetLinkConfigProxy.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANEthernetLinkConfigProxyFactory.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANEthernetLinkConfigRemoteObject.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANEthernetLinkConfigServerHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANEthernetLinkConfigSkeleton.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANIPConnectionClientHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANIPConnectionEventDispatcher.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANIPConnectionEventSubscriber.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANIPConnectionProxy.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANIPConnectionProxyFactory.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANIPConnectionRemoteObject.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANIPConnectionServerHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANIPConnectionSkeleton.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANPOTSLinkConfigClientHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANPOTSLinkConfigProxy.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANPOTSLinkConfigProxyFactory.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANPOTSLinkConfigRemoteObject.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANPOTSLinkConfigServerHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANPOTSLinkConfigSkeleton.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANPPPConnectionClientHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANPPPConnectionEventDispatcher.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANPPPConnectionEventSubscriber.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANPPPConnectionProxy.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANPPPConnectionProxyFactory.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANPPPConnectionRemoteObject.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANPPPConnectionServerHelper.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANPPPConnectionSkeleton.cpp">
+      <Filter>Remoting\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LANHostConfigManagement.cpp">
+      <Filter>Interfaces\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Layer3Forwarding.cpp">
+      <Filter>Interfaces\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCableLinkConfig.cpp">
+      <Filter>Interfaces\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANCommonInterfaceConfig.cpp">
+      <Filter>Interfaces\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANDSLLinkConfig.cpp">
+      <Filter>Interfaces\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANEthernetLinkConfig.cpp">
+      <Filter>Interfaces\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANIPConnection.cpp">
+      <Filter>Interfaces\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANPOTSLinkConfig.cpp">
+      <Filter>Interfaces\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WANPPPConnection.cpp">
+      <Filter>Interfaces\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

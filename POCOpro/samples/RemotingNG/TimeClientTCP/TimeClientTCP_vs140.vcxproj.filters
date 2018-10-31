@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8e966177-46a6-41c0-b7f8-8be62e2e8b64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{86e3cb1d-912c-48fd-86c7-4307d860eb14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{0fe51a9d-0a05-4b28-893d-e1183b855ea6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Header Files">
+      <UniqueIdentifier>{ba0cfcdc-3887-4f13-8715-8d692659ffd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Source Files">
+      <UniqueIdentifier>{723b64ce-5d47-466f-8b61-8ff2a67e71ef}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\TimeClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ITimeService.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TimeServiceClientHelper.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TimeServiceEventSubscriber.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TimeServiceProxy.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TimeServiceProxyFactory.cpp">
+      <Filter>Generated Files\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ITimeService.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TimeServiceClientHelper.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TimeServiceEventSubscriber.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TimeServiceProxy.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TimeServiceProxyFactory.h">
+      <Filter>Generated Files\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="RemoteGen.xml" />
+  </ItemGroup>
+</Project>

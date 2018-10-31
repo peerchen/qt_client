@@ -1,0 +1,34 @@
+<AppConfig>
+	<UPnPGen>
+		<input>
+			<services>
+				<service>
+					<type>urn:schemas-upnp-org:service:Dimming:1</type>
+					<description>xml/service/Dimming1.xml</description>
+					<class>Dimming</class>
+					<implClass>DimmingImpl</implClass>
+				</service>
+				<service>
+					<type>urn:schemas-upnp-org:service:SwitchPower:1</type>
+					<description>xml/service/SwitchPower1.xml</description>
+					<class>SwitchPower</class>
+					<implClass>SwitchPowerImpl</implClass>
+				</service>
+			</services>
+		</input>
+		<output>
+			<namespace>UPnPS::LightingControls1</namespace>
+			<include>include/UPnPS/LightingControls1</include>
+			<src>src</src>
+			<library>LightingControls1</library>
+			<alwaysInclude>UPnPS/LightingControls1/LightingControls1.h</alwaysInclude>
+			<copyright>Copyright (c) 2011-2012, Applied Informatics Software Engineering GmbH.
+				All rights reserved.
+				
+				This is unpublished proprietary source code of Applied Informatics.
+				The contents of this file may not be disclosed to third parties, 
+				copied or duplicated in any form, in whole or in part.
+			</copyright>
+		</output>
+	</UPnPGen>
+</AppConfig>

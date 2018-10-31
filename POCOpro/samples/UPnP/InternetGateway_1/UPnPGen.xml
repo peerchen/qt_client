@@ -1,0 +1,76 @@
+<AppConfig>
+	<UPnPGen>
+		<input>
+			<services>
+				<service>
+					<type>urn:schemas-upnp-org:service:LANHostConfigManagement:1</type>
+					<description>xml/service/LANHostConfigManagement1.xml</description>
+					<class>LANHostConfigManagement</class>
+					<implClass>LANHostConfigManagementImpl</implClass>
+				</service>
+				<service>
+					<type>urn:schemas-upnp-org:service:Layer3Forwarding:1</type>
+					<description>xml/service/Layer3Forwarding1.xml</description>
+					<class>Layer3Forwarding</class>
+					<implClass>Layer3ForwardingImpl</implClass>
+				</service>
+				<service>
+					<type>urn:schemas-upnp-org:service:WANCableLinkConfig:1</type>
+					<description>xml/service/WANCableLinkConfig1.xml</description>
+					<class>WANCableLinkConfig</class>
+					<implClass>WANCableLinkConfigImpl</implClass>
+				</service>
+				<service>
+					<type>urn:schemas-upnp-org:service:WANCommonInterfaceConfig:1</type>
+					<description>xml/service/WANCommonInterfaceConfig1.xml</description>
+					<class>WANCommonInterfaceConfig</class>
+					<implClass>WANCommonInterfaceConfigImpl</implClass>
+				</service>
+				<service>
+					<type>urn:schemas-upnp-org:service: WANDSLLinkConfig:1</type>
+					<description>xml/service/WANDSLLinkConfig1.xml</description>
+					<class>WANDSLLinkConfig</class>
+					<implClass>WANDSLLinkConfigImpl</implClass>
+				</service>
+				<service>
+					<type>urn:schemas-upnp-org:service:WANEthernetLinkConfig:1</type>
+					<description>xml/service/WANEthernetLinkConfig1.xml</description>
+					<class>WANEthernetLinkConfig</class>
+					<implClass>WANEthernetLinkConfigImpl</implClass>
+				</service>
+				<service>
+					<type>urn:schemas-upnp-org:service:WANIPConnection:1</type>
+					<description>xml/service/WANIPConnection1.xml</description>
+					<class>WANIPConnection</class>
+					<implClass>WANIPConnectionImpl</implClass>
+				</service>
+				<service>
+					<type>urn:schemas-upnp-org:service:WANPOTSLinkConfig:1</type>
+					<description>xml/service/WANPOTSLinkConfig1.xml</description>
+					<class>WANPOTSLinkConfig</class>
+					<implClass>WANPOTSLinkConfigImpl</implClass>
+				</service>
+				<service>
+					<type>urn:schemas-upnp-org:service:WANPPPConnection:1</type>
+					<description>xml/service/WANPPPConnection1.xml</description>
+					<class>WANPPPConnection</class>
+					<implClass>WANPPPConnectionImpl</implClass>
+				</service>
+			</services>
+		</input>
+		<output>
+			<namespace>UPnPS::InternetGateway1</namespace>
+			<include>include/UPnPS/InternetGateway1</include>
+			<src>src</src>
+			<library>InternetGateway1</library>
+			<alwaysInclude>UPnPS/InternetGateway1/InternetGateway1.h</alwaysInclude>
+			<copyright>Copyright (c) 2011-2012, Applied Informatics Software Engineering GmbH.
+				All rights reserved.
+				
+				This is unpublished proprietary source code of Applied Informatics.
+				The contents of this file may not be disclosed to third parties, 
+				copied or duplicated in any form, in whole or in part.
+			</copyright>
+		</output>
+	</UPnPGen>
+</AppConfig>
