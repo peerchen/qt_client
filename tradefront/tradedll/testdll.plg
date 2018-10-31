@@ -1,0 +1,67 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: testdll - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP2F.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "../" /I "../sgeapi/include" /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /D "_WINDOWS" /Fp"Release/testdll.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"\\tsclient\d\工作\yl\2016\产品\三代升级\tradefront\tradedll\main.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP2F.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP30.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:no /pdb:"Release/testdll.pdb" /machine:I386 /out:"../bin/testdll.exe" 
+".\Release\main.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP30.tmp"
+<h3>Output Window</h3>
+Compiling...
+main.cpp
+\\tsclient\D\BUBASE\include\kernel\BF_Socket.h(40) : warning C4005: 'EINTR' : macro redefinition
+        C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\errno.h(76) : see previous definition of 'EINTR'
+Automatically linking with WS2_32.lib
+Automatically linking with  bf_kernel.lib bf_dbpubd.lib
+Automatically linking with   bf_kernel.lib bf_xdp.lib bf_drebapi.lib bf_kvdata.lib bf_gtp.lib
+Linking...
+
+
+
+<h3>Results</h3>
+testdll.exe - 0 error(s), 1 warning(s)
+<h3>
+--------------------Configuration: testdll - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP32.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../" /I "../sgeapi/include" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /D "_WINDOWS" /Fp"Debug/testdll.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"\\tsclient\d\工作\yl\2016\产品\三代升级\tradefront\tradedll\main.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP32.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP33.tmp" with contents
+[
+bf_kerneld.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/testdlld.pdb" /debug /machine:I386 /out:"../bin/testdlld.exe" /pdbtype:sept 
+".\Debug\main.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP33.tmp"
+<h3>Output Window</h3>
+Compiling...
+main.cpp
+\\tsclient\d\bubase\include\kernel\bf_socket.h(40) : warning C4005: 'EINTR' : macro redefinition
+        c:\program files\microsoft visual studio\vc98\include\errno.h(76) : see previous definition of 'EINTR'
+Automatically linking with WS2_32.lib
+Automatically linking with  bf_kerneld.lib bf_dbpubd.lib
+Automatically linking with   bf_kerneld.lib bf_xdpd.lib bf_drebapid.lib bf_kvdatad.lib bf_gtpd.lib
+Linking...
+
+
+
+<h3>Results</h3>
+testdlld.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

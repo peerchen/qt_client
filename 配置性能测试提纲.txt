@@ -1,0 +1,10 @@
+一.配置CVG数据源
+1.配置上级IP
+
+二.配置Collector进程共享内存名称
+D:\GCN\HQserver\cfg\Sampler.cfg
+
+
+三.配置MQ生产者程序
+
+四.安装发行库

@@ -1,0 +1,49 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: tradedll - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP43.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../" /I "../sgeapi/include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "EXPORTS" /FR"Debug/" /Fp"Debug/tradedll.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"\\tsclient\d\工作\yl\2016\产品\三代升级\tradefront\fpdll\OfferingTrade.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP43.tmp" 
+Creating temporary file "C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP44.tmp" with contents
+[
+bf_kerneld.lib bf_gtpd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:yes /pdb:"Debug/fptradedlld.pdb" /debug /machine:I386 /out:"../bin/fptradedlld.dll" /implib:"Debug/fptradedlld.lib" /pdbtype:sept 
+".\Debug\OfferingTrade.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\XPMUser\LOCALS~1\Temp\RSP44.tmp"
+<h3>Output Window</h3>
+Compiling...
+OfferingTrade.cpp
+\\tsclient\d\bubase\include\kernel\bf_socket.h(40) : warning C4005: 'EINTR' : macro redefinition
+        c:\program files\microsoft visual studio\vc98\include\errno.h(76) : see previous definition of 'EINTR'
+Automatically linking with WS2_32.lib
+Automatically linking with  bf_kerneld.lib bf_dbpubd.lib
+\\tsclient\d\工作\yl\2016\产品\三代升级\tradefront\fpdll\fpapi.h(57) : error C2632: 'long' followed by 'long' is illegal
+\\tsclient\d\工作\yl\2016\产品\三代升级\tradefront\fpdll\fpapi.h(59) : error C2632: 'long' followed by 'long' is illegal
+\\tsclient\d\工作\yl\2016\产品\三代升级\tradefront\fpdll\fpapi.h(61) : error C2632: 'long' followed by 'long' is illegal
+\\tsclient\d\工作\yl\2016\产品\三代升级\tradefront\fpdll\fpapi.h(63) : error C2632: 'long' followed by 'long' is illegal
+\\tsclient\d\工作\yl\2016\产品\三代升级\tradefront\fpdll\offeringtrade.h(33) : error C2632: 'long' followed by 'long' is illegal
+\\tsclient\d\工作\yl\2016\产品\三代升级\tradefront\fpdll\offeringtrade.h(34) : error C2632: 'long' followed by 'long' is illegal
+\\tsclient\d\工作\yl\2016\产品\三代升级\tradefront\fpdll\offeringtrade.h(35) : error C2632: 'long' followed by 'long' is illegal
+\\tsclient\d\工作\yl\2016\产品\三代升级\tradefront\fpdll\offeringtrade.h(36) : error C2632: 'long' followed by 'long' is illegal
+\\tsclient\d\工作\yl\2016\产品\三代升级\tradefront\fpdll\offeringtrade.h(56) : warning C4275: non dll-interface class 'CIOfferingBase' used as base for dll-interface class 'COfferingTrade'
+        \\tsclient\d\工作\yl\2016\产品\三代升级\tradefront\iofferingbase.h(92) : see declaration of 'CIOfferingBase'
+\\tsclient\d\工作\yl\2016\产品\三代升级\tradefront\fpdll\offeringtrade.h(149) : warning C4251: 'm_mutex' : class 'CBF_Mutex' needs to have dll-interface to be used by clients of class 'COfferingTrade'
+        \\tsclient\d\bubase\include\kernel\bf_mutex.h(70) : see declaration of 'CBF_Mutex'
+\\tsclient\d\工作\yl\2016\产品\三代升级\tradefront\fpdll\offeringtrade.h(154) : warning C4251: 'm_packet_buffer' : class 'std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >' needs to have dll-interface to be used by clients of class 'COfferingTrade'
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+fptradedlld.dll - 8 error(s), 4 warning(s)
+</pre>
+</body>
+</html>

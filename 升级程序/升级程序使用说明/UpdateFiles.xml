@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="gb2312"?>c�� <catalogs>
+  <catalog name="Update.exe" type="1">
+   <item name="Update.exe" style="1" updatedate="20110923">
+   </item>
+  </catalog>
+  <catalog name="Update2.exe" type="1">
+   <item name="Update2.exe" style="1" updatedate="20110923">
+   </item>
+  </catalog>
+  <catalog name="iconfig.ini" type="1">
+   <item name="iconfig.ini" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="Setting\" type="2">
+   <item name="五彩Ｋ线.exp" style="1" updatedate="20110923">
+   </item>
+  </catalog>
+  <catalog name="Setting\" type="2">
+   <item name="条件选股.exp" style="1" updatedate="20110923">
+   </item>
+  </catalog>
+  <catalog name="Setting\" type="2">
+   <item name="交易系统.exp" style="1" updatedate="20110923">
+   </item>
+  </catalog>
+  <catalog name="Setting\" type="2">
+   <item name="技术指标.exp" style="1" updatedate="20110923">
+   </item>
+  </catalog>
+  <catalog name="Setting\" type="2">
+   <item name="help.chm" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="Setting\" type="2">
+   <item name="ReportTabUsr.ini" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="Setting\" type="2">
+   <item name="InfoTreeConfig.ini" style="1" updatedate="20110923">
+   </item>
+  </catalog>
+  <catalog name="Setting\" type="2">
+   <item name="HappyStar.ini" style="1" updatedate="20110923">
+   </item>
+  </catalog>
+  <catalog name="Setting\" type="2">
+   <item name="TableColGroup.cfg" style="1" updatedate="20110923">
+   </item>
+  </catalog>
+  <catalog name="Setting\" type="2">
+   <item name="DialogTip.cfg" style="1" updatedate="20110923">
+   </item>
+  </catalog>
+  <catalog name="Setting\" type="2">
+   <item name="windowstyle.ini" style="1" updatedate="20110923">
+   </item>
+  </catalog>
+  <catalog name="Setting\" type="2">
+   <item name="Communication.ini" style="1" updatedate="20110923">
+   </item>
+  </catalog>
+  <catalog name="Setting\" type="2">
+   <item name="ColorTempl.cfg" style="1" updatedate="20110923">
+   </item>
+  </catalog>
+  <catalog name="Setting\" type="2">
+   <item name="infopath.ini" style="1" updatedate="20110923">
+   </item>
+  </catalog>
+  <catalog name="Setting\" type="2">
+   <item name="ColProperty.cfg" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="UserDefineIndex\" type="2">
+   <item name="UserDefineIndex.dat" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="4352.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="4608.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="16640.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="16896.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="17152.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="17664.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="20736.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="20992.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="21248.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="21504.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="21760.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="22016.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="22272.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="22528.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="23040.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="24832.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="25088.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="25344.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="25600.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="-32256.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="InitDat\" type="2">
+   <item name="-32512.int" style="1" updatedate="20110411">
+   </item>
+  </catalog>
+  <catalog name="CompMan.dll" type="1">
+   <item name="CompMan.dll" style="1" updatedate="20110923">
+   </item>
+  </catalog>
+  <catalog name="RecvSend.dll" type="1">
+   <item name="RecvSend.dll" style="1" updatedate="20110923">
+   </item>
+  </catalog>
+  <catalog name="GFQuotation.EXE" type="1">
+   <item name="GFQuotation.EXE" style="1" updatedate="20110923">
+   </item>
+  </catalog>
+ </catalogs>

@@ -1,0 +1,233 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\DataRepair.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\DataRepair.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 DataRepair"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "DataRepair 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2013",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_DATAREPAIR_DIALOG DIALOGEX 0, 0, 717, 446
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "K线数据补齐工具"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "保存文件",ID_SAVE_FILE,549,69,50,32
+    PUSHBUTTON      "关闭",IDCANCEL,509,419,50,16
+    EDITTEXT        IDC_EDIT1,23,39,435,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT2,23,84,436,14,ES_AUTOHSCROLL | WS_DISABLED
+    DEFPUSHBUTTON   "初始文件路径",IDC_BUTTON_OPEN_SRC,463,37,70,17
+    PUSHBUTTON      "保存文件路径",IDC_BUTTON_OPEN_DES,463,83,70,17
+    GROUPBOX        "设置K线数据",IDC_STATIC,7,5,702,143
+    PUSHBUTTON      "数据检测",IDC_BUTTON_DATA_CHECK,329,176,57,14
+    PUSHBUTTON      "搜索节点",IDC_BUTTON_SEARCH_NODE,395,176,57,14
+    PUSHBUTTON      "载入初始数据文件",ID_LOAD_FILE,15,169,72,21
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,11,194,457,195
+    GROUPBOX        "手工补齐",IDC_STATIC,7,157,465,238
+    PUSHBUTTON      "插入记录",IDC_BUTTON_INSERT,110,175,57,14
+    PUSHBUTTON      "删除记录",IDC_BUTTON_DELETE,172,175,57,14
+    PUSHBUTTON      "批处理",IDC_DEAL_1,478,193,50,14,WS_DISABLED
+    LTEXT           "问题①:当天的晚市，日期跳到第二天了",IDC_STATIC,478,172,119,17
+    LTEXT           "问题②:2013年7月1到5号数据缺失",IDC_STATIC,477,222,123,17
+    PUSHBUTTON      "批处理",IDC_DEAL_2,479,247,50,14,WS_DISABLED
+    PUSHBUTTON      "裁剪处理",IDC_DEAL_3,481,293,50,14,WS_DISABLED
+    LTEXT           "问题③:合并2003/8/22~2013/8/24的数据",IDC_STATIC,478,270,124,17
+    EDITTEXT        IDC_EDIT3,23,61,436,14,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "附加文件路径",IDC_BUTTON_OPEN_SRC2,463,60,70,17
+    PUSHBUTTON      "合并文件处理",IDC_DEAL_4,542,293,57,14,WS_DISABLED
+    PUSHBUTTON      "合并附加文件到列表",IDC_BUTTON_MERGE,21,121,106,22
+    PUSHBUTTON      "导出到Excel",IDC_BUTTON_EXCEL,417,117,61,19
+    CONTROL         "",IDC_DATETIMEPICKER1,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,178,121,100,15
+    LTEXT           "之后的全部数据",IDC_STATIC,283,123,45,8
+    CONTROL         "时间过滤",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,178,107,48,10
+    LTEXT           "Data目录下除trend同格式解析(分钟数据年=前2位+1990)，Trend历史每日分钟单独解析",IDC_STATIC,23,20,309,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "DataRepair.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "DataRepair.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DATAREPAIR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 709
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 435
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DATAREPAIR_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 DataRepair(&A)..."
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\DataRepair.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

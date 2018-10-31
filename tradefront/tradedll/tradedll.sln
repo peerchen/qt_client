@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testdll", "testdll.vcxproj", "{C8FA056C-C389-F20C-C7D2-73D97090C5C6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tradedll", "tradedll.vcxproj", "{9E30126D-0423-B1A2-AC2D-C7B9B13B4EC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Template|Win32 = Template|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8FA056C-C389-F20C-C7D2-73D97090C5C6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C8FA056C-C389-F20C-C7D2-73D97090C5C6}.Debug|Win32.Build.0 = Debug|Win32
+		{C8FA056C-C389-F20C-C7D2-73D97090C5C6}.Release|Win32.ActiveCfg = Release|Win32
+		{C8FA056C-C389-F20C-C7D2-73D97090C5C6}.Release|Win32.Build.0 = Release|Win32
+		{C8FA056C-C389-F20C-C7D2-73D97090C5C6}.Template|Win32.ActiveCfg = Release|Win32
+		{C8FA056C-C389-F20C-C7D2-73D97090C5C6}.Template|Win32.Build.0 = Release|Win32
+		{9E30126D-0423-B1A2-AC2D-C7B9B13B4EC7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9E30126D-0423-B1A2-AC2D-C7B9B13B4EC7}.Debug|Win32.Build.0 = Debug|Win32
+		{9E30126D-0423-B1A2-AC2D-C7B9B13B4EC7}.Release|Win32.ActiveCfg = Release|Win32
+		{9E30126D-0423-B1A2-AC2D-C7B9B13B4EC7}.Release|Win32.Build.0 = Release|Win32
+		{9E30126D-0423-B1A2-AC2D-C7B9B13B4EC7}.Template|Win32.ActiveCfg = Template|Win32
+		{9E30126D-0423-B1A2-AC2D-C7B9B13B4EC7}.Template|Win32.Build.0 = Template|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

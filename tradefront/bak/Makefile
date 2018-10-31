@@ -1,0 +1,31 @@
+# Makefile for test
+# AIX version
+
+.SUFFIXES:
+.SUFFIXES: .cpp .obj .o
+
+CPP = g++
+
+INC =-I$(HOME)/include/aio -I$(HOME)/include/bumodule -I$(HOME)/include/cgateapi -I$(HOME)/include/dbapi -I$(HOME)/include/dbpub -I$(HOME)/include/dptool -I$(HOME)/include/dreb -I$(HOME)/include/gateway -I$(HOME)/include/gtp -I$(HOME)/include/kernel -I$(HOME)/include/kvdata -I$(HOME)/include/tib -I$(HOME)/include/xdp -I$(HOME)/include/xml
+
+
+CPPFLAGS = -g -Wall  -O2 -fPIC -shared
+CPPDEFS =  -DLINUX -DUNIX  -DNDEBUG -D_THREAD_SAFE -D_MT -DSA_USE_PTHREAD -D_AIX32_THREADS
+
+DLLLIB= -L$(HOME)/libapp  -L$(HOME)/lib -lbf_kernel -lshcaapi -lsqlapi -lpthread -leasy -lsafeengine
+
+
+.cpp.o:
+	$(CPP) $(CPPFLAGS)  -c   $(CPPDEFS)   $(INC)  $< -o $@
+OBJL =  OfferingTrade.o
+
+
+ALL:  libfptrade.so
+
+libfptrade.so: $(OBJL)
+	$(CPP) $(CPPFLAGS) $(CPPDEFS) -o $@ $(OBJL) $(INC) -L$(HOME)/libapp $(DLLLIB)
+	mv $@ $(HOME)/libapp
+	rm -f *.o
+
+clean:
+	rm -f *.o
