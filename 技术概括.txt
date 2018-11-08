@@ -1,8 +1,0 @@
-boost(工具大全)
-poco++(工具库)
-nanomsg(嵌入式网络)
-
-
-
-客户端
-QT + BOOST（工具） + POCO++(工具) + NANOMSG （网络） 

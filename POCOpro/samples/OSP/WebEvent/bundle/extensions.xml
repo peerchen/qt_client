@@ -1,3 +1,0 @@
-<extensions>
-  <extension point="osp.web.server.directory" path="/webeventsample" resource="html" allowSpecialization="none" description="WebEvent Sample Page"/>
-</extensions>

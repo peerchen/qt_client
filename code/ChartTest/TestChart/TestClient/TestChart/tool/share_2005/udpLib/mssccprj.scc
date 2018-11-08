@@ -1,9 +1,0 @@
-SCC = This is a Source Code Control file
-
-[udpLib.sln]
-SCC_Aux_Path = "K:\NewWork_sourcesafe"
-SCC_Project_Name = "$/NewWork/share/udpLib", LIDAAAAA
-
-[udpLib.vcproj]
-SCC_Aux_Path = "K:\NewWork_sourcesafe"
-SCC_Project_Name = "$/NewWork/share/udpLib", LIDAAAAA

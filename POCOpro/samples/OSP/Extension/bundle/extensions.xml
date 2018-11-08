@@ -1,3 +1,0 @@
-<extensions>
-  <extension point="com.appinf.sample.xp" message="Hello, world!"/>
-</extensions>

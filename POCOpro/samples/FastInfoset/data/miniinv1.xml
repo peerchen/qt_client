@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<invoice xmlns:ns1="http://www.sun.com/schema/spidermarkexpress/sm-inv" ns1="http://www.sun.com/schema/spidermarkexpress/sm-inv">
-  <Header>
-    <IssueDateTime timezone="GMT+1">2003-03-13T13:13:32-08:00</IssueDateTime>
-  </Header> 
-</invoice>
